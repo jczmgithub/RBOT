@@ -9,7 +9,6 @@
     @include('layouts.registrar')
 </header>
 <body>
-
     <div id="main">
         @yield('home')
     </div>

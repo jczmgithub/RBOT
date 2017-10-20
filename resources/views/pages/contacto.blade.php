@@ -1,13 +1,17 @@
-<!doctype html>
-<html>
-<head>
-    @include('includes.head')
-</head>
-<header>
-    @include('includes.header')
-</header>
-<body>
+@extends('layouts.default')
+@section('home')
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger">
+                        <strong>Error! </strong> {{ $error }}
+                    </div>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <h2>Contacto</h2>
     <form class="form-horizontal" action="contacto" method="POST">
         {{ csrf_field() }}
@@ -36,16 +40,8 @@
         </div>
     </form>
 </div>
-@if(Session::get('errors'))
-    <div class="alert alert-danger alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h5>Han habido errores:</h5>
-        @foreach($errors->all('<li>:message</li>') as $message)
-            {{$message}}
-        @endforeach
-    </div>
-    @endif
-</div>
-</body>
-@include('includes.footer')
-</html>
+
+
+
+
+@stop

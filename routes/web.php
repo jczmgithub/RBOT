@@ -15,7 +15,7 @@ Route::get('/', function(){
     return view('pages.home');
 });
 
-Route::get('contacto', function() {
+Route::get('contact', function() {
     return View('pages.contacto');
 });
 Route::post('contacto', 'ContactoController@ContactoDatos'
@@ -24,10 +24,10 @@ Route::post('contacto', 'ContactoController@ContactoDatos'
 Route::get('RBX1', function(){
     return(view('pages.RBX1'));
 });
-Route::get('controlB', function(){
+Route::get('controlBotones', function(){
     return(view('pages.controlBotones'));
 });
-Route::get('controlM', function(){
+Route::get('controlManual', function(){
     return(view('pages.controlManual'));
 });
 ?>

@@ -6,7 +6,7 @@
  * Time: 9:41
  */
 ?>
-<footer id="myFooter">
+<footer class="footer"id="myFooter">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -42,7 +42,7 @@
                     <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
                 </div>
-               <a href="contacto"> <button type="button" class="btn btn-default" >Contact us</button></a>
+               <a href="contact"> <button type="button" class="btn btn-default" >Contact us</button></a>
             </div>
         </div>
     </div>
