@@ -11,22 +11,6 @@
 |
 */
 
-/*
- * Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
-    return(view('bienvenido'));
-});
-Route::get('/agur', function () {
-    return(view('agur'));
-});
-
-Route::post('/formpost', 'formulario_controlador@formulario_datos'
-    //return(view('formpost'));
-);
-/**/
 Route::get('/', function(){
     return view('pages.home');
 });
@@ -37,5 +21,13 @@ Route::get('contacto', function() {
 Route::post('contacto', 'ContactoController@ContactoDatos'
 );
 
-
+Route::get('RBX1', function(){
+    return(view('pages.RBX1'));
+});
+Route::get('controlB', function(){
+    return(view('pages.controlBotones'));
+});
+Route::get('controlM', function(){
+    return(view('pages.controlManual'));
+});
 ?>
