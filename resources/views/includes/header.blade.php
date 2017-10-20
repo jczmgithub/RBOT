@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default fixed-top">
 
     <div class="container-fluid">
         <div class="navbar-header">
@@ -13,12 +13,17 @@
 
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-
-
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Robot</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Control
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Mando</a></li>
+                        <li><a href="#">Funciones</a></li>
+                    </ul>
+                </li>
                 <li><a href="contacto">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

@@ -14,7 +14,6 @@
         <div class="container">
             <h1>RBOT - DomoTek</h1>
             <p>Un servicio de control para un brazo robot.</p>
-            <p><a class="btn btn-primary btn-lg" href="contact" role="button">Contáctanos &raquo;</a></p>
         </div>
     </div>
 
@@ -23,7 +22,7 @@
         <div class="row">
             <div class="col-md-4">
                 <h2>RBX1</h2>
-                <p>El RBX1 (también conocido como Remix) es un brazo de robot impreso de 6 ejes 3D. El robot se construye utilizando solo una impresora 3D sin componentes mecanizados. También usa solo un Raspberry Pi y nuestro nuevo controlador de motor paso a paso SlushEngine Model D 7 para controlar el robot. No se requiere una computadora externa.</p>
+                <p>El RBX1 (también conocido como Remix) es un brazo de robot impreso de 6 ejes 3D. El robot se construye utilizando solo una impresora 3D sin componentes mecanizados. También usa solo un Raspberry Pi y nuestro nuevo controlador de motor paso a paso SlushEngine Model D 7 para controlar el robot.</p>
                 <p><a class="btn btn-default" href="#" role="button">Detalles &raquo;</a></p>
             </div>
             <div class="col-md-4">

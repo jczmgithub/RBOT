@@ -30,11 +30,12 @@ Route::post('/formpost', 'formulario_controlador@formulario_datos'
 Route::get('/', function(){
     return view('pages.home');
 });
-Route::get('formulario', function() {
-    return View('pages.formulario');
+
+Route::get('contacto', function() {
+    return View('pages.contacto');
 });
-Route::post('formpost', 'formulario_controlador@formulario_datos'
-//return(view('formpost'));
+Route::post('contacto', 'ContactoController@ContactoDatos'
 );
+
 
 ?>

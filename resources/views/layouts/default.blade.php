@@ -9,11 +9,10 @@
     @include('layouts.registrar')
 </header>
 <body>
-<div class="container-fluid">
+
     <div id="main">
         @yield('home')
     </div>
-</div>
 </body>
 @include('includes.footer')
 </html>
