@@ -48,12 +48,12 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|email',
+            'code' => 'required|string|min:8',
             'password' => 'required|min:6'
         ]);
 
         $credential = [
-            'email' => $request->email,
+            'code' => $request->code,
             'password' => $request->password
         ];
 
@@ -64,7 +64,7 @@ class LoginController extends Controller
         }
 
         // If Unsuccessful, then redirect back to the login with the form data
-        return redirect()->back()->withInput($request->only('email', 'remember'));
+        return redirect()->back()->withInput($request->only('code', 'remember'));
     }
 
     /**
