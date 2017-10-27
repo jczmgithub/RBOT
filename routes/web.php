@@ -30,4 +30,8 @@ Route::get('controlBotones', function(){
 Route::get('controlManual', function(){
     return(view('pages.controlManual'));
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 ?>

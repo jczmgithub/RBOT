@@ -5,8 +5,8 @@
 </head>
 <header>
     @include('includes.header')
-    @include('layouts.entrar')
-    @include('layouts.registrar')
+    @include('auth.login')
+    @include('auth.register')
 </header>
 <body>
     <div id="main">

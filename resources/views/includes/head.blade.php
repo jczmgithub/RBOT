@@ -19,3 +19,6 @@
 <script src="/js/bootstrap.js"></script>
 <!-- mi css -->
 <link rel="stylesheet" href="/css/rbot.css">
+<!-- Glyphicons -->
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+

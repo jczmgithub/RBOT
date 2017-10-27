@@ -25,7 +25,7 @@ body {
 #myFooter {
     background-color: #3c3d41;
     color: white;
-    padding-top: 30px;
+    padding-top: 20px;
     bottom:0;
 }
 
@@ -37,12 +37,12 @@ body {
 }
 
 #myFooter .row {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 #myFooter .navbar-brand {
-    margin-top: 45px;
-    height: 65px;
+    margin-top: 35px;
+    height: 50px;
 }
 
 #myFooter .footer-copyright p {
@@ -155,4 +155,22 @@ body{
 }
 .arreglar-nav{
     margin-bottom:50px;
+}
+#logoE{
+    max-width: 100%;
+}
+#blanco{
+    background-color: white;
+    opacity: 0.8;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.zekton{
+    font-family: "Zekton Rg";
+}
+#titulo{
+    text-align: center;
+    text-shadow:2px 2px #F6B408;
+    color: #0026FE;
 }
