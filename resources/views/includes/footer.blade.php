@@ -6,7 +6,7 @@
  * Time: 9:41
  */
 ?>
-<footer class="footer"id="myFooter">
+<footer  class="footer" id="myFooter">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div id=#hide class="footer-copyright">
         <p>© 2017 Aitor López Calvarro </p>
     </div>
 </footer>

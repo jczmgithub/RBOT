@@ -17,23 +17,23 @@
         </div>
     </div>
 
-    <div class="container ">
+    <div class="container altura">
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail seccion">
                 <h2>RBX1</h2>
                 <p>El RBX1 (también conocido como Remix) es un brazo de robot impreso de 6 ejes 3D. El robot se construye utilizando...</p>
                 <p class="caption"><a class="btn btn-primary" href="RBX1" role="button">Detalles &raquo;</a></p>
             </div></div>
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail seccion  ">
                 <h2>Control por funciones</h2>
-                <p>El brazo robótico puede ser controlado por funciones añadidas a botones. Añade nuevas funciones, modifica las existentes y elimina las inútiles.</p>
+                <p>El brazo robótico puede ser controlado por secuencias. Mueve los ejes y crea tu secuencia de movimientos. </p>
                 <p class="caption"><a class="btn btn-warning" href="controlBotones.blade.php" role="button">Detalles <span class="glyphicon glyphicon-console"></span></a></p>
                 </div></div>
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail seccion">
                 <h2>Control manual</h2>
                 <p>El brazo robótico también se puede controlar mediante un mando de consola. ¡Un mando Xbox para controlar motores!</p>
                 <p class="caption"><a class="btn btn-warning" href="#" role="button">Detalles <i class="fa fa-gamepad" aria-hidden="true"></i></a></p>

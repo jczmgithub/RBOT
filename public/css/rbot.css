@@ -23,9 +23,10 @@ body {
 }
 /* footer */
 #myFooter {
+
     background-color: #3c3d41;
     color: white;
-    padding-top: 20px;
+    padding-top: 10px;
     bottom:0;
 }
 
@@ -173,4 +174,15 @@ body{
     text-align: center;
     text-shadow:2px 2px #F6B408;
     color: #0026FE;
+}
+.seccion{
+    background-color: #3C3D41;
+    color:white;
+    padding: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.altura{
+    min-height: 500px;
 }
