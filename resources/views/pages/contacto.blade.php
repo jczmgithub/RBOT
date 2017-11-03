@@ -12,24 +12,27 @@
             </ul>
         </div>
     @endif
-    <h2>Contacto</h2>
-    <form class="form-horizontal" action="contacto" method="POST">
+    <div id="main">
+        <div class=""><h2>Contacto</h2></div>
+
+    <form class="form-horizontal seccion" action="contacto" method="POST">
         {{ csrf_field() }}
+
         <div class="form-group">
             <label class="control-label col-sm-2" for="nombre">Nombre:</label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
                 <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
                 <input type="email" class="form-control" id="email" placeholder="Introduce email" name="email">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="mensaje">Contenido:</label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
                 <textarea class="form-control" rows="3" id="mensaje" name="mensaje" placeholder="Contenido del mensaje"></textarea>
             </div>
         </div>
@@ -40,7 +43,7 @@
         </div>
     </form>
 </div>
-
+</div>
 
 
 

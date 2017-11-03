@@ -4955,15 +4955,6 @@ a.badge:focus {
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
-.jumbotron {
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-image: url("../img/robot-hand.jpg");
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 50px;
-}
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;

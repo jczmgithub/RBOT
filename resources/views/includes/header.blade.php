@@ -28,7 +28,7 @@
                 <li><a href="contact">Contacto</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#entrar"><span class="glyphicon glyphicon-user" data-toggle="modal" data-target="#entrar"></span> Entrar</a></li>
+                <li><a data-toggle="modal" onclick="$('#entrar').modal({'backdrop': 'static'});" ><span class="glyphicon glyphicon-user" ></span> Entrar</a></li>
                 <li><a data-toggle="modal" data-target="#registrar"><span class="glyphicon glyphicon-log-in" ></span> Registrar</a></li>
 
             </ul>

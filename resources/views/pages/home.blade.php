@@ -12,12 +12,12 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="zekton" id="titulo">RBOT - DomoTek</h1>
-            <p id="titulo">Un servicio de control para un brazo robot.</p>
+            <h1 class="zekton" id="titulo">RBOT</h1>
+            <p class="zekton" id="subtitulo">Un servicio de control para un brazo robot.</p>
         </div>
     </div>
 
-    <div class="container altura">
+    <div class="container">
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-md-4">
