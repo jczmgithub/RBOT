@@ -15,7 +15,7 @@
             <div class="col-sm-2">
                 <h5>Comenzar</h5>
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Inicio</a></li>
                     <li><a data-toggle="modal" data-target="#registrar">Registrar</a></li>
                     <li><a href="#"></a></li>
                 </ul>
@@ -23,7 +23,7 @@
             <div class="col-sm-2">
                 <h5>Sobre nosotros</h5>
                 <ul>
-                    <li><a href="https://domotek.es/">Empresa Domotek</a></li>
+                    <li><a href="https://domotek.es/" target="_blank">Empresa Domotek</a></li>
                     <li><a href="#">Descargas</a></li>
                     <li><a href="contact">Contacto</a></li>
                 </ul>
