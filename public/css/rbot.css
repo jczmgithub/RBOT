@@ -1,11 +1,6 @@
 body {
     padding-top: 50px;
 }
-
-#main {
-    min-height: calc(100vh - 50px);
-}
-
 #carousel2{
     width:100%;
     max-height: 500px !important;
@@ -167,6 +162,7 @@ body{
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
 .zekton{
     font-family: "Zekton Rg";
 }
@@ -193,5 +189,7 @@ html, body{
 }
 @font-face {
     font-family: "Roboto";
-    src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+    src: url("/public/fonts/roboto/Roboto-Regular.ttf");
+    font-family: "Zekton Rg";
+    src: url("/public/fonts/zekton/zekton rg.ttf");
 }
