@@ -182,7 +182,16 @@ body{
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
 }
+html, body{
+    font-family: "Roboto";
+}
+
 .altura{
     min-height: 500px;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
 }
