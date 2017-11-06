@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::post('auth/login', 'Auth\LoginController@attemptLogin');
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::post('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout');
@@ -35,20 +35,17 @@ Route::prefix('admin')->group(function() {
 Route::get('/email', function(){
     return view('emails.welcome');
 });
-Route::get('sendemail', function () {
+Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');;
 
+
+/*
+Route::get('sendemail', function () {
     $data = array(
         'name' => "Learning Laravel",
     );
-
     Mail::send('emails.welcome', $data, function ($message) {
-
         $message->from('alopezca16dw@ikzubirimanteo.com', 'Learning Laravel');
-
         $message->to('alopezca16dw@ikzubirimanteo.com')->subject('Learning Laravel test email');
-
     });
-
     return "Your email has been sent successfully";
-
-});
+});*/
