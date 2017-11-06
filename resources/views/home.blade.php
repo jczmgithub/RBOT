@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.app    height: 100%;
+    min-height: 100%;')
 
 @section('content')
 <div class="container">

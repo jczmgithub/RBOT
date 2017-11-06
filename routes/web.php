@@ -11,41 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('pages.home');
 });
 
+Route::get('contact', function() {
+    return View('pages.contacto');
+});
+Route::post('contacto', 'ContactoController@ContactoDatos');
+
+Route::get('RBX1', function(){
+    return(view('pages.RBX1'));
+});
+Route::get('controlBotones', function(){
+    return(view('pages.controlBotones'));
+});
+Route::get('controlManual', function(){
+    return(view('pages.controlManual'));
+});
 Auth::routes();
-Route::post('auth/login', 'Auth\LoginController@attemptLogin');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::post('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout');
-
-
-Route::prefix('admin')->group(function() {
-    Route::get('/', 'AdminController@index')->name('admin.home');
-    Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
-    Route::post('/logout', 'AuthAdmin\LoginController@logout')->name('admin.logout');
-    Route::get('/password/reset', 'AuthAdmin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
-    Route::post('/password/email', 'AuthAdmin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
-    Route::get('/password/reset/{token}', 'AuthAdmin\ResetPasswordController@showResetForm')->name('admin.password.reset');
-    Route::post('/password/reset', 'AuthAdmin\ResetPasswordController@reset');
-});
-Route::get('/email', function(){
-    return view('emails.welcome');
-});
-Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');;
-
-
-/*
-Route::get('sendemail', function () {
-    $data = array(
-        'name' => "Learning Laravel",
-    );
-    Mail::send('emails.welcome', $data, function ($message) {
-        $message->from('alopezca16dw@ikzubirimanteo.com', 'Learning Laravel');
-        $message->to('alopezca16dw@ikzubirimanteo.com')->subject('Learning Laravel test email');
-    });
-    return "Your email has been sent successfully";
-});*/
+?>

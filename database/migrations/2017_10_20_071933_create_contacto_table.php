@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
 class CreateContactoTable extends Migration
 {
     /**
@@ -21,7 +19,6 @@ class CreateContactoTable extends Migration
             $table->longText('mensaje');
         });
     }
-
     /**
      * Reverse the migrations.
      *

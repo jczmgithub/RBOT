@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: xenlord
- * Date: 5/10/17
- * Time: 10:23
- */
-?>
 @extends('layouts.default')
 @section('home')
 

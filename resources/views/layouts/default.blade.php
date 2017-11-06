@@ -5,8 +5,6 @@
 </head>
 <header>
     @include('includes.header')
-    @include('auth.login')
-    @include('auth.register')
 </header>
 <body>
     <div id="main">

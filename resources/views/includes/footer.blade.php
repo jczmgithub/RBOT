@@ -6,7 +6,7 @@
  * Time: 9:41
  */
 ?>
-<footer  class="footer" id="myFooter">
+<footer id="myFooter">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">

@@ -1,50 +1,55 @@
 @extends('layouts.default')
 @section('home')
-<div class="container">
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <div class="alert alert-danger">
-                        <strong>Error! </strong> {{ $error }}
-                    </div>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     <div id="main">
-        <div class=""><h2>Contacto</h2></div>
+        <div class="contenido">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3>Register</h3></div>
 
-    <form class="form-horizontal seccion" action="contacto" method="POST">
-        {{ csrf_field() }}
+                        <div class="panel-body">
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <div class="alert alert-danger">
+                                                <strong>Error! </strong> {{ $error }}
+                                            </div>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form class="form-horizontal" method="POST" action="contacto">
+                                {{ csrf_field() }}
 
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="nombre">Nombre:</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre">
+                                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                    <label class="control-label col-md-4" for="nombre">Nombre:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4" for="email">Email:</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control" id="email" placeholder="Introduce email" name="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4" for="mensaje">Contenido:</label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" rows="3" id="mensaje" name="mensaje" placeholder="Contenido del mensaje"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <button type="submit" class="btn btn-info">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Email:</label>
-            <div class="col-sm-6">
-                <input type="email" class="form-control" id="email" placeholder="Introduce email" name="email">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="mensaje">Contenido:</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="mensaje" name="mensaje" placeholder="Contenido del mensaje"></textarea>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-info">Enviar</button>
-            </div>
-        </div>
-    </form>
-</div>
-</div>
-
-
-
 @stop

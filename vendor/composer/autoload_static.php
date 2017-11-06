@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit842302e7761dde48848a881eb5593d6e
+class ComposerStaticInitadd01a205474cbf95c602fd8a26f141b
 {
     public static $files = array (
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
@@ -71,6 +71,7 @@ class ComposerStaticInit842302e7761dde48848a881eb5593d6e
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'Laraveles\\Spanish\\' => 18,
             'Laravel\\Tinker\\' => 15,
         ),
         'I' => 
@@ -211,6 +212,10 @@ class ComposerStaticInit842302e7761dde48848a881eb5593d6e
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'Laraveles\\Spanish\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laraveles/spanish/src',
+        ),
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
@@ -302,6 +307,7 @@ class ComposerStaticInit842302e7761dde48848a881eb5593d6e
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Contacto' => __DIR__ . '/../..' . '/app/Models/Contacto.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\AuthAdmin\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthAdmin/ForgotPasswordController.php',
@@ -311,6 +317,7 @@ class ComposerStaticInit842302e7761dde48848a881eb5593d6e
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\ContactoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -1720,6 +1727,8 @@ class ComposerStaticInit842302e7761dde48848a881eb5593d6e
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Laraveles\\Spanish\\Commands\\InstallLang' => __DIR__ . '/..' . '/laraveles/spanish/src/Commands/InstallLang.php',
+        'Laraveles\\Spanish\\SpanishServiceProvider' => __DIR__ . '/..' . '/laraveles/spanish/src/SpanishServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -3568,10 +3577,10 @@ class ComposerStaticInit842302e7761dde48848a881eb5593d6e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit842302e7761dde48848a881eb5593d6e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit842302e7761dde48848a881eb5593d6e::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit842302e7761dde48848a881eb5593d6e::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit842302e7761dde48848a881eb5593d6e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitadd01a205474cbf95c602fd8a26f141b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitadd01a205474cbf95c602fd8a26f141b::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitadd01a205474cbf95c602fd8a26f141b::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitadd01a205474cbf95c602fd8a26f141b::$classMap;
 
         }, null, ClassLoader::class);
     }
