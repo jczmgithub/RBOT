@@ -4,8 +4,8 @@ body {
     background-color: #D9D9D9;
 }
 html, body{
-    height: 100%;
     min-height: 100%;
+    font-family: "Zekton";
 }
 .contenido{
     margin-top: 30px;
@@ -57,6 +57,7 @@ html, body{
     color: white;
     padding-top: 10px;
     bottom:0;
+    width: 100%;
 }
 
 #myFooter .footer-copyright {
@@ -144,6 +145,10 @@ html, body{
         text-align: center;
     }
 }
+.zekton {
+    font-family: "Zekton";
+}
+
 #logoE{
     max-width: 100%;
 }
@@ -162,10 +167,6 @@ html, body{
 .arreglar-nav{
     margin-bottom:50px;
 }
-.zekton{
-    font-family: "Zekton Rg";
-    src: url("/public/fonts/zekton/zekton rg.ttf");
-}
 #titulo{
     text-align: center;
     text-shadow:2px 2px 2px black;
@@ -176,10 +177,7 @@ html, body{
     text-shadow:2px 2px 2px black;
     color:white;
 }
-html, body{
-    font-family: "Zekton Rg";
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("/public/fonts/roboto/Roboto-Regular.ttf");
+@font-face{
+    font-family: "Zekton";
+    src: url("../fonts/zekton/zekton rg.ttf");
 }

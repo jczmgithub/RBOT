@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('home')
-    <div class="contenido">
+    <div class="contenido container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
@@ -68,5 +68,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br><br><br>
 @stop
