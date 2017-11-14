@@ -164,6 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Laraveles\Spanish\SpanishServiceProvider::class,
+        NZTim\Mailchimp\MailchimpServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -225,6 +226,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Mailchimp' => NZTim\Mailchimp\MailchimpFacade::class,
 
     ],
 

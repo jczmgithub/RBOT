@@ -64,6 +64,10 @@ class ComposerStaticInitadd01a205474cbf95c602fd8a26f141b
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
         ),
+        'N' => 
+        array (
+            'NZTim\\Mailchimp\\' => 16,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -204,6 +208,10 @@ class ComposerStaticInitadd01a205474cbf95c602fd8a26f141b
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'NZTim\\Mailchimp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nztim/mailchimp/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -267,6 +275,13 @@ class ComposerStaticInitadd01a205474cbf95c602fd8a26f141b
     );
 
     public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Requests' => 
+            array (
+                0 => __DIR__ . '/..' . '/rmccue/requests/library',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
@@ -1929,6 +1944,13 @@ class ComposerStaticInitadd01a205474cbf95c602fd8a26f141b
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'NZTim\\Mailchimp\\Exception\\MailchimpBadRequestException' => __DIR__ . '/..' . '/nztim/mailchimp/src/Exception/MailchimpBadRequestException.php',
+        'NZTim\\Mailchimp\\Exception\\MailchimpException' => __DIR__ . '/..' . '/nztim/mailchimp/src/Exception/MailchimpException.php',
+        'NZTim\\Mailchimp\\Exception\\MailchimpInternalErrorException' => __DIR__ . '/..' . '/nztim/mailchimp/src/Exception/MailchimpInternalErrorException.php',
+        'NZTim\\Mailchimp\\Mailchimp' => __DIR__ . '/..' . '/nztim/mailchimp/src/Mailchimp.php',
+        'NZTim\\Mailchimp\\MailchimpApi' => __DIR__ . '/..' . '/nztim/mailchimp/src/MailchimpApi.php',
+        'NZTim\\Mailchimp\\MailchimpFacade' => __DIR__ . '/..' . '/nztim/mailchimp/src/MailchimpFacade.php',
+        'NZTim\\Mailchimp\\MailchimpServiceProvider' => __DIR__ . '/..' . '/nztim/mailchimp/src/MailchimpServiceProvider.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
@@ -2848,6 +2870,64 @@ class ComposerStaticInitadd01a205474cbf95c602fd8a26f141b
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'Requests' => __DIR__ . '/..' . '/rmccue/requests/library/Requests.php',
+        'Requests_Auth' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Auth.php',
+        'Requests_Auth_Basic' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Auth/Basic.php',
+        'Requests_Cookie' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Cookie.php',
+        'Requests_Cookie_Jar' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Cookie/Jar.php',
+        'Requests_Exception' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception.php',
+        'Requests_Exception_HTTP' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP.php',
+        'Requests_Exception_HTTP_304' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/304.php',
+        'Requests_Exception_HTTP_305' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/305.php',
+        'Requests_Exception_HTTP_306' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/306.php',
+        'Requests_Exception_HTTP_400' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/400.php',
+        'Requests_Exception_HTTP_401' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/401.php',
+        'Requests_Exception_HTTP_402' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/402.php',
+        'Requests_Exception_HTTP_403' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/403.php',
+        'Requests_Exception_HTTP_404' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/404.php',
+        'Requests_Exception_HTTP_405' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/405.php',
+        'Requests_Exception_HTTP_406' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/406.php',
+        'Requests_Exception_HTTP_407' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/407.php',
+        'Requests_Exception_HTTP_408' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/408.php',
+        'Requests_Exception_HTTP_409' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/409.php',
+        'Requests_Exception_HTTP_410' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/410.php',
+        'Requests_Exception_HTTP_411' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/411.php',
+        'Requests_Exception_HTTP_412' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/412.php',
+        'Requests_Exception_HTTP_413' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/413.php',
+        'Requests_Exception_HTTP_414' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/414.php',
+        'Requests_Exception_HTTP_415' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/415.php',
+        'Requests_Exception_HTTP_416' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/416.php',
+        'Requests_Exception_HTTP_417' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/417.php',
+        'Requests_Exception_HTTP_418' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/418.php',
+        'Requests_Exception_HTTP_428' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/428.php',
+        'Requests_Exception_HTTP_429' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/429.php',
+        'Requests_Exception_HTTP_431' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/431.php',
+        'Requests_Exception_HTTP_500' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/500.php',
+        'Requests_Exception_HTTP_501' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/501.php',
+        'Requests_Exception_HTTP_502' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/502.php',
+        'Requests_Exception_HTTP_503' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/503.php',
+        'Requests_Exception_HTTP_504' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/504.php',
+        'Requests_Exception_HTTP_505' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/505.php',
+        'Requests_Exception_HTTP_511' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/511.php',
+        'Requests_Exception_HTTP_Unknown' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/HTTP/Unknown.php',
+        'Requests_Exception_Transport' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/Transport.php',
+        'Requests_Exception_Transport_cURL' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Exception/Transport/cURL.php',
+        'Requests_Hooker' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Hooker.php',
+        'Requests_Hooks' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Hooks.php',
+        'Requests_IDNAEncoder' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/IDNAEncoder.php',
+        'Requests_IPv6' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/IPv6.php',
+        'Requests_IRI' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/IRI.php',
+        'Requests_Proxy' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Proxy.php',
+        'Requests_Proxy_HTTP' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Proxy/HTTP.php',
+        'Requests_Response' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Response.php',
+        'Requests_Response_Headers' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Response/Headers.php',
+        'Requests_SSL' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/SSL.php',
+        'Requests_Session' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Session.php',
+        'Requests_Transport' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Transport.php',
+        'Requests_Transport_cURL' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Transport/cURL.php',
+        'Requests_Transport_fsockopen' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Transport/fsockopen.php',
+        'Requests_Utility_CaseInsensitiveDictionary' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Utility/CaseInsensitiveDictionary.php',
+        'Requests_Utility_FilteredIterator' => __DIR__ . '/..' . '/rmccue/requests/library/Requests/Utility/FilteredIterator.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',

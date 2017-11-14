@@ -181,3 +181,11 @@ html, body{
     font-family: "Zekton";
     src: url("../fonts/zekton/zekton rg.ttf");
 }
+.dropdown-menu{
+    background-color: #D9D9D9;
+}
+.navbar-default.nav li a{
+    color: #2DA18A !important;
+}
+
+

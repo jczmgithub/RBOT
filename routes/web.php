@@ -21,13 +21,13 @@ Route::get('contact', function() {
 Route::post('contacto', 'ContactoController@ContactoDatos');
 
 Route::get('RBX1', function(){
-    return(view('pages.RBX1'));
+    return(view('includes.error404'));
 });
 Route::get('controlBotones', function(){
-    return(view('pages.controlBotones'));
+    return(view('includes.error404'));
 });
 Route::get('controlManual', function(){
-    return(view('pages.controlManual'));
+    return(view('includes.error404'));
 });
 Auth::routes();
 Route::post('auth/login', 'Auth\LoginController@attemptLogin');

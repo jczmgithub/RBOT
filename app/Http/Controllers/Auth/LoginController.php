@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -54,5 +54,12 @@ class LoginController extends Controller
         return redirect('/');
     }
      */
+    protected function attemptLogin(Request $request){
+        return $this->guard()->attempt([
+            'email' => $request->email,
+            'password' => $request->password,
+            'confirmado' => 1 ],
+            $request->has('remember'));
+    }
 }
 

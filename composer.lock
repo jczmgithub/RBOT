@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8d26a1fddc578f46a417fe6320bc4e24",
-    "content-hash": "4b39593f6f7dfb5baa72f061db0207c1",
+    "hash": "6e38a24fa7df40891fffae80fe3bbcd3",
+    "content-hash": "893d37320f846f14c2ace38adbfedb3b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -970,6 +970,46 @@
             "time": "2017-11-04 11:48:34"
         },
         {
+            "name": "nztim/mailchimp",
+            "version": "v3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nztim/mailchimp.git",
+                "reference": "73d79e2ce2808a493894043fadd548107589b826"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nztim/mailchimp/zipball/73d79e2ce2808a493894043fadd548107589b826",
+                "reference": "73d79e2ce2808a493894043fadd548107589b826",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "rmccue/requests": "^1.7"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NZTim\\Mailchimp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim",
+                    "email": "tim@nztim.com"
+                }
+            ],
+            "description": "Mailchimp API wrapper, includes Laravel 5 support.",
+            "time": "2017-08-11 22:09:16"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v2.0.11",
             "source": {
@@ -1315,6 +1355,55 @@
                 "uuid"
             ],
             "time": "2017-09-22 20:46:04"
+        },
+        {
+            "name": "rmccue/requests",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmccue/Requests.git",
+                "reference": "87932f52ffad70504d93f04f15690cf16a089546"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmccue/Requests/zipball/87932f52ffad70504d93f04f15690cf16a089546",
+                "reference": "87932f52ffad70504d93f04f15690cf16a089546",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "requests/test-server": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Requests": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan McCue",
+                    "homepage": "http://ryanmccue.info"
+                }
+            ],
+            "description": "A HTTP library written in PHP, for human beings.",
+            "homepage": "http://github.com/rmccue/Requests",
+            "keywords": [
+                "curl",
+                "fsockopen",
+                "http",
+                "idna",
+                "ipv6",
+                "iri",
+                "sockets"
+            ],
+            "time": "2016-10-13 00:11:37"
         },
         {
             "name": "swiftmailer/swiftmailer",

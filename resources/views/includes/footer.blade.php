@@ -16,7 +16,7 @@
                 <h5>Comenzar</h5>
                 <ul>
                     <li><a href="/">Inicio</a></li>
-                    <li><a data-toggle="modal" data-target="#registrar">Registrar</a></li>
+                    <li><a href="register">Registrar</a></li>
                     <li><a href="#"></a></li>
                 </ul>
             </div>
