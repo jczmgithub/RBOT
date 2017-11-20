@@ -21,7 +21,7 @@ Route::get('contact', function() {
 Route::post('contacto', 'ContactoController@ContactoDatos');
 
 Route::get('RBX1', function(){
-    return(view('includes.error404'));
+    return(view('pages.RBX1'));
 });
 Route::get('controlBotones', function(){
     return(view('includes.error404'));
