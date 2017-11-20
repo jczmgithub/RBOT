@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top arreglar-nav">
+<nav class="navbar navbar-default navbar-fixed-top arreglar-nav" id="navegador">
 
     <div class="container-fluid">
         <div class="navbar-header">

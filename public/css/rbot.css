@@ -184,8 +184,62 @@ html, body{
 .dropdown-menu{
     background-color: #D9D9D9;
 }
-.navbar-default.nav li a{
-    color: #2DA18A !important;
+.panel-default > .panel-heading {
+    background-color: #333333;
+    border-color: #2DA18A;
+    color: white;
+}
+.panel-default{
+    border: 3px solid #2DA18A;
+    background-color: #D9D9D9;
+}
+#videoYoutube{
+    border: 3px solid #2DA18A;
 }
 
+/* Boton nuevo color */
+.btn-rbt {
+    color: #ffffff;
+    background-color: #2DA18A;
+    border-color: #333333;
+}
 
+.btn-rbt:hover,
+.btn-rbt:focus,
+.btn-rbt:active,
+.btn-rbt.active,
+.open .dropdown-toggle.btn-rbt {
+    color: #ffffff;
+    background-color: #0026FE;
+    border-color: #333333;
+}
+
+.btn-rbt:active,
+.btn-rbt.active,
+.open .dropdown-toggle.btn-rbt {
+    background-image: none;
+}
+
+.btn-rbt.disabled,
+.btn-rbt[disabled],
+fieldset[disabled] .btn-rbt,
+.btn-rbt.disabled:hover,
+.btn-rbt[disabled]:hover,
+fieldset[disabled] .btn-rbt:hover,
+.btn-rbt.disabled:focus,
+.btn-rbt[disabled]:focus,
+fieldset[disabled] .btn-rbt:focus,
+.btn-rbt.disabled:active,
+.btn-rbt[disabled]:active,
+fieldset[disabled] .btn-rbt:active,
+.btn-rbt.disabled.active,
+.btn-rbt[disabled].active,
+fieldset[disabled] .btn-rbt.active {
+    background-color: #2DA18A;
+    border-color: #333333;
+}
+
+.btn-rbt .badge {
+    color: #2DA18A;
+    background-color: #ffffff;
+}
