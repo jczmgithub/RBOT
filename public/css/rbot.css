@@ -243,3 +243,30 @@ fieldset[disabled] .btn-rbt.active {
     color: #2DA18A;
     background-color: #ffffff;
 }
+
+#infoRBX h2, h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.gallery {
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gallery figure {
+    flex-basis: 33.333%;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.gallery figure img {
+    width: 100%;
+    border-radius: 10px;
+}

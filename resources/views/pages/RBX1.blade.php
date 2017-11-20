@@ -5,25 +5,22 @@
     <div id="infoRBX" class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2>
+                <h3>
                     Información Sobre RBX1:
-                </h2>
+                </h3>
             </div>
-            <div class="panel-body">
-
-                <h4>
+            <div class="panel-body text-justify">
+                    <p>
                     El RBX1 (también conocido como Remix) es un brazo de Robot de 6 ejes impreso en 3D. El robot está construido
                     usando solo una impresora 3D sin componentes mecanizados. También utiliza solo un Raspberry Pi y nuestro nuevo
                     controlador de motor paso a paso SlushEngine Modelo D 7 para controlar el robot. No se requiere una computadora
                     externa.
-                </h4>
-                <h4>
+                    </p><p>
                     Le proporcionamos este kit de creación usted mismo para que pueda armar este robot y realmente darle a su impresora
                     3D en casa un proyecto desafiante. Esencialmente, todo lo que necesita es una impresora 3D y una Raspberry Pi;
                     proporcionamos el resto de los componentes junto con documentos de montaje y programación.
-                </h4>
+                    </p>
 
-                <h4>
                     <p>INCLUYE:</p>
                     <li>7 motores paso a paso de NEMA23 a NEMA14</li>
                     <li>Un servomotor para la pinza</li>
@@ -37,7 +34,6 @@
                     <li>Tarjeta SD de arranque con imagen de Raspberry Pi y todo el software requerido</li>
                     <li>Controlador / enseñar colgante</li>
                     <li>Archivo 3D Cad y videos de la guía de montaje</li>
-                </h4>
             </div>
         </div>
 
