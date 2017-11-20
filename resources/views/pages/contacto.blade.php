@@ -18,6 +18,11 @@
                                     </ul>
                                 </div>
                             @endif
+                                @if (session('status'))
+                                    <div class="alert alert-success">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
                             <form class="form-horizontal" method="POST" action="contacto">
                                 {{ csrf_field() }}
 
@@ -42,7 +47,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
-                                        <button type="submit" class="btn btn-info">Enviar</button>
+                                        <button type="submit" class="btn btn-rbt">Enviar</button>
                                     </div>
                                 </div>
                             </form>

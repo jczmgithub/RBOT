@@ -203,7 +203,6 @@ html, body{
     background-color: #2DA18A;
     border-color: #333333;
 }
-
 .btn-rbt:hover,
 .btn-rbt:focus,
 .btn-rbt:active,
@@ -213,13 +212,11 @@ html, body{
     background-color: #0026FE;
     border-color: #333333;
 }
-
 .btn-rbt:active,
 .btn-rbt.active,
 .open .dropdown-toggle.btn-rbt {
     background-image: none;
 }
-
 .btn-rbt.disabled,
 .btn-rbt[disabled],
 fieldset[disabled] .btn-rbt,
@@ -238,11 +235,11 @@ fieldset[disabled] .btn-rbt.active {
     background-color: #2DA18A;
     border-color: #333333;
 }
-
 .btn-rbt .badge {
     color: #2DA18A;
     background-color: #ffffff;
 }
+
 
 #infoRBX h2, h4{
     margin-top: 0px;
