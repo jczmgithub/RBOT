@@ -26,6 +26,9 @@ Route::get('RBX1', function(){
 Route::get('controlBotones', function(){
     return(view('includes.error404'));
 });
+Route::get('error404', function(){
+    return view('includes.error404');
+});
 Route::get('controlManual', function(){
     return(view('includes.error404'));
 });

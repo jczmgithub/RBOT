@@ -25,19 +25,19 @@
                 <div class="thumbnail seccion">
                     <h2>RBX1</h2>
                     <p>El RBX1 (también conocido como Remix) es un brazo de robot impreso de 6 ejes 3D. El robot se construye utilizando...</p>
-                    <p class="caption"><a class="btn btn-primary" href="RBX1" role="button">Detalles &raquo;</a></p>
+                    <p class="caption"><a class="btn btn-primary" href="RBX1" role="button">Ver Robot &raquo;</a></p>
                 </div></div>
             <div class="col-md-4">
                 <div class="thumbnail seccion  ">
                     <h2>Control por funciones</h2>
                     <p>El brazo robótico puede ser controlado por secuencias. Mueve los ejes y crea tu secuencia de movimientos. </p>
-                    <p class="caption"><a class="btn btn-warning" href="controlBotones.blade.php" role="button">Detalles <span class="glyphicon glyphicon-console"></span></a></p>
+                    <p class="caption"><a class="btn btn-warning" href="controlBotones.blade.php" role="button">Ver control <span class="glyphicon glyphicon-console"></span></a></p>
                 </div></div>
             <div class="col-md-4">
                 <div class="thumbnail seccion">
                     <h2>Control manual</h2>
                     <p>El brazo robótico también se puede controlar mediante un mando de consola. ¡Un mando Xbox para controlar motores!</p>
-                    <p class="caption"><a class="btn btn-warning" href="#" role="button">Detalles <i class="fa fa-gamepad" aria-hidden="true"></i></a></p>
+                    <p class="caption"><a class="btn btn-warning" href="#" role="button">Ver control manual <i class="fa fa-gamepad" aria-hidden="true"></i></a></p>
                 </div>
             </div>
         </div>

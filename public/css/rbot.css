@@ -48,6 +48,7 @@ html, body{
 .navbar-default{
     background-color: #D9D9D9;
     color: white;
+    border-bottom: 2px solid #2DA18A;
 }
 
 
@@ -200,8 +201,8 @@ html, body{
 /* Boton nuevo color */
 .btn-rbt {
     color: #ffffff;
-    background-color: #2DA18A;
-    border-color: #333333;
+    background-color: #333333;
+    border-color: #2DA18A;
 }
 .btn-rbt:hover,
 .btn-rbt:focus,
@@ -209,8 +210,8 @@ html, body{
 .btn-rbt.active,
 .open .dropdown-toggle.btn-rbt {
     color: #ffffff;
-    background-color: #0026FE;
-    border-color: #333333;
+    background-color: #2DA18A;
+    border-color: #2DA18A;
 }
 .btn-rbt:active,
 .btn-rbt.active,
@@ -266,4 +267,19 @@ fieldset[disabled] .btn-rbt.active {
 .gallery figure img {
     width: 100%;
     border-radius: 10px;
+}
+#infos{
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+#videoYoutube{
+    margin-bottom: 5%;
+}
+#titles{
+    background-color: #000000;
+    width: auto;
+    border-bottom: 3px solid #2DA18A;
+    border-radius: 5px;
+    color: white;
+    height: 50px;
 }

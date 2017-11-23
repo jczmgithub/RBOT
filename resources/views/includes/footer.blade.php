@@ -17,22 +17,22 @@
                 <ul>
                     <li><a href="/">Inicio</a></li>
                     <li><a href="register">Registrar</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="error404"></a></li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <h5>Sobre nosotros</h5>
                 <ul>
                     <li><a href="https://domotek.es/" target="_blank">Empresa Domotek</a></li>
-                    <li><a href="#">Descargas</a></li>
+                    <li><a href="error404">Descargas</a></li>
                     <li><a href="contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <div class="social-networks">
-                    <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
-                    <a href="#" class="facebook"><span class="fa fa-facebook"></span></a>
-                    <a href="#" class="google"><span class="fa fa-google-plus"></span></a>
+                    <a href="error404" class="twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="error404" class="facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="error404" class="google"><span class="fa fa-google-plus"></span></a>
                 </div>
             </div>
         </div>
