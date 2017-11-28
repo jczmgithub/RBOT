@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RBOT.iml" filepath="$PROJECT_DIR$/.idea/RBOT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/laravel55multiauth.iml" filepath="$PROJECT_DIR$/.idea/laravel55multiauth.iml" />
     </modules>
   </component>
 </project>
