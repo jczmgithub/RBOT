@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('home')
 
+    {!! Html::style('css/user/homeUser.css') !!}
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">

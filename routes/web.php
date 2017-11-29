@@ -23,15 +23,7 @@ Route::post('contacto', 'ContactoController@ContactoDatos');
 Route::get('RBX1', function(){
     return(view('pages.RBX1'));
 });
-Route::get('controlBotones', function(){
-    return(view('includes.error404'));
-});
-Route::get('error404', function(){
-    return view('includes.error404');
-});
-Route::get('controlManual', function(){
-    return(view('includes.error404'));
-});
+
 Auth::routes();
 Route::post('auth/login', 'Auth\LoginController@attemptLogin');
 Route::get('/home', 'HomeController@index')->name('home');

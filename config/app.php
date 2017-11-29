@@ -178,6 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Collective\Html\HtmlServiceProvider::class,
+
     ],
 
     /*
@@ -227,6 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Mailchimp' => NZTim\Mailchimp\MailchimpFacade::class,
+
+        'HTML' => Collective\Html\HtmlFacade::class,
 
     ],
 
