@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-default navbar-fixed-top arreglar-nav" id="navegador">
 
     <div class="container-fluid">
@@ -74,16 +75,11 @@
                                 </ul>
                             </li>
                         @endif
-                        @endguest
+                @endguest
             </ul>
             </ul>
         </div>
     </div>
 </nav>
-<script>
-    $('ul.nav li.dropdown').hover(function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(20).fadeIn(500);
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(20).fadeOut(500);
-    });
-</script>
+
+{!! HTML::script('js/includes/nav.js'); !!}

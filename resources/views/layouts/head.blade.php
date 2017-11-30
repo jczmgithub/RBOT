@@ -12,4 +12,5 @@
 <link rel="stylesheet" href="/css/rbot.css">
 <!-- Glyphicons -->
 <link rel="stylesheet" href="/css/font-awesome.min.css">
-
+<!-- link favicon-->
+<link rel="shortcut icon" href="{{ asset('faviconKpau.png') }}">
