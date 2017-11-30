@@ -1,9 +1,9 @@
 <body>
-@include('includes.nav')
+@include('layouts.nav')
 
 <div id="main">
     @yield('home')
 </div>
 
-@include('includes.footer')
+@include('layouts.footer')
 </body>
