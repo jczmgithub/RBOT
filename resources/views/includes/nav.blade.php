@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default navbar-fixed-top arreglar-nav" id="navegador">
 
     <div class="container-fluid">
