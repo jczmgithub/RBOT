@@ -1,5 +1,4 @@
 <nav class="navbar navbar-default navbar-fixed-top arreglar-nav" id="navegador">
-
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
@@ -10,12 +9,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li ><a href="/">Inicio</a></li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Características
                         <span class="caret"></span></a>
@@ -38,7 +35,6 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ route('admin.logout') }}"
@@ -58,7 +54,6 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ route('logout') }}"
@@ -66,7 +61,6 @@
                                                  document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
@@ -75,7 +69,6 @@
                             </li>
                         @endif
                 @endguest
-            </ul>
             </ul>
         </div>
     </div>

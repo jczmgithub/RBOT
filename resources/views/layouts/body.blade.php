@@ -1,5 +1,9 @@
+<body>
 @include('includes.nav')
 
-@yield('content')
+<div id="main">
+    @yield('home')
+</div>
 
 @include('includes.footer')
+</body>
