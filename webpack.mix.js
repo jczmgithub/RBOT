@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+var mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,5 +11,9 @@ let mix = require('laravel-mix');
  |
  */
 
+/* Default tasks
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+*/
+
+mix.sass('resources/assets/sass/rbot.scss', 'public/css');
