@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('admin.layouts.default')
 
 @section('home')
 <div class="container">

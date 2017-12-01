@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('user.layouts.default')
 @section('home')
 
     <!-- Main jumbotron for a primary marketing message or call to action -->

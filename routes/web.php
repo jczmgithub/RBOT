@@ -12,17 +12,10 @@
 */
 
 Route::get('/', function(){
-    return view('pages.home');
+    return view('landing.home');
 });
 
-Route::get('contact', function() {
-    return View('pages.contacto');
-});
 Route::post('contacto', 'ContactoController@ContactoDatos');
-
-Route::get('RBX1', function(){
-    return(view('pages.RBX1'));
-});
 
 Auth::routes();
 Route::post('auth/login', 'Auth\LoginController@attemptLogin');

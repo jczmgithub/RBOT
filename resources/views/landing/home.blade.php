@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('landing.layouts.default')
 @section('home')
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
