@@ -74,4 +74,4 @@
     </div>
 </nav>
 
-{!! HTML::script('js/includes/nav.js'); !!}
+{!! HTML::script('js/landing/layouts/nav.js'); !!}
