@@ -1,41 +1,39 @@
-/* MAIN - GENERAL */
+$colorBlanco: white;
 
+
+
+/* MAIN - GENERAL */
 body {
   padding-top: 50px;
   background-color: #D9D9D9;
 }
-
-html,
-body {
+html, body{
   min-height: 100%;
   font-family: "Zekton";
 }
-
-.contenido {
+.contenido{
   margin-top: 30px;
 }
-
-#main {
+#main{
   height: 100%;
   min-height: 100%;
   position: relative;
 }
-
-#item {
-  max-height: 500px;
+#item{
+  max-height:500px;
 }
-
-.seccion {
+.seccion{
   background-color: #333333;
-  color: white;
+  color: $colorBlanco;
   padding: 10px;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   padding-bottom: 20px;
   padding-top: 20px;
   margin-bottom: 50px;
-}
 
+}
 .jumbotron {
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -47,25 +45,23 @@ body {
 }
 
 /* HEADER */
-
-#logo {
-  max-height: 150%;
+#logo{
+  max-height:150%;
   padding-bottom: 10%;
 }
-
-.navbar-default {
+.navbar-default{
   background-color: #D9D9D9;
-  color: white;
+  color: $colorBlanco;
   border-bottom: 2px solid #2DA18A;
 }
 
-/* FOOTER */
 
+/* FOOTER */
 #myFooter {
   background-color: #3c3d41;
-  color: white;
+  color: $colorBlanco;
   padding-top: 10px;
-  bottom: 0;
+  bottom:0;
   width: 100%;
 }
 
@@ -98,15 +94,15 @@ body {
 
 #myFooter h5 {
   font-size: 18px;
-  color: white;
+  color: $colorBlanco;
   font-weight: bold;
   margin-top: 30px;
 }
 
-#myFooter h2 a {
+#myFooter h2 a{
   font-size: 50px;
   text-align: center;
-  color: white;
+  color: $colorBlanco;
 }
 
 #myFooter a {
@@ -117,7 +113,7 @@ body {
 #myFooter a:hover,
 #myFooter a:focus {
   text-decoration: none;
-  color: white;
+  color: $colorBlanco;
 }
 
 #myFooter .social-networks {
@@ -130,7 +126,6 @@ body {
   font-size: 32px;
   color: #f9f9f9;
   padding: 10px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -155,91 +150,78 @@ body {
     text-align: center;
   }
 }
-
 .zekton {
   font-family: "Zekton";
 }
 
-#logoE {
+#logoE{
   max-width: 100%;
 }
-
 /*Logo con fondo blanco*/
-
-#blanco {
-  background-color: white;
+#blanco{
+  background-color: $colorBlanco;
   opacity: 0.8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
 /* CSS used for positioning the footers at the bottom of the page. */
-
 /* You can remove this. */
 
-.arreglar-nav {
-  margin-bottom: 50px;
+.arreglar-nav{
+  margin-bottom:50px;
 }
-
-#titulo {
+#titulo{
   text-align: center;
-  text-shadow: 2px 2px 2px black;
-  color: white;
+  text-shadow:2px 2px 2px black;
+  color: $colorBlanco;
 }
-
-#subtitulo {
+#subtitulo{
   text-align: center;
-  text-shadow: 2px 2px 2px black;
-  color: white;
+  text-shadow:2px 2px 2px black;
+  color: $colorBlanco;
 }
-
-@font-face {
+@font-face{
   font-family: "Zekton";
   src: url("/public/fonts/zekton/zekton rg.ttf");
 }
-
-.dropdown-menu {
+.dropdown-menu{
   background-color: #D9D9D9;
 }
-
 .panel-default > .panel-heading {
   background-color: #333333;
   border-color: #2DA18A;
-  color: white;
+  color: $colorBlanco;
 }
-
-.panel-default {
+.panel-default{
   border: 3px solid #2DA18A;
   background-color: #D9D9D9;
 }
-
-#videoYoutube {
+#videoYoutube{
   border: 3px solid #2DA18A;
 }
 
 /* Boton nuevo color */
-
 .btn-rbt {
-  color: white;
+  color: $colorBlanco;
   background-color: #333333;
   border-color: #2DA18A;
 }
-
 .btn-rbt:hover,
 .btn-rbt:focus,
 .btn-rbt:active,
 .btn-rbt.active,
 .open .dropdown-toggle.btn-rbt {
-  color: white;
+  color: $colorBlanco;
   background-color: #2DA18A;
   border-color: #2DA18A;
 }
-
 .btn-rbt:active,
 .btn-rbt.active,
 .open .dropdown-toggle.btn-rbt {
   background-image: none;
 }
-
 .btn-rbt.disabled,
 .btn-rbt[disabled],
 fieldset[disabled] .btn-rbt,
@@ -258,14 +240,13 @@ fieldset[disabled] .btn-rbt.active {
   background-color: #2DA18A;
   border-color: #333333;
 }
-
 .btn-rbt .badge {
   color: #2DA18A;
-  background-color: white;
+  background-color: $colorBlanco;
 }
 
-#infoRBX h2,
-h4 {
+
+#infoRBX h2, h4{
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -277,40 +258,32 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .gallery figure {
-  -ms-flex-preferred-size: 33.333%;
-      flex-basis: 33.333%;
+  flex-basis: 33.333%;
   padding: 10px;
   overflow: hidden;
   border-radius: 10px;
-}
 
+}
 .gallery figure img {
   width: 100%;
   border-radius: 10px;
 }
-
-#infos {
+#infos{
   margin-top: 1%;
   margin-bottom: 3%;
 }
-
-#videoYoutube {
+#videoYoutube{
   margin-bottom: 5%;
 }
-
-#titles {
+#titles{
   background-color: #000000;
   width: auto;
   border-bottom: 3px solid #2DA18A;
   border-radius: 5px;
-  color: white;
+  color: $colorBlanco;
   height: 50px;
 }
-
