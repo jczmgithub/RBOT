@@ -1,7 +1,6 @@
 $colorBlanco: white;
 
 
-
 /* MAIN - GENERAL */
 body {
   padding-top: 50px;
@@ -38,7 +37,7 @@ html, body{
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-image: url("/public/img/robot-hand3.jpg");
+  background-image: url("../img/robot-hand3.jpg");
   background-size: cover;
   background-position: center;
   padding-bottom: 50px;
@@ -184,7 +183,7 @@ html, body{
 }
 @font-face{
   font-family: "Zekton";
-  src: url("/public/fonts/zekton/zekton rg.ttf");
+  src: url("../fonts/zekton/zekton rg.ttf");
 }
 .dropdown-menu{
   background-color: #D9D9D9;

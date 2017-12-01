@@ -47,6 +47,6 @@
     </div>
     <br/>
 
-    {!! HTML::style('css/user/homeUser.css') !!}
+    {!! HTML::style('css/user/home.css') !!}
 
 @stop
