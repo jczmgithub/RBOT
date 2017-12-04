@@ -1,4 +1,4 @@
-<h1>RBOT</h1>
+<h1 align="center">RBOT</h1>
 
 ## Descripción
 
