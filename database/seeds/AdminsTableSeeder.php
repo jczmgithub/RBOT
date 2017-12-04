@@ -23,8 +23,8 @@ class AdminsTableSeeder extends Seeder
                 'password' => bcrypt('zubiri')
             ],
             [
-                'name' => 'admin',
-                'code' => 'ADMIN77K',
+                'name' => 'Admin',
+                'code' => 'admin',
                 'password' => bcrypt('zubiri')
             ],
         ];
