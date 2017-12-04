@@ -154,18 +154,6 @@ html, body {
   color: #ef1a1a;
 }
 
-#myFooter .facebook:hover {
-  color: #0077e2;
-}
-
-#myFooter .google:hover {
-  color: #ef1a1a;
-}
-
-#myFooter .twitter:hover {
-  color: #00aced;
-}
-
 @media screen and (max-width: 767px) {
   #myFooter {
     text-align: center;

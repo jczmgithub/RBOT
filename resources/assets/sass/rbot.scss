@@ -1,5 +1,4 @@
-$colorBlanco: white;
-
+@import "varsRobot";
 
 /* MAIN - GENERAL */
 body {
@@ -315,7 +314,7 @@ fieldset[disabled] .btn-rbt.active {
 }
 
 #seccionbrazo{
-  background-color: white;
+  background-color: $colorBlanco;
 }
 
 #contenedorContacto{
