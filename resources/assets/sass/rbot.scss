@@ -135,13 +135,17 @@ html, body{
 #myFooter .facebook:hover {
   color: #0077e2;
 }
-
-#myFooter .google:hover {
-  color: #ef1a1a;
-}
-
 #myFooter .twitter:hover {
   color: #00aced;
+}
+#myFooter .pinterest:hover {
+  color: #bd081c;
+}
+#myFooter .instagram:hover {
+  color: #bd1774;
+}
+#myFooter .youtube:hover {
+  color: #ef1a1a;
 }
 
 @media screen and (max-width: 767px) {
@@ -285,4 +289,39 @@ fieldset[disabled] .btn-rbt.active {
   border-radius: 5px;
   color: $colorBlanco;
   height: 50px;
+}
+
+/* CSS para home public */
+
+#inicio{
+
+  background-image:url("../img/fondoInicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 595px;
+
+}
+
+#descripcion{
+
+  color: white;
+  text-shadow:
+          -1px -1px 0 black,
+          1px -1px 0 black,
+          -1px 1px 0 black,
+          1px 1px 0 black;
+
+}
+
+#seccionbrazo{
+  background-color: white;
+}
+
+#contenedorContacto{
+  background-color: gray;
+}
+
+#contacto{
+  margin-top: 20px;
 }

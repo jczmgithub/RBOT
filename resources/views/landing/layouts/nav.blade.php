@@ -1,8 +1,8 @@
-<nav class="navbar navbar-default navbar-fixed-top arreglar-nav" id="navegador">
+<nav class="navbar navbar-inverse navbar-fixed-top arreglar-nav" id="navegador">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
-                <img class="icon-bar" id="logo" src="/img/domotek-logo.png">
+                <img class="icon-bar" id="logo" src="/faviconKpau.png">
             </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -10,19 +10,13 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
+
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li ><a href="/">Inicio</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Características
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="RBX1">Robot</a></li>
-                        <li><a href="controlManual">Mando</a></li>
-                        <li><a href="controlBotones">Funciones</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact">Contacto</a></li>
+
+                @yield('huecoNav')
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
@@ -73,5 +67,3 @@
         </div>
     </div>
 </nav>
-
-{!! HTML::script('js/landing/layouts/nav.js'); !!}

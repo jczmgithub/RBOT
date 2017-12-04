@@ -1,4 +1,11 @@
-@extends('user.layouts.default')
+@extends('landing.layouts.default')
+
+@section('huecoNav')
+    <li ><a href="#seccionbrazo">Características</a></li>
+    <li ><a href="#servicios">Servicios</a></li>
+    <li ><a href="#contacto">Contacto</a></li>
+@stop
+
 @section('home')
 
     <!-- Main jumbotron for a primary marketing message or call to action -->

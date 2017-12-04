@@ -20,6 +20,5 @@ mix.options({
     processCssUrls: false // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
 });
 
-mix.js('resources/assets/js/landing/layouts/nav.js', 'public/js/landing/layouts')
-    .mix.sass('resources/assets/sass/user/home.scss', 'public/css/user')
+mix.mix.sass('resources/assets/sass/user/home.scss', 'public/css/user')
     .mix.sass('resources/assets/sass/rbot.scss', 'public/css');

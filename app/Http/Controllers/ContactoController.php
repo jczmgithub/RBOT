@@ -23,6 +23,6 @@ class ContactoController extends Controller
                 $message->to($data['email']);
                 $message->subject('Contacto enviado');
             });
-        return redirect (url('contact'))->with('status', 'Se ha enviado correctamente');
+        return redirect (url('/#contenedorContacto'))->with('status', 'Se ha enviado correctamente');
     }
 }

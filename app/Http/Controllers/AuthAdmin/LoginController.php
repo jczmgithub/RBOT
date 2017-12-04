@@ -48,8 +48,8 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $this->validate($request, [
-            'code' => 'required|string|min:8',
-            'password' => 'required|min:6'
+            'code' => 'required|string|min:1',
+            'password' => 'required|min:1'
         ]);
 
         $credential = [
