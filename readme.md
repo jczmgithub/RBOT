@@ -1,53 +1,28 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<h1>RBOT</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Descripción
 
-## About Laravel
+El proyecto es una aplicación web que controla brazos robóticos en remoto. El trabajo que realizaremos es una colaboración entre alumnos de zubiri-manteo y la empresa domotek, que realiza labores de impresión 3D. Lo que queremos lograr es que una vez terminen la impresión de una pieza, el brazo robotico se encarge de retirarla y preparar la próxima impresión. El robot podremos controlarlo de forma remota desde cualquier rincón del mundo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+El concepto de la industria 4.0 consiste en la introducción de las nuevas tecnologías digitales en las empresas.El objetivo que se pretende alcanza es la puesta en marcha de un gran número de fábricas inteligentes que sean capaces de una mayor adaptabilidad a las necesidades y a los procesos de producción, así como a una asignación más eficiente de los recursos, abriendo así la vía a una nueva revolución industrial.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Objetivo
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+El objetivo es desarrollar una aplicación web que nos permita controlar los robots de forma remota y deberá ofrecer diversas funcionalidades para que el control del robot sea más sencillo y preciso.
 
-## Learning Laravel
+Nuestra aplicación permitiría el guardar secuencias para el robot y así ejecutarlas con un solo click. También de una forma visual nos permitiria controlar el robot con una interfaz creada especificamente para ello.
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+## Resultados esperados
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+Gracias a esta aplicación empresas tradicionales podrán integrarse en la industria 4.0.
 
-## Laravel Sponsors
+Beneficios del uso de la aplicación web:
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+- Movilidad: No tienes que estar fisicamente en el lugar de trabajo.
+- Productividad: Los robots estarán continuamente trabajando.
+- Usabilidad: La aplicación hará más sencillo el manejo de los robots.
+- Disponibilidad: Permite el acceso desde cualquier dispositivo con internet.
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
+La aplicación podría tener funcionalides para labores militares y así no peligrar la vida de los soldados.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
