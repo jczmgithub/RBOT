@@ -17,7 +17,13 @@ mix.js('resources/assets/js/app.js', 'public/js')
 */
 
 mix.options({
-    processCssUrls: false // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+    processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+    postCss: [
+        require('autoprefixer')({
+            browsers: ['last 3 versions'],
+            cascade: false
+        })
+    ],
 });
 
 mix.sass('resources/assets/sass/user/home.scss', 'public/css/user')

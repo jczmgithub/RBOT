@@ -1,3 +1,8 @@
 body {
   background-color: yellow;
 }
+
+div {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}

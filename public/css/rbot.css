@@ -278,13 +278,13 @@ fieldset[disabled] .btn-rbt.active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .gallery figure {
   -ms-flex-preferred-size: 33.333%;
-      flex-basis: 33.333%;
+  flex-basis: 33.333%;
   padding: 10px;
   overflow: hidden;
   border-radius: 10px;
