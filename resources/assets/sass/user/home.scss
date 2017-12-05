@@ -3,3 +3,7 @@
 body{
   background-color: $colorPruebas;
 }
+
+div {
+  transition: width 2s;
+}
