@@ -66,4 +66,6 @@
             </ul>
         </div>
     </div>
+
+    {!! HTML::style('css/layouts/nav.css') !!}
 </nav>

@@ -1,0 +1,100 @@
+@import "../varsRobot";
+
+/* FOOTER */
+#myFooter {
+  background-color: #3c3d41;
+  color: $colorBlanco;
+  padding-top: 10px;
+  bottom:0;
+  width: 100%;
+}
+
+#myFooter .footer-copyright {
+  background-color: #333333;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+#myFooter .row {
+  margin-bottom: 10px;
+}
+
+#myFooter .navbar-brand {
+  margin-top: 35px;
+  height: 50px;
+}
+
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: $colorCasiBlanco;
+}
+
+#myFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+}
+
+#myFooter h5 {
+  font-size: 18px;
+  color: $colorBlanco;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#myFooter h2 a{
+  font-size: 50px;
+  text-align: center;
+  color: $colorBlanco;
+}
+
+#myFooter a {
+  color: $colorCasiBlanco;
+  text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+  text-decoration: none;
+  color: $colorBlanco;
+}
+
+#myFooter .social-networks {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+  font-size: 32px;
+  color: $colorCasiBlanco;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+  text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+  color: #0077e2;
+}
+#myFooter .twitter:hover {
+  color: #00aced;
+}
+#myFooter .pinterest:hover {
+  color: #bd081c;
+}
+#myFooter .instagram:hover {
+  color: #bd1774;
+}
+#myFooter .youtube:hover {
+  color: #ef1a1a;
+}
+
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+  }
+}

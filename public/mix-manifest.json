@@ -1,4 +1,7 @@
 {
     "/css/user/home.css": "/css/user/home.css",
+    "/css/layouts/nav.css": "/css/layouts/nav.css",
+    "/css/layouts/footer.css": "/css/layouts/footer.css",
+    "/css/home.css": "/css/home.css",
     "/css/rbot.css": "/css/rbot.css"
 }
