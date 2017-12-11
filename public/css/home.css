@@ -1,0 +1,25 @@
+/* CSS para home landingPage */
+#inicio {
+  background-image: url("../img/fondoInicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 595px;
+}
+
+#descripcion {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+#seccionbrazo {
+  background-color: white;
+}
+
+#contenedorContacto {
+  background-color: gray;
+}
+
+#contacto {
+  margin-top: 20px;
+}

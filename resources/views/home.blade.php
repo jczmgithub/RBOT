@@ -131,4 +131,6 @@
             </div>
         </div>
     </div>
+
+    {!! HTML::style('css/home.css') !!}
 @stop

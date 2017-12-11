@@ -1,0 +1,41 @@
+@import "varsRobot";
+
+/* CSS para home landingPage */
+#inicio{
+  background-image:url("../img/fondoInicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 595px;
+}
+
+#descripcion{
+  color: $colorBlanco;
+  text-shadow:
+          -1px -1px 0 $colorNegro,
+          1px -1px 0 $colorNegro,
+          -1px 1px 0 $colorNegro,
+          1px 1px 0 $colorNegro;
+}
+
+#seccionbrazo{
+  background-color: $colorBlanco;
+}
+
+#contenedorContacto{
+  background-color: gray;
+}
+
+#contacto{
+  margin-top: 20px;
+}
+
+.jumbotron {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-image: url("../img/robot-hand3.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 50px;
+}

@@ -1,0 +1,11 @@
+/* NAV */
+#logo {
+  max-height: 150%;
+  margin-top: -4px;
+}
+
+.navbar-default {
+  background-color: #D9D9D9;
+  color: white;
+  border-bottom: 2px solid #337AB7;
+}
