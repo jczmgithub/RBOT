@@ -1,4 +1,5 @@
-@extends('landing.layouts.default')
+@extends('layouts.default')
+
 @section('home')
     <div class="contenido container">
         <div class="row">
