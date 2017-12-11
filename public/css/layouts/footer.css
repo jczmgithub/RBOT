@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Zekton";
+  src: url("../fonts/zekton/zekton rg.ttf");
+}
+
 /* FOOTER */
 #myFooter {
   background-color: #3c3d41;

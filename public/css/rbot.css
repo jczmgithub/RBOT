@@ -1,4 +1,8 @@
-/* MAIN - GENERAL */
+@font-face {
+  font-family: "Zekton";
+  src: url("../fonts/zekton/zekton rg.ttf");
+}
+
 body {
   padding-top: 50px;
   background-color: #D9D9D9;
@@ -9,81 +13,12 @@ html, body {
   font-family: "Zekton";
 }
 
-.contenido {
-  margin-top: 30px;
-}
-
-#main {
-  height: 100%;
-  min-height: 100%;
-  position: relative;
-}
-
-#item {
-  max-height: 500px;
-}
-
-.seccion {
-  background-color: #333333;
-  color: white;
-  padding: 10px;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  padding-bottom: 20px;
-  padding-top: 20px;
-  margin-bottom: 50px;
-}
-
-.jumbotron {
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-image: url("../img/robot-hand3.jpg");
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 50px;
-}
-
 .zekton {
   font-family: "Zekton";
 }
 
-#logoE {
-  max-width: 100%;
-}
-
-/*Logo con fondo blanco*/
-#blanco {
-  background-color: white;
-  opacity: 0.8;
-  border-radius: 10px;
-}
-
-/* CSS used for positioning the footers at the bottom of the page. */
-/* You can remove this. */
-.arreglar-nav {
-  margin-bottom: 50px;
-}
-
-#titulo {
-  text-align: center;
-  text-shadow: 2px 2px 2px black;
-  color: white;
-}
-
-#subtitulo {
-  text-align: center;
-  text-shadow: 2px 2px 2px black;
-  color: white;
-}
-
-@font-face {
-  font-family: "Zekton";
-  src: url("../fonts/zekton/zekton rg.ttf");
-}
-
-.dropdown-menu {
-  background-color: #D9D9D9;
+.contenido {
+  margin-top: 30px;
 }
 
 .panel-default > .panel-heading {
@@ -97,11 +32,7 @@ html, body {
   background-color: #D9D9D9;
 }
 
-#videoYoutube {
-  border: 3px solid #337AB7;
-}
-
-/* Boton nuevo color */
+/* Botones submit */
 .btn-rbt {
   color: white;
   background-color: #333333;
@@ -146,53 +77,4 @@ fieldset[disabled] .btn-rbt.active {
 .btn-rbt .badge {
   color: #337AB7;
   background-color: white;
-}
-
-#infoRBX h2, h4 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.gallery {
-  position: relative;
-  z-index: 2;
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
-.gallery figure {
-  -ms-flex-preferred-size: 33.333%;
-  flex-basis: 33.333%;
-  padding: 10px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.gallery figure img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-#infos {
-  margin-top: 1%;
-  margin-bottom: 3%;
-}
-
-#videoYoutube {
-  margin-bottom: 5%;
-}
-
-#titles {
-  background-color: #000000;
-  width: auto;
-  border-bottom: 3px solid #337AB7;
-  border-radius: 5px;
-  color: white;
-  height: 50px;
 }
