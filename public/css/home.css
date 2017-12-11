@@ -19,6 +19,7 @@
 
 #seccionbrazo {
   background-color: white;
+  min-height: 400px;
 }
 
 #contenedorContacto {
@@ -37,4 +38,18 @@
   background-size: cover;
   background-position: center;
   padding-bottom: 50px;
+}
+#servicios{
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+#contenedorContacto{
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
