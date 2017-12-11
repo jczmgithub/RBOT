@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function(){
-    return view('landing.home');
+    return view('home');
 });
 
 Route::post('contacto', 'ContactoController@ContactoDatos');

@@ -1,4 +1,4 @@
-@extends('landing.layouts.default')
+@extends('layouts.default')
 
 @section('huecoNav')
     <li ><a href="#seccionbrazo">Características</a></li>
