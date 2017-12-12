@@ -10,7 +10,7 @@ body {
 
 html, body {
   min-height: 100%;
-  font-family: "Zekton";
+  font-family: "Pangolin";
 }
 
 .zekton {
@@ -77,4 +77,9 @@ fieldset[disabled] .btn-rbt.active {
 .btn-rbt .badge {
   color: #337AB7;
   background-color: white;
+}
+
+.contenidoLogin {
+  margin-top: 4%;
+  min-height: 72vh;
 }
