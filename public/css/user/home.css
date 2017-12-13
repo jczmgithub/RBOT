@@ -17,6 +17,10 @@ body {
   margin: auto;
 }
 
+.formularioMotor {
+  margin: 2%;
+}
+
 div {
   -webkit-transition: width 2s;
   transition: width 2s;
