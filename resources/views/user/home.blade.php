@@ -36,7 +36,9 @@
 
             </div>
 
-            <div id="controles">
+            <div id="controles" class="container">
+
+                <div class="row">
 
                 <h3>Controles</h3>
 
@@ -44,27 +46,80 @@
 
                     <fieldset>
 
-                        Motor 1:
-                        <br><input type="number" name="motor1" value=""><br>
-                        Motor 2:
-                        <br><input type="number" name="Motor2" value=""><br>
-                        Motor 3:
-                        <br><input type="number" name="Motor3" value=""><br>
-                        Motor 4:
-                        <br><input type="number" name="motor4" value=""><br>
-                        Motor 5:
-                        <br><input type="number" name="Motor5" value=""><br>
-                        Motor 6:
-                        <br><input type="text" name="Motor6" value=""><br>
+                        <div class="col-md-4 formularioMotor">
 
-                        <br><input type="submit" value="Enviar Datos">
-                        
+                            <h4>Motor 1:</h4>
+
+                            Pasos:
+                            <br><input type="number" name="Pasos1" value="0"><br>
+                            Velocidad
+                            <br><input type="number" name="Velocidad1" value="0"><br>
+
+                        </div>
+
+                        <div class="col-md-4 formularioMotor">
+
+                            <h4>Motor 2:</h4>
+
+                            Pasos:
+                            <br><input type="number" name="Pasos2" value="0"><br>
+                            Velocidad
+                            <br><input type="number" name="Velocidad2" value="0"><br>
+
+                        </div>
+
+                        <div class="col-md-4 formularioMotor">
+
+                            <h4>Motor 3:</h4>
+
+                            Pasos:
+                            <br><input type="number" name="Pasos3" value="0"><br>
+                            Velocidad
+                            <br><input type="number" name="Velocidad3" value="0"><br>
+
+                        </div>
+
+                        <div class="col-md-4 formularioMotor">
+
+                            <h4>Motor 4:</h4>
+
+                            Pasos:
+                            <br><input type="number" name="Pasos4" value="0"><br>
+                            Velocidad
+                            <br><input type="number" name="Velocidad4" value="0"><br>
+
+                        </div>
+
+                        <div class="col-md-4 formularioMotor">
+
+                            <h4>Motor 5:</h4>
+
+                            Pasos:
+                            <br><input type="number" name="Pasos5" value="0"><br>
+                            Velocidad
+                            <br><input type="number" name="Velocidad5" value="0"><br>
+
+                        </div>
+
+
+                        <div class="col-md-4 formularioMotor">
+
+                            <h4>Motor 6:</h4>
+
+                            Pasos:
+                            <br><input type="number" name="Pasos6" value="0"><br>
+                            Velocidad
+                            <br><input type="number" name="Velocidad6" value="0"><br>
+
+                        </div>
+
+
                     </fieldset>
 
                 </form>
 
             </div>
-
+            </div>
         </div>
         <br>
     </div>
