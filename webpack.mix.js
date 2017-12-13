@@ -27,7 +27,6 @@ mix.options({
 });
 
 mix.sass('resources/assets/sass/user/home.scss', 'public/css/user')
-    .sass('resources/assets/sass/admin/home.scss', 'public/css/admin')
     .sass('resources/assets/sass/layouts/nav.scss', 'public/css/layouts')
     .sass('resources/assets/sass/layouts/aside.scss', 'public/css/layouts')
     .sass('resources/assets/sass/layouts/footer.scss', 'public/css/layouts')

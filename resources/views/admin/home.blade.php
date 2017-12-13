@@ -1,11 +1,7 @@
-@extends('layouts.default')
+@extends('layouts.defaultAdmin')
 
 @section('huecoNav')
-
-    <span id="abrirAside" onclick="openNav()">&#9776;</span>
-
-    {!! HTML::style('css/admin/home.css') !!}
-
+    <li><a onclick="openNav()" style="cursor: pointer">Menu</a></li>
 @endsection
 
 @section('home')
