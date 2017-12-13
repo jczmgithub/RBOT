@@ -46,7 +46,7 @@
 
                     <fieldset>
 
-                        <div class="col-md-4 formularioMotor">
+                        <div class="col-md-4">
 
                             <h4>Motor 1:</h4>
 
@@ -57,7 +57,7 @@
 
                         </div>
 
-                        <div class="col-md-4 formularioMotor">
+                        <div class="col-md-4 ">
 
                             <h4>Motor 2:</h4>
 
@@ -68,7 +68,7 @@
 
                         </div>
 
-                        <div class="col-md-4 formularioMotor">
+                        <div class="col-md-4 ">
 
                             <h4>Motor 3:</h4>
 
@@ -79,7 +79,7 @@
 
                         </div>
 
-                        <div class="col-md-4 formularioMotor">
+                        <div class="col-md-4 ">
 
                             <h4>Motor 4:</h4>
 
@@ -90,7 +90,7 @@
 
                         </div>
 
-                        <div class="col-md-4 formularioMotor">
+                        <div class="col-md-4 ">
 
                             <h4>Motor 5:</h4>
 
@@ -102,7 +102,7 @@
                         </div>
 
 
-                        <div class="col-md-4 formularioMotor">
+                        <div class="col-md-4 ">
 
                             <h4>Motor 6:</h4>
 
