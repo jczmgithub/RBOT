@@ -2,10 +2,13 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <br>
+        <a href="#">Crear usuario</a>
+        <a href="#">Modificar usuario</a>
+        <a href="#">Borrar usuario</a>
+        <a href="#">Crear robot</a>
+        <a href="#">Modificar robot</a>
+        <a href="#">Borrar robot</a>
     </div>
 
     {!! HTML::style('css/layouts/aside.css') !!}
