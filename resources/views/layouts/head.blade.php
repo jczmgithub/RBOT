@@ -15,4 +15,8 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <!-- link favicon-->
     <link rel="shortcut icon" href="{{ asset('faviconKpau.png') }}">
+    <!-- Fuente prueba-->
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/pepsi-cyr-lat" type="text/css"/>
+
 </head>

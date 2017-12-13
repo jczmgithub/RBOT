@@ -1,5 +1,13 @@
 @extends('layouts.default')
 
+@section('huecoNav')
+
+    <span id="abrirAside" onclick="openNav()">&#9776;</span>
+
+    {!! HTML::style('css/admin/home.css') !!}
+
+@endsection
+
 @section('home')
 
     @include('layouts.aside')
@@ -23,4 +31,6 @@
             </div>
         </div>
     </div>
+
 @endsection
+

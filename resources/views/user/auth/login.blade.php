@@ -1,11 +1,11 @@
 @extends('layouts.default')
 
 @section('home')
-    <div class="contenido container">
+    <div class="contenidoLogin container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h3>Entrar</h3></div>
+                    <div class="panel-heading">Entrar</div>
                     <div class="panel-body">
 
                         @if($status = Session::get('status'))

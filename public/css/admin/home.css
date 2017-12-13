@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Zekton";
+  src: url("../fonts/zekton/zekton rg.ttf");
+}
+
+#abrirAside {
+  font-size: 30px;
+  cursor: pointer;
+  color: #337AB7;
+}
