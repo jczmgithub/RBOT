@@ -3,8 +3,7 @@
 @section('huecoNav')
 
     @auth
-        <li><a data-toggle="tab" href="#menu1">Control por Botones</a></li>
-        <li><a data-toggle="tab" href="#menu2">Control Manual</a></li>
+        <li><a href="/home">Controles</a></li>
     @endauth
 
 @endsection
@@ -20,7 +19,8 @@
     <div id="panelControl" class="container">
 
         <div class="row">
-            <div class="col-md-6">
+
+            <div class="col-md-4">
 
                 <h3>Webcam</h3>
 
@@ -28,33 +28,45 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5Q_xjJQmBE"
                             frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
                     </iframe>
+
+                </div>
+                <div id="divMando">
+                <img id="mando" src="/img/mando.png" class="img-responsive" alt="Mando robot">
                 </div>
 
             </div>
 
-            <div class="col-md-6">
+            <div id="controles">
 
-                <div class="tab-content">
+                <h3>Controles</h3>
 
-                    <div id="menu1" class="tab-pane fade in active">
-                        <h3>Control por Botones</h3>
+                <form action="/">
 
-                    </div>
-                    <div id="menu2" class="tab-pane fade">
-                        <h3>Control Manual</h3>
+                    <fieldset>
 
-                    </div>
-                </div>
+                        Motor 1:
+                        <br><input type="number" name="motor1" value=""><br>
+                        Motor 2:
+                        <br><input type="number" name="Motor2" value=""><br>
+                        Motor 3:
+                        <br><input type="number" name="Motor3" value=""><br>
+                        Motor 4:
+                        <br><input type="number" name="motor4" value=""><br>
+                        Motor 5:
+                        <br><input type="number" name="Motor5" value=""><br>
+                        Motor 6:
+                        <br><input type="text" name="Motor6" value=""><br>
+
+                        <br><input type="submit" value="Enviar Datos">
+                        
+                    </fieldset>
+
+                </form>
 
             </div>
+
         </div>
-
-    </div>
-
-    <div id="estado">
-
-
-
+        <br>
     </div>
 
     {!! HTML::style('css/user/home.css') !!}

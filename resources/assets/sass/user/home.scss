@@ -2,12 +2,23 @@
 
 
 body{
- min-height: 100%;
+  height: 100vh;
+  min-height: 100vh;
 }
 
-#panelControl{
-  height: 100vh;
+#divMando{
+  padding-top: 10%;
 }
+
+#mandoimg{
+  padding: 10%;
+  margin: auto;
+}
+
+#controles{
+
+}
+
 
 div {
   transition: width 2s;
