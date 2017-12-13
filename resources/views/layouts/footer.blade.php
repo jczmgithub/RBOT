@@ -29,7 +29,7 @@
         </div>
     </div>
     <div id=#hide class="footer-copyright">
-        <p>© 2017 Grupo Rbot Indrustries </p>
+        <p>© 2017/2018 - Grupo Rbot Corporation  </p>
     </div>
 
     {!! HTML::style('css/layouts/footer.css') !!}

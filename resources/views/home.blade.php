@@ -1,17 +1,18 @@
 @extends('layouts.default')
 
 @section('huecoNav')
-    <li ><a href="#seccionbrazoFIX">Características</a></li>
+    <li ><a href="#seccionbrazo">Características</a></li>
     <li ><a href="#servicios">Servicios</a></li>
-    <li ><a href="#contacto">Contacto</a></li>
+    <li ><a href="#contenedorContacto">Contacto</a></li>
 @stop
 
 @section('home')
 
     <div class="container-fluid text-center" id="inicio">
-            <h1 id="descripcion">
-                eivneesnse
-            </h1>
+            <h1 id="titulo" class="retroshadow">RBOT<h2 id="descripcion">control service</h2></h1>
+
+            <p><button type="submit" class="btn-lg btn-rbt ">Registrar</button></p>
+
     </div>
     <div id="seccionbrazo" class="container-fluid text-center">
         <div class="row">
@@ -30,7 +31,7 @@
                 <p>¡Disfruta de nustra aplicación web!</p>
 
             </div>
-                <img style="position: center  " src="/img/rbx4.png" class="img-responsive col-lg-4 " alt="Mano robot">
+            <iframe id="gifRobot" src="https://giphy.com/embed/6e5R2q1W3pA4g" frameBorder="0" class="img-responsive" allowFullScreen></iframe>
         </div>
 
     </div>
@@ -39,7 +40,6 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">Servicios</h2>
-                <h3 class="section-subheading text-muted">Servicios disponibles en RBOT.</h3>
             </div>
         </div>
         <div class="row text-center">
@@ -126,15 +126,14 @@
 
 
     <div id="contenedorContacto">
-        <div class="row" id="contacto">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2 container">
                 <h1>CONTACTO</h1>
                 <ul>
                     @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-                <form class="form-horizontal " method="POST" action="contacto" >
+                <form class="form-horizontal    " method="POST" action="contacto" >
                     {{ csrf_field() }}
                 <div class="form-group">
                     {!! Form::label('Nombre:') !!}
@@ -144,7 +143,6 @@
                               'name'=>'nombre',
                               'placeholder'=>'Introduce tu nombre')) !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::label('E-mail:') !!}
                     {!! Form::text('email', null,
@@ -153,7 +151,6 @@
                               'name'=>'email',
                               'placeholder'=>'Introduce tu correo')) !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::label('Mensaje:') !!}
                     {!! Form::textarea('mensaje', null,
@@ -161,15 +158,12 @@
                               'name'=>'mensaje',
                               'placeholder'=>'Contenido del mensaje')) !!}
                 </div>
-
                 <div class="form-group">
                     {!! Form::submit('Contactáctanos!',
                       array('class'=>'btn btn-rbt')) !!}
                 </div>
-
                 </form>
             </div>
-        </div>
     </div>
     {!! HTML::style('css/home.css') !!}
 @stop
