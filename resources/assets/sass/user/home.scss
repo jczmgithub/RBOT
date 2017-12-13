@@ -1,9 +1,12 @@
 @import "../varsRobot";
 
 
-#panelControl{
+body{
  min-height: 100%;
- height: 100vh;
+}
+
+#panelControl{
+  height: 100vh;
 }
 
 div {

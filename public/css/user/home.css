@@ -3,8 +3,11 @@
   src: url("../fonts/zekton/zekton rg.ttf");
 }
 
-#panelControl {
+body {
   min-height: 100%;
+}
+
+#panelControl {
   height: 100vh;
 }
 

@@ -21,6 +21,7 @@
 
         <div class="row">
             <div class="col-md-6">
+
                 <h3>Webcam</h3>
 
                 <div class="embed-responsive embed-responsive-16by9">
@@ -47,6 +48,12 @@
 
             </div>
         </div>
+
+    </div>
+
+    <div id="estado">
+
+
 
     </div>
 
