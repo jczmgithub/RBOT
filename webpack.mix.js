@@ -30,5 +30,6 @@ mix.sass('resources/assets/sass/user/home.scss', 'public/css/user')
     .sass('resources/assets/sass/layouts/nav.scss', 'public/css/layouts')
     .sass('resources/assets/sass/layouts/aside.scss', 'public/css/layouts')
     .sass('resources/assets/sass/layouts/footer.scss', 'public/css/layouts')
+    .sass('resources/assets/sass/layouts/footerAdmin.scss', 'public/css/layouts')
     .sass('resources/assets/sass/home.scss', 'public/css')
     .sass('resources/assets/sass/rbot.scss', 'public/css');

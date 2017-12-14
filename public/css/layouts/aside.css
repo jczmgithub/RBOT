@@ -31,7 +31,7 @@
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   color: #818181;
   display: block;
   -webkit-transition: 0.3s;
@@ -52,13 +52,16 @@
   margin-left: 50px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
+/* On smaller screens, where width is less than 1000px, change the style of the sidenav (a smaller font size) */
+@media screen and (max-width: 1000px) {
   .sidenav a {
-    font-size: 18px;
+    font-size: 15px;
+  }
+  #mySidenav {
+    width: 200px;
+  }
+  #main {
+    margin-left: 200px;
   }
 }
 

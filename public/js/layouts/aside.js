@@ -1,7 +1,7 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidenav").style.width = "20vw";
+    document.getElementById("main").style.marginLeft = "20vw";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -23,5 +23,12 @@ function openTab(evt, tabName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    if (evt !== null) {
+        evt.currentTarget.className += " active";
+    }
 }
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    openTab(null, "Home");
+});
