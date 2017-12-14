@@ -21,6 +21,10 @@ html, body {
   margin-top: 30px;
 }
 
+.container {
+  width: inherit;
+}
+
 .panel-default > .panel-heading {
   background-color: #333333;
   border-color: #337AB7;

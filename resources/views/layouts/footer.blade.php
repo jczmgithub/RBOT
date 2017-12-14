@@ -28,9 +28,9 @@
             </div>
         </div>
     </div>
-    <div id=#hide class="footer-copyright">
-        <p>© 2017 Grupo Rbot Indrustries </p>
-    </div>
+        <div id=#hide class="footer-copyright">
+            <p>© 2017 Grupo Rbot Indrustries </p>
+        </div>
 
     {!! HTML::style('css/layouts/footer.css') !!}
 </footer>
