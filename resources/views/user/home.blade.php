@@ -20,108 +20,56 @@
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-sm-4">
 
                 <h3>Webcam</h3>
 
                 <div class="embed-responsive embed-responsive-16by9">
+
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5Q_xjJQmBE"
                             frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
                     </iframe>
 
                 </div>
+
                 <div id="divMando">
-                <img id="mando" src="/img/mando.png" class="img-responsive" alt="Mando robot">
+
+                    <h3>Mando</h3>
+
+                    <img id="mando" src="/img/mando.png" class="img-responsive" alt="Mando robot">
+
                 </div>
 
             </div>
 
-            <div id="controles" class="container">
-
-                <div class="row">
+            <div class="col-sm-4">
 
                 <h3>Controles</h3>
 
                 <form action="/">
 
-                    <fieldset>
-
-                        <div class="col-md-4">
-
-                            <h4>Motor 1:</h4>
-
-                            Pasos:
-                            <br><input type="number" name="Pasos1" value="0"><br>
-                            Velocidad
-                            <br><input type="number" name="Velocidad1" value="0"><br>
-
-                        </div>
-
-                        <div class="col-md-4 ">
-
-                            <h4>Motor 2:</h4>
-
-                            Pasos:
-                            <br><input type="number" name="Pasos2" value="0"><br>
-                            Velocidad
-                            <br><input type="number" name="Velocidad2" value="0"><br>
-
-                        </div>
-
-                        <div class="col-md-4 ">
-
-                            <h4>Motor 3:</h4>
-
-                            Pasos:
-                            <br><input type="number" name="Pasos3" value="0"><br>
-                            Velocidad
-                            <br><input type="number" name="Velocidad3" value="0"><br>
-
-                        </div>
-
-                        <div class="col-md-4 ">
-
-                            <h4>Motor 4:</h4>
-
-                            Pasos:
-                            <br><input type="number" name="Pasos4" value="0"><br>
-                            Velocidad
-                            <br><input type="number" name="Velocidad4" value="0"><br>
-
-                        </div>
-
-                        <div class="col-md-4 ">
-
-                            <h4>Motor 5:</h4>
-
-                            Pasos:
-                            <br><input type="number" name="Pasos5" value="0"><br>
-                            Velocidad
-                            <br><input type="number" name="Velocidad5" value="0"><br>
-
-                        </div>
-
-
-                        <div class="col-md-4 ">
-
-                            <h4>Motor 6:</h4>
-
-                            Pasos:
-                            <br><input type="number" name="Pasos6" value="0"><br>
-                            Velocidad
-                            <br><input type="number" name="Velocidad6" value="0"><br>
-
-                        </div>
-
-
-                    </fieldset>
+                    <select class="form-control selector">
+                        <option value="">--Selecciona el motor--</option>
+                        <option value="motor1">Base</option>
+                        <option value="motor2">Hombro</option>
+                        <option value="motor3">Brazo</option>
+                        <option value="motor4">Codo</option>
+                        <option value="motor5">Muñeca</option>
+                        <option value="motor6">Mano</option>
+                    </select>
 
                 </form>
 
             </div>
+
+            <div class="col-sm-4">
+
+                <h3>Robot</h3>
+
             </div>
+
         </div>
-        <br>
+
     </div>
 
     {!! HTML::style('css/user/home.css') !!}
