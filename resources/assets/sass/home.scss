@@ -13,9 +13,10 @@
   margin-top: 5px;
   margin-bottom: 0px;
   text-align: center;
-  font-weight: normal;
+  font-weight: bolder;
   color: #222;
   letter-spacing: 0.3em;
+
 }
 .retroshadow {
   color: #337ab7;
@@ -32,7 +33,7 @@
   margin-top: 10px;
   text-align: center!important;
   letter-spacing: 0.3em;
-  text-shadow:0 0 3px #337AB7, 0 0 5px white;
+  text-shadow:0 0 10px #337AB7, 0 0 10px white;
 }
 #botonLanding{
   margin-top: 10%;
@@ -42,13 +43,6 @@
   background-color: $colorBlanco;
   min-height: 400px;
   padding-bottom: 50px;
-}
-#gifRobot{
-  border: 1px solid red;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: transparent;
 }
 
 #contenedorContacto{
