@@ -29,8 +29,16 @@
 
             <h5>Velocidad:</h5>
 
+            <div class="row">
+                <input type="range" id="velocidadForm" name="rangeVelocidad" min="0" max="100" value="50" onchange="updateTextInput(this.value);">
+                <input type="text" id="textoVelocidad" value="">
+            </div>
+
+
         </form>
 
     </div>
+
+    {!! HTML::script('js/user/columnas/control.js'); !!}
 
 </div>
