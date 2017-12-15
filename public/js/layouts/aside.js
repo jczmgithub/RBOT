@@ -1,7 +1,7 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "20vw";
-    document.getElementById("main").style.marginLeft = "20vw";
+    document.getElementById("mySidenav").style.width = "30vw";
+    document.getElementById("main").style.marginLeft = "30vw";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
