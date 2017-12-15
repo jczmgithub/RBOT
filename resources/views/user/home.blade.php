@@ -46,6 +46,8 @@
 
                 <h3>Controles</h3>
 
+                <div id="controles">
+
                 <form action="/">
 
                     <select class="form-control selector">
@@ -58,7 +60,11 @@
                         <option value="motor6">Mano</option>
                     </select>
 
+                    <h5>Velocidad:</h5>
+
                 </form>
+
+                </div>
 
             </div>
 
@@ -73,5 +79,5 @@
     </div>
 
     {!! HTML::style('css/user/home.css') !!}
-
+    {!! HTML::script('js/user/home.js'); !!}
 @stop
