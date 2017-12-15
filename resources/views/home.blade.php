@@ -4,6 +4,9 @@
     <li ><a href="#seccionbrazo">Características</a></li>
     <li ><a href="#servicios">Servicios</a></li>
     <li ><a href="#contacto">Contacto</a></li>
+    @auth
+        <li><a href={{ route('home') }}>Panel de control</a></li>
+    @endauth
 @stop
 
 @section('home')
