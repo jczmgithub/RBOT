@@ -5,7 +5,7 @@
 
 /* CSS para home landingPage */
 #inicio {
-  background-image: url("../img/robot-hand3.jpg");
+  background-image: url("../img/circuit1.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -13,35 +13,39 @@
 }
 
 #titulo {
-  font-size: 150px;
+  font-size: 20vmin;
   margin-top: 5px;
   margin-bottom: 0px;
   text-align: center;
-  font-weight: normal;
-  color: #222;
+  font-weight: bolder;
+  color: white;
   letter-spacing: 0.3em;
 }
 
 .retroshadow {
-  color: #337ab7;
+  color: #337AB7;
   letter-spacing: .1em;
   text-shadow: 0 0 10px #337AB7, 0 0 10px #337AB7;
 }
 
 #descripcion {
-  color: #222;
-  font-size: 55px;
+  color: white;
+  font-size: 10vmin;
   font-weight: lighter;
   font-variant: normal;
   text-transform: uppercase;
   margin-top: 10px;
   text-align: center !important;
   letter-spacing: 0.3em;
-  text-shadow: 0 0 3px #337AB7, 0 0 5px white;
+  text-shadow: 0 0 10px #337AB7, 0 0 10px white;
 }
 
 #botonLanding {
   margin-top: 10%;
+}
+
+.azul {
+  color: #337AB7;
 }
 
 #seccionbrazo {
@@ -49,14 +53,6 @@
   background-color: white;
   min-height: 400px;
   padding-bottom: 50px;
-}
-
-#gifRobot {
-  border: 1px solid red;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: transparent;
 }
 
 #contenedorContacto {
@@ -83,4 +79,8 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.bordeAzul {
+  border-bottom: 2px solid #337AB7;
 }

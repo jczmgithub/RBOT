@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Zekton";
+  src: url("../fonts/zekton/zekton rg.ttf");
+}
+
+#contenidoLogin {
+  margin-top: 4%;
+  min-height: 72vh;
+}

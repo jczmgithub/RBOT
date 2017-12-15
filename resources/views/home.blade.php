@@ -8,26 +8,26 @@
 
 @section('home')
 
-    <div class="container-fluid text-center" id="inicio">
-            <h1 id="titulo" class="retroshadow">RBOT<h2 id="descripcion">control service</h2></h1>
+    <div class="container-fluid text-center bordeAzul" id="inicio">
+            <h1 id="titulo" class="retroshadow zekton">RBOT<div id="descripcion">control service</div></h1>
 
-            <p><button type="submit" class="btn-lg btn-rbt ">Registrar</button></p>
+            <a href="{{ route('register') }}"><button type="button" class="btn-lg btn-rbt contenido">Probar Control</button></a>
 
     </div>
-    <div id="seccionbrazo" class="container-fluid text-center">
+    <div id="seccionbrazo" class="container-fluid text-center bordeAzul">
         <div class="row">
             <div class="col-lg-6 col-xs-12 col-sm-6">
 
-                <h1>Movilidad</h1>
+                <h1 class="azul">Movilidad</h1>
                 <p>Maneja tu brazo robot desde cualquier lugar.</p>
 
-                <h1>Usabilidad</h1>
+                <h1 class="azul">Usabilidad</h1>
                 <p>Interfaz amigable para un máximo control.</p>
 
-                <h1>Eficiencia</h1>
+                <h1 class="azul">Eficiencia</h1>
                 <p>Ahorra tiempo y trabajo.</p>
 
-                <h1>User experience</h1>
+                <h1 class="azul">User experience</h1>
                 <p>¡Disfruta de nustra aplicación web!</p>
 
             </div>
@@ -39,10 +39,10 @@
 
     </div>
 
-    <div class="container" id="servicios">
+    <div class="bordeAzul" id="servicios">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Servicios</h2>
+                <h1 class="section-heading text-uppercase">Servicios</h1>
             </div>
         </div>
         <div class="row text-center">
@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div id="contenedorContacto">
+    <div id="contenedorContacto" class="text-center bordeAzul">
             <div class="col-md-8 col-md-offset-2 container">
                 <h1>CONTACTO</h1>
                 <ul>
@@ -81,7 +81,7 @@
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-                <form class="form-horizontal    " method="POST" action="contacto" >
+                <form class="form-horizontal" method="POST" action="contacto" >
                     {{ csrf_field() }}
                 <div class="form-group">
                     {!! Form::label('Nombre:') !!}

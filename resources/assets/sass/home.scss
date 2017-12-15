@@ -2,41 +2,44 @@
 
 /* CSS para home landingPage */
 #inicio{
-  background-image:url("../img/robot-hand3.jpg");
+  background-image:url("../img/circuit1.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 595px;
 }
 #titulo{
-  font-size:150px;
+  font-size:20vmin;
   margin-top: 5px;
   margin-bottom: 0px;
   text-align: center;
   font-weight: bolder;
-  color: #222;
+  color: $colorBlanco;
   letter-spacing: 0.3em;
 
 }
 .retroshadow {
-  color: #337ab7;
+  color: $colorAzul;
   letter-spacing: .1em;
-  text-shadow:0 0 10px #337AB7, 0 0 10px #337AB7;
+  text-shadow:0 0 10px $colorAzul, 0 0 10px $colorAzul;
 }
 
 #descripcion{
-  color: #222;
-  font-size: 55px;
+  color:  $colorBlanco;
+  font-size: 10vmin;
   font-weight: lighter;
   font-variant: normal;
   text-transform: uppercase;
   margin-top: 10px;
   text-align: center!important;
   letter-spacing: 0.3em;
-  text-shadow:0 0 10px #337AB7, 0 0 10px white;
+  text-shadow:0 0 10px $colorAzul, 0 0 10px $colorBlanco;
 }
 #botonLanding{
   margin-top: 10%;
+}
+.azul{
+  color: $colorAzul;
 }
 #seccionbrazo{
   padding-top: 50px;
@@ -61,4 +64,7 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
+}
+.bordeAzul{
+  border-bottom: 2px solid $colorAzul;
 }
