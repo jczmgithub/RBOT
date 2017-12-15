@@ -16,6 +16,7 @@ body {
 #mandoimg {
   padding: 10%;
   margin: auto;
+  width: 50%;
 }
 
 #controles {
@@ -51,14 +52,10 @@ div {
   width: 33%;
 }
 
-#selecMotor {
+#pasosForm {
+  width: 68%;
+}
+
+#botonFormRobot {
   margin-top: 4%;
-}
-
-#velocidadForm {
-  width: 55%;
-}
-
-#textoVelocidad {
-  width: 10%;
 }

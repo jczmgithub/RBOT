@@ -15,6 +15,8 @@
 
             </select>
 
+            <h5>Motores:</h5>
+
             <select class="form-control selector" id="selecMotor">
 
                 <option value="">--Seleccione el motor--</option>
@@ -27,18 +29,29 @@
 
             </select>
 
+            <h5>Pasos:</h5>
+
+            <input type="number" class="form-control" id="pasosForm">
+
+
+
             <h5>Velocidad:</h5>
 
             <div class="row">
-                <input type="range" id="velocidadForm" name="rangeVelocidad" min="0" max="100" value="50" onchange="updateTextInput(this.value);">
-                <input type="text" id="textoVelocidad" value="">
+                <div class="col-xs-6">
+                    <div class="range range-primary" id="velocidadForm">
+                        <input type="range" name="range" min="0" max="100" value="50" onchange="rangePrimary.value=value">
+                        <output id="rangePrimary">50</output>
+                    </div>
+                </div>
             </div>
 
+            <button type="button" class="btn btn-primary" id="botonFormRobot">Enviar Datos</button>
 
         </form>
 
     </div>
 
-    {!! HTML::script('js/user/columnas/control.js'); !!}
+    {!! HTML::script('js/user/home.js'); !!}
 
 </div>
