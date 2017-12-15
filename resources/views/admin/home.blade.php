@@ -1,11 +1,7 @@
-@extends('layouts.default')
+@extends('layouts.defaultAdmin')
 
 @section('huecoNav')
-
-    <span id="abrirAside" onclick="openNav()">&#9776;</span>
-
-    {!! HTML::style('css/admin/home.css') !!}
-
+    <li><a href="#" onclick="openNav()">Menu</a></li>
 @endsection
 
 @section('home')
@@ -13,23 +9,17 @@
     @include('layouts.aside')
 
     <div class="container">
+
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Admin Aitor Dashboard</div>
+            @include('admin.tabs.home')
 
-                    <div class="panel-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+            @include('admin.tabs.crearUsuario')
 
-                        You are logged in, Admin!
-                    </div>
-                </div>
-            </div>
+            @include('admin.tabs.modificarUsuario')
+
+            @include('admin.tabs.borrarUsuario')
         </div>
+
     </div>
 
 @endsection

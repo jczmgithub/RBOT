@@ -10,7 +10,7 @@ body {
 
 html, body {
   min-height: 100%;
-  font-family: 'XoloniumRegular';
+  font-family: "xolonium";
 }
 
 .zekton {
@@ -19,6 +19,10 @@ html, body {
 
 .contenido {
   margin-top: 30px;
+}
+
+.container {
+  width: inherit;
 }
 
 .panel-default > .panel-heading {
@@ -32,7 +36,53 @@ html, body {
   background-color: #D9D9D9;
 }
 
-0
+/* Botones submit */
+.btn-rbt {
+  color: white;
+  background-color: #333333;
+  border-color: #337AB7;
+}
+
+.btn-rbt:hover,
+.btn-rbt:focus,
+.btn-rbt:active,
+.btn-rbt.active,
+.open .dropdown-toggle.btn-rbt {
+  color: white;
+  background-color: #337AB7;
+  border-color: #337AB7;
+}
+
+.btn-rbt:active,
+.btn-rbt.active,
+.open .dropdown-toggle.btn-rbt {
+  background-image: none;
+}
+
+.btn-rbt.disabled,
+.btn-rbt[disabled],
+fieldset[disabled] .btn-rbt,
+.btn-rbt.disabled:hover,
+.btn-rbt[disabled]:hover,
+fieldset[disabled] .btn-rbt:hover,
+.btn-rbt.disabled:focus,
+.btn-rbt[disabled]:focus,
+fieldset[disabled] .btn-rbt:focus,
+.btn-rbt.disabled:active,
+.btn-rbt[disabled]:active,
+fieldset[disabled] .btn-rbt:active,
+.btn-rbt.disabled.active,
+.btn-rbt[disabled].active,
+fieldset[disabled] .btn-rbt.active {
+  background-color: #337AB7;
+  border-color: #333333;
+}
+
+.btn-rbt .badge {
+  color: #337AB7;
+  background-color: white;
+}
+
 .contenidoLogin {
   margin-top: 4%;
   min-height: 72vh;
