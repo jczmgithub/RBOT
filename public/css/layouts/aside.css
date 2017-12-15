@@ -57,12 +57,10 @@
   .sidenav a {
     font-size: 15px;
   }
-  #mySidenav {
-    width: 200px;
-  }
-  #main {
-    margin-left: 200px;
-  }
+  /*
+  #mySidenav {width: 200px;}
+  #main {margin-left: 200px;}
+*/
 }
 
 /* Style the tab content */
