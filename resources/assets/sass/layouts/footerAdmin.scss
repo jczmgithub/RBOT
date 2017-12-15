@@ -1,0 +1,21 @@
+@import "../varsRobot";
+
+/* FOOTER */
+#myFooter {
+  background-color: #3c3d41;
+  color: $colorBlanco;
+  bottom:0;
+}
+
+#myFooter .footer-copyright {
+  background-color: #333333;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: $colorCasiBlanco;
+}
+
