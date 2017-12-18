@@ -21,6 +21,8 @@ Auth::routes();
 Route::post('auth/login', 'Auth\LoginController@attemptLogin');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post("/datosRobot","RobotController@dataRobot")->name('datosRobot');
+
 Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.home');
     Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
