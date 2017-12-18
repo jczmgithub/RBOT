@@ -1,4 +1,9 @@
 <div id="ModificarUsu" class="tabcontent">
-    <h3>Paris</h3>
-    <p>Paris is the capital of France.</p>
+    <?php foreach ($users as $user): ?>
+    <p>
+        nombre: <?=$user['name']?>
+        <br>
+        email: <?=$user['email']?>
+    </p>
+    <?php endforeach ?>
 </div>
