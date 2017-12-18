@@ -5,7 +5,9 @@
         <br><br>
         <a href="#" class="tablinks" onclick="openTab(event, 'Home')">Home</a>
         <a href="#" class="tablinks" onclick="openTab(event, 'CrearUsu')">Crear usuario</a>
-        <a href="#" class="tablinks" onclick="{{ route('showUsers') }}">Modificar usuario</a>
+{{--
+        <a href="{{ route('showUsers') }}" class="tablinks" onclick="">Modificar usuario</a>
+--}}
         <a href="#" class="tablinks" onclick="openTab(event, 'BorrarUsu')">Borrar usuario</a>
         <a href="#">Crear robot</a>
         <a href="#">Modificar robot</a>
