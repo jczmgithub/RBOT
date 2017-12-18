@@ -4,9 +4,11 @@
 
     <div id="controles">
 
-        <form action="/">
+        <form action="{{ route('datosRobot') }}" method="POST">
 
-            <select class="form-control selector">
+            {{ csrf_field() }}
+
+            <select name="selecRobot" class="form-control selector">
 
                 <option value="">--Seleccione el Robot--</option>
                 <option value="robot1">Robot1</option>
@@ -17,7 +19,7 @@
 
             <h5>Motores:</h5>
 
-            <select class="form-control selector" id="selecMotor">
+            <select name="selecMotor" class="form-control selector" id="selecMotor">
 
                 <option value="">--Seleccione el motor--</option>
                 <option value="motor1">Base</option>
@@ -31,22 +33,20 @@
 
             <h5>Pasos:</h5>
 
-            <input type="number" class="form-control" id="pasosForm">
-
-
+            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0">
 
             <h5>Velocidad:</h5>
 
             <div class="row">
                 <div class="col-xs-6">
                     <div class="range range-primary" id="velocidadForm">
-                        <input type="range" name="range" min="0" max="100" value="50" onchange="rangePrimary.value=value">
+                        <input type="range" name="velocidad" min="0" max="100" onchange="rangePrimary.value=value">
                         <output id="rangePrimary">50</output>
                     </div>
                 </div>
             </div>
 
-            <button type="button" class="btn btn-primary" id="botonFormRobot">Enviar Datos</button>
+            <button type="submit">Enviar datos</button>
 
         </form>
 
