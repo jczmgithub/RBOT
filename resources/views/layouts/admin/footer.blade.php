@@ -7,5 +7,5 @@
         </div>
     </div>
 
-    {!! HTML::style('css/layouts/footerAdmin.css') !!}
+    {!! HTML::style('css/layouts/admin/footer.css') !!}
 </footer>

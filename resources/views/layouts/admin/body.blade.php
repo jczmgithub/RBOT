@@ -3,5 +3,5 @@
 
 @yield('home')
 
-@include('layouts.footerAdmin')
+@include('layouts.admin.footer')
 </body>

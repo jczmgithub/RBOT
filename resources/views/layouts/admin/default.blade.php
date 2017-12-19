@@ -4,7 +4,7 @@
 @include('layouts.head')
 
 <div id="main">
-    @include('layouts.bodyAdmin')
+    @include('layouts.admin.body')
 </div>
 
 </html>

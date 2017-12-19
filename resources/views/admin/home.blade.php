@@ -1,4 +1,4 @@
-@extends('layouts.defaultAdmin')
+@extends('layouts.admin.default')
 
 @section('huecoNav')
     <li><a href="#" onclick="openNav()">Menu</a></li>
