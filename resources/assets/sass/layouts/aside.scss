@@ -32,14 +32,26 @@
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+/* On smaller screens, where width is less than 1000px, change the style of the sidenav (a smaller font size) */
+@media screen and (max-width: 1000px) {
+  .sidenav a {font-size: 15px;}
+/*
+  #mySidenav {width: 200px;}
+  #main {margin-left: 200px;}
+*/
 }
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <h5 class="logo">RBOT Corporation</h5>
+                <h5 class="logo">RBOT Industries</h5>
             </div>
             <div class="col-sm-3">
                 <h5>Comenzar</h5>
@@ -28,8 +28,8 @@
             </div>
         </div>
     </div>
-    <div id=#hide class="footer-copyright">
-        <p>© 2017/2018 - Grupo Rbot Corporation  </p>
+    <div class="footer-copyright">
+        <p>© 2017/2018 - Grupo Rbot Indrustries </p>
     </div>
 
     {!! HTML::style('css/layouts/footer.css') !!}

@@ -1,18 +1,33 @@
 @extends('layouts.default')
 
+@section('huecoNav')
+
+    @auth
+        <li><a href="/home">Controles</a></li>
+    @endauth
+
+@endsection
+
 @section('home')
 
-    <div class="container">
-        <!-- Example row of columns -->
-        <div class="panel-body">
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
             @endif
 
-            You are logged in, User!
+    <div id="panelControl" class="container">
+
+        <div class="row">
+
+        @include('user.columnas.webcam_mando')
+
+        @include('user.columnas.control')
+
+        @include('user.columnas.robot')
+
         </div>
+
     </div>
 
     {!! HTML::style('css/user/home.css') !!}

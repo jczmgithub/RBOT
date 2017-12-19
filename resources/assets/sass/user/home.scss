@@ -1,9 +1,56 @@
 @import "../varsRobot";
 
+
 body{
-  background-color: $colorPruebas;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+#divMando{
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+#mandoimg{
+  padding: 10%;
+  margin: auto;
+}
+
+#controles{
+  font-size: 90%;
 }
 
 div {
   transition: width 2s;
+}
+
+#botonMotores{
+  padding-top: 3%;
+  padding-left: 1%;
+}
+
+.selector{
+  width: 68%;
+}
+
+.column-left{
+  float: left;
+  width: 33%;
+}
+.column-right{
+  float: right;
+  width: 33%;
+
+}
+.column-center{
+  display: inline-block;
+  width: 33%;
+}
+
+#pasosForm{
+  width: 68%;
+}
+
+#botonFormRobot{
+  margin-top: 4%;
 }

@@ -1,9 +1,9 @@
 {
     "/css/user/home.css": "/css/user/home.css",
-    "/css/admin/home.css": "/css/admin/home.css",
     "/css/layouts/nav.css": "/css/layouts/nav.css",
     "/css/layouts/aside.css": "/css/layouts/aside.css",
     "/css/layouts/footer.css": "/css/layouts/footer.css",
+    "/css/layouts/footerAdmin.css": "/css/layouts/footerAdmin.css",
     "/css/home.css": "/css/home.css",
     "/css/rbot.css": "/css/rbot.css"
 }
