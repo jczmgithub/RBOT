@@ -15,7 +15,7 @@
 
             @include('admin.tabs.crearUsuario')
 
-            @include('admin.tabs.modificarUsuario', ['users' => DB::table('users')->get()])
+            @include('admin.tabs.modificarUsuario')
 
             @include('admin.tabs.borrarUsuario')
         </div>
