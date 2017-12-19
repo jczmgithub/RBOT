@@ -3,16 +3,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>RBOT</title>
+
+    <!-- jQuery library -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+
     <!-- load bootstrap-->
     <link rel="stylesheet" href="/css/bootstrap.css">
     <!-- Latest compiled JavaScript-->
     <script src="/js/bootstrap.js"></script>
+
     <!-- load bootstrap 4
     <link rel="stylesheet" href="/css/bootstrap4.css">-->
     <!-- Latest compiled JavaScript 4
     <script src="/js/bootstrap4.js"></script>-->
-    <!-- jQuery library -->
-    <script src="/js/jquery-3.2.1.min.js"></script>
+
     <!-- mi css -->
     <link rel="stylesheet" href="/css/rbot.css">
     <!-- Glyphicons -->
