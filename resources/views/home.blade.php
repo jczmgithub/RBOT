@@ -3,7 +3,7 @@
 @section('huecoNav')
     <li ><a href="#seccionbrazo">Características</a></li>
     <li ><a href="#servicios">Servicios</a></li>
-    <li ><a href="#contacto">Contacto</a></li>
+    <li ><a href="#contenedorContacto">Contacto</a></li>
 @stop
 
 @section('home')
