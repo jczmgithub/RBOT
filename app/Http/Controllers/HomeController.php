@@ -24,6 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home', ['modelos' => DB::table('robot')->get()]);
+        return view('user.home', ['modelos' => DB::table('robots')->get()]);
     }
 }
