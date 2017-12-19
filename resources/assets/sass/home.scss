@@ -7,6 +7,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   height: 595px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
 }
 #titulo{
   font-size:20vmin;
@@ -49,7 +54,7 @@
 }
 
 #contenedorContacto{
-  background-color: gray;
+  background-color: $colorGrisClaro;
 }
 
 #contacto{

@@ -3,20 +3,19 @@
 @section('huecoNav')
     <li ><a href="#seccionbrazo">Características</a></li>
     <li ><a href="#servicios">Servicios</a></li>
-    <li ><a href="#contenedorContacto">Contacto</a></li>
+    <li ><a href="#contacto">Contacto</a></li>
 @stop
 
 @section('home')
 
-    <div class="container-fluid text-center bordeAzul" id="inicio">
-            <h1 id="titulo" class="retroshadow zekton">RBOT<div id="descripcion">control service</div></h1>
-
-            <a href="{{ route('register') }}"><button type="button" class="btn-lg btn-rbt contenido">Probar Control</button></a>
-
+    <div class="container-fluid text-center bordeAzul " id="inicio">
+        <h1 id="titulo" class="retroshadow zekton">RBOT<div id="descripcion">control service</div></h1>
     </div>
+
+
     <div id="seccionbrazo" class="container-fluid text-center bordeAzul">
         <div class="row">
-            <div class="col-lg-6 col-xs-12 col-sm-6">
+            <div class="col-lg-6">
 
                 <h1 class="azul">Movilidad</h1>
                 <p>Maneja tu brazo robot desde cualquier lugar.</p>
@@ -42,7 +41,8 @@
     <div class="bordeAzul" id="servicios">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="section-heading text-uppercase">Servicios</h1>
+                <h2 class="section-heading text-uppercase">Servicios</h2>
+                <h3 class="section-subheading text-muted">Servicios disponibles en RBOT.</h3>
             </div>
         </div>
         <div class="row text-center">
@@ -74,15 +74,15 @@
     </div>
 
     <div id="contenedorContacto" class="text-center bordeAzul">
-            <div class="col-md-8 col-md-offset-2 container">
-                <h1>CONTACTO</h1>
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <form class="form-horizontal" method="POST" action="contacto" >
-                    {{ csrf_field() }}
+        <div class="col-md-8 col-md-offset-2 container">
+            <h1>CONTACTO</h1>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <form class="form-horizontal" method="POST" action="contacto" >
+                {{ csrf_field() }}
                 <div class="form-group">
                     {!! Form::label('Nombre:') !!}
                     {!! Form::text('nombre', null,
@@ -110,8 +110,9 @@
                     {!! Form::submit('Contactáctanos!',
                       array('class'=>'btn btn-rbt')) !!}
                 </div>
-                </form>
-            </div>
+            </form>
+        </div>
     </div>
+
     {!! HTML::style('css/home.css') !!}
 @stop
