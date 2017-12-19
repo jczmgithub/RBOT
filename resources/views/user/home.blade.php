@@ -22,7 +22,7 @@
 
         @include('user.columnas.webcam_mando')
 
-        @include('user.columnas.control', ['modelos' => DB::table('robot')->get()])
+        @include('user.columnas.control')
 
         @include('user.columnas.robot')
 
