@@ -4,18 +4,21 @@
     <li ><a href="#seccionbrazo">Características</a></li>
     <li ><a href="#servicios">Servicios</a></li>
     <li ><a href="#contenedorContacto">Contacto</a></li>
+    @auth
+        <li><a href={{ route('home') }}>Panel de control</a></li>
+    @endauth
 @stop
 
 @section('home')
 
-    <div class="container-fluid text-center bordeAzul " id="inicio">
+    <div class="container-fluid text-center bordeAzul" id="inicio">
         <h1 id="titulo" class="retroshadow zekton">RBOT<div id="descripcion">control service</div></h1>
     </div>
 
 
     <div id="seccionbrazo" class="container-fluid text-center bordeAzul">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-xs-12 col-sm-6">
 
                 <h1 class="azul">Movilidad</h1>
                 <p>Maneja tu brazo robot desde cualquier lugar.</p>
@@ -38,11 +41,10 @@
 
     </div>
 
-    <div class="bordeAzul" id="servicios">
+    <div class="container bordeAzul" id="servicios">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Servicios</h2>
-                <h3 class="section-subheading text-muted">Servicios disponibles en RBOT.</h3>
+                <h1 class="section-heading text-uppercase">Servicios</h1>
             </div>
         </div>
         <div class="row text-center">
@@ -74,7 +76,7 @@
     </div>
 
     <div id="contenedorContacto" class="text-center bordeAzul">
-        <div class="col-md-8 container">
+        <div class="col-md-8  container">
             <h1>CONTACTO</h1>
             <ul>
                 @foreach($errors->all() as $error)
