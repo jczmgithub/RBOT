@@ -36,3 +36,4 @@ Route::prefix('admin')->group(function() {
 
 Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');
 
+Route::get('showUsers', 'UserController@showUsers')->name('showUsers');

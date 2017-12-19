@@ -1,4 +1,11 @@
 <div id="ModificarUsu" class="tabcontent">
-    <h3>Paris</h3>
-    <p>Paris is the capital of France.</p>
+
+    @foreach($users as $key => $data)
+        <p>
+            nombre: {{ $data->name }}
+            <br>
+            email: {{ $data->email }}
+        </p>
+    @endforeach
+
 </div>
