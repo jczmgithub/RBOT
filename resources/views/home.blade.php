@@ -7,6 +7,9 @@
     @auth
         <li><a href={{ route('home') }}>Panel de control</a></li>
     @endauth
+    @auth('admin')
+        <li><a href={{ route('admin.home') }}>Panel de administración</a></li>
+    @endauth
 @stop
 
 @section('home')
