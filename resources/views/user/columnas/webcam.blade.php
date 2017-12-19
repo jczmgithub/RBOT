@@ -10,12 +10,6 @@
 
     </div>
 
-    <div id="divMando">
 
-        <h3>Mando</h3>
-
-        <img id="mando" src="/img/mando.png" class="img-responsive" alt="Mando robot">
-
-    </div>
 
 </div>
