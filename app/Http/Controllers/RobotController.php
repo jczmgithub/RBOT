@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use DeepCopy\Filter\KeepFilter;
 use Illuminate\Http\Request;
-use App\datosRobot;
+use App\Models\DatosRobot;
 use Illuminate\Support\Facades\Input;
 
 class RobotController extends Controller
@@ -16,7 +16,7 @@ class RobotController extends Controller
         $pasos=request()->get('pasos');
         $velocidad=request()->get('velocidad');
 
-        $datosRobot = new datosRobot();
+        $datosRobot = new DatosRobot();
 
         $datosRobot->robot=$robot;
         $datosRobot->motor=$motor;
@@ -27,7 +27,7 @@ class RobotController extends Controller
         fwrite($file,json_encode($datosRobot));
         fclose($file);
 
-        return(view('home'));
+        return back();
 
 
     }
