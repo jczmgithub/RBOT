@@ -11,9 +11,10 @@
             <select name="selecRobot" class="form-control selector">
 
                 <option value="">--Seleccione el Robot--</option>
-                <option value="robot1">Robot1</option>
-                <option value="robot2">Robot2</option>
-                <option value="robot3">Robot3</option>
+
+                @foreach ($modelos as $modelo)
+                    <option> {{ $modelo->modelo }} </option>
+                @endforeach
 
             </select>
 

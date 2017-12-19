@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use DeepCopy\Filter\KeepFilter;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\DatosRobot;
 use Illuminate\Support\Facades\Input;
@@ -29,6 +30,8 @@ class RobotController extends Controller
 
         return back();
 
-
     }
+
+
+
 }
