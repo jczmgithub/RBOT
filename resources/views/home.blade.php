@@ -74,7 +74,7 @@
     </div>
 
     <div id="contenedorContacto" class="text-center bordeAzul">
-        <div class="col-md-8 col-md-offset-2 container">
+        <div class="col-md-8 container">
             <h1>CONTACTO</h1>
             <ul>
                 @foreach($errors->all() as $error)
