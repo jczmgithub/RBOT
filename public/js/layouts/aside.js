@@ -1,4 +1,4 @@
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+/* Set the width of the side navigation to 30vw and the left margin of the page content to 30vw */
 function openNav() {
     document.getElementById("mySidenav").style.width = "30vw";
     document.getElementById("main").style.marginLeft = "30vw";
@@ -20,11 +20,11 @@ function openTab(evt, tabName) {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace("active", "");
     }
     document.getElementById(tabName).style.display = "block";
     if (evt !== null) {
-        evt.currentTarget.className += " active";
+        evt.currentTarget.className += "active";
     }
 }
 
