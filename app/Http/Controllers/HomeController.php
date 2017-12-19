@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Auth;
+
 
 class HomeController extends Controller
 {
@@ -24,6 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home', ['modelos' => DB::table('robots')->get()]);
+        return view('user.home', ['modelos' => DB::table('robots')->where('idUsuario','=',Auth::user()->id)->get()]);
     }
 }
