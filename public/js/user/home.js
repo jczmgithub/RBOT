@@ -37,6 +37,7 @@ function enablePasosVelocidad() {
 
 //pruebas mandar json en curpo de post
 function send() {
+
     var datos = {
         robot: $("#selecRobot").val(),
         motor: $("#selecMotor").val(),
@@ -51,18 +52,16 @@ function send() {
         url: '/prueba',
         type: 'post',
         dataType: 'text',
-        done: function (data) {
+        success: function (data) {
             alert(data);
         },
-        fail: function (data) {
+        error: function (data) {
             alert("fallo");
         },
-        always: function (data) {
+        complete: function (data) {
             alert("esto se hace siempre");
         },
         data: datos
-        //data: JSON.stringify(datos),
-        //contentType: "application/json; charset=utf-8"
     });
 }
 

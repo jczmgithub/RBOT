@@ -39,6 +39,5 @@ Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')
 Route::get('showUsers', 'UserController@showUsers')->name('showUsers');
 
 Route::post('/prueba', function(){
-    print_r("holahola");
-    echo $_POST["robot"];
+    echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
