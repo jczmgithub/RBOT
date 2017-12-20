@@ -28,8 +28,6 @@ class RobotController extends Controller
         fwrite($file,json_encode($datosRobot));
         fclose($file);
 
-
-
         return back();
 
     }

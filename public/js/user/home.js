@@ -37,4 +37,16 @@ function enablePasosVelocidad() {
 
 function enableEnviar() {
     document.getElementById("enviar").disabled=false;
+    document.getElementById("guardar").disabled=false;
+}
+
+// Funcion para guardar datos
+
+function guardarDatos(event){
+
+    event.preventDefault();
+    $file=fopen('../storage/app/datos.json','a+');
+    fwrite($file,json_encode($datosRobot));
+    fclose($file);
+
 }

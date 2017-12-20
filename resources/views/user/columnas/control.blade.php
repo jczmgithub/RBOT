@@ -34,7 +34,7 @@
 
             <h5>Pasos:</h5>
 
-            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0"disabled onclick="enableEnviar()">
+            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0" disabled onclick="enableEnviar()">
 
             <h5>Velocidad:</h5>
 
@@ -49,8 +49,10 @@
 
             <button type="submit" id="enviar" disabled>Enviar datos</button>
 
-        </form>
+            <button onclick="guardarDatos()" id="guardar" disabled>Guardar datos</button>
 
+        </form>
+        
     </div>
 
     {!! HTML::script('js/user/home.js'); !!}
