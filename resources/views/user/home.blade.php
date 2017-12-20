@@ -20,11 +20,11 @@
 
         <div class="row">
 
-        @include('user.columnas.webcam_mando')
+        @include('user.columnas.webcam')
 
         @include('user.columnas.control')
 
-        @include('user.columnas.robot')
+        @include('user.columnas.leyendas')
 
         </div>
 
