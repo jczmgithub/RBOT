@@ -47,12 +47,12 @@
                 </div>
             </div>
 
-            <button type="submit" id="enviar" disabled>Enviar datos</button>
+            <button type="submit" id="enviar" value="enviar" name="submit" disabled>Enviar datos</button>
 
-            <button onclick="guardarDatos()" id="guardar" disabled>Guardar datos</button>
+            <button type="submit" id="guardar" value="guardar" name="submit" disabled>Guardar datos</button>
 
         </form>
-        
+
     </div>
 
     {!! HTML::script('js/user/home.js'); !!}

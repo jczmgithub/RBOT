@@ -24,13 +24,23 @@ class RobotController extends Controller
         $datosRobot->pasos=$pasos;
         $datosRobot->velocidad=$velocidad;
 
-        $file=fopen('../storage/app/datos.json','w');
-        fwrite($file,json_encode($datosRobot));
-        fclose($file);
+        switch($request->submit) {
+
+            case 'enviar':
+
+                break;
+
+            case 'guardar':
+                $file=fopen('../storage/app/datos.json','a+');
+                fwrite($file,json_encode($datosRobot).PHP_EOL);
+                fclose($file);
+                break;
+        }
 
         return back();
 
     }
+
 
 
 
