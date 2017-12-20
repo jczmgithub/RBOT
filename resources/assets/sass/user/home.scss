@@ -11,9 +11,23 @@ body{
   padding-bottom: 5%;
 }
 
-#mandoimg{
-  padding: 10%;
+#divAmbos{
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+#mando{
   margin: auto;
+  height: 85%;
+  width: 85%;
+
+}
+
+#robot{
+  margin: auto;
+  height: 85%;
+  width: 85%;
+
 }
 
 #controles{
@@ -90,3 +104,8 @@ div {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+#panelControl{
+  min-height: 66vh;
+}
+

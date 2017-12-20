@@ -1,4 +1,7 @@
-function openLegend(evt, cityName) {
+// Funcion js para la funcion de tab del apartado leyendas
+
+function openLegend(evt, divEvent) {
+
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -15,6 +18,19 @@ function openLegend(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(divEvent).style.display = "block";
     evt.currentTarget.className += " active";
+
+}
+
+// Funcion para activar el siguiente campo del formulario de control robot
+
+function enableMotor() {
+    document.getElementById("selecMotor").disabled=false;
+}
+
+function enablePasosVelocidad() {
+    document.getElementById("pasosForm").disabled=false;
+    document.getElementById("velocidadForm").disabled=false;
+
 }

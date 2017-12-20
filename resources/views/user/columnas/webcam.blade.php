@@ -1,4 +1,4 @@
-<div class="col-sm-4">
+<div class="col-sm-5">
 
     <h3>Webcam</h3>
 
