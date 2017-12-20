@@ -34,7 +34,7 @@
 
             <h5>Pasos:</h5>
 
-            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0"disabled >
+            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0"disabled onclick="enableEnviar()">
 
             <h5>Velocidad:</h5>
 
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <button type="submit">Enviar datos</button>
+            <button type="submit" id="enviar" disabled>Enviar datos</button>
 
         </form>
 

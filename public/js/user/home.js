@@ -34,3 +34,7 @@ function enablePasosVelocidad() {
     document.getElementById("velocidadForm").disabled=false;
 
 }
+
+function enableEnviar() {
+    document.getElementById("enviar").disabled=false;
+}
