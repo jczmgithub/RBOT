@@ -47,8 +47,7 @@
                 </div>
             </div>
 
-            <button type="submit">Enviar datos</button>
-            <button onclick="send()">Prueba</button>
+            <button type="submit" id="enviar" disabled>Enviar datos</button>
 
         </form>
         <button id="prueba" onclick="send()">Prueba</button>

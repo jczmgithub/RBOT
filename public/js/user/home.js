@@ -65,3 +65,7 @@ function send() {
         //contentType: "application/json; charset=utf-8"
     });
 }
+
+function enableEnviar() {
+    document.getElementById("enviar").disabled=false;
+}
