@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="range range-primary" >
-                        <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled>
+                        <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled onclick="enableEnviar()">
                         <output id="rangePrimary">50</output>
                     </div>
                 </div>
