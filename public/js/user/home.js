@@ -67,4 +67,5 @@ function send() {
 
 function enableEnviar() {
     document.getElementById("enviar").disabled=false;
+    document.getElementById("guardar").disabled=false;
 }
