@@ -48,8 +48,10 @@
             </div>
 
             <button type="submit">Enviar datos</button>
+            <button onclick="send()">Prueba</button>
 
         </form>
+        <button id="prueba" onclick="send()">Prueba</button>
 
     </div>
 

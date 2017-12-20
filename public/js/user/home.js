@@ -34,3 +34,34 @@ function enablePasosVelocidad() {
     document.getElementById("velocidadForm").disabled=false;
 
 }
+
+//pruebas mandar json en curpo de post
+function send() {
+    var datos = {
+        robot: $("#selecRobot").val(),
+        motor: $("#selecMotor").val(),
+        pasos: $("#pasosForm").val(),
+        velocidad: $("#velocidadForm").val()
+    };
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/prueba',
+        type: 'post',
+        dataType: 'text',
+        done: function (data) {
+            alert(data);
+        },
+        fail: function (data) {
+            alert("fallo");
+        },
+        always: function (data) {
+            alert("esto se hace siempre");
+        },
+        data: datos
+        //data: JSON.stringify(datos),
+        //contentType: "application/json; charset=utf-8"
+    });
+}
