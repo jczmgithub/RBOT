@@ -86,6 +86,9 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
+            @if($status = Session::get('status'))
+                <div class="alert alert-success">{{ $status }}</div>
+            @endif
             <form class="form-horizontal" method="POST" action="contacto" >
                 {{ csrf_field() }}
                 <div class="form-group">
