@@ -59,6 +59,8 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'tarifa' => 'required',
+            'credito' => 'min:12'
         ]);
     }
 
@@ -74,7 +76,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-
+            'tarifa' => $data['tarifas'],
+            'credito' => $data['credito']
         ]);
     }
     protected function register(Request $request){
@@ -108,5 +111,26 @@ class RegisterController extends Controller
             return redirect(route('login'))->with('status', 'Has activado la cuenta!');
         }
         return redirect (route('login'))->with('status', 'Ha ocurrido un error.');
+    }
+    public function adminRegistrarUser(Request $request){
+        $input = $request -> all();
+        $validator =  $this->validator($input);
+
+        if($validator->passes()){
+            $data = $this ->create($input)->toArray();
+
+            $data['emailToken'] =  str_random(25);
+
+            $user = User::find($data['id']);
+            $user -> emailToken = $data['emailToken'];
+            $user -> save();
+
+            Mail::send('email.userConfirmation', $data, function($message) use($data){
+                $message->to($data['email']);
+                $message->subject('Registro de confirmación');
+            });
+            return redirect(route('login'))->with('status', 'Se le ha enviado un correo de confirmación a '.$user);
+        }
+        return redirect (route('login'))->with('status', $validator->errors());
     }
 }
