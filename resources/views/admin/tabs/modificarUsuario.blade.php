@@ -23,7 +23,7 @@
                                 <button type="button">Editar</button>
                             </td>
                             <td>
-                                <button type="button">Eliminar</button>
+                                <a href="admin/eliminarUsuario/{{ $data -> id }}" class="btnEliminarUsuario">X</a>
                             </td>
                         </tr>
                     @endforeach

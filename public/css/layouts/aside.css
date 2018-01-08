@@ -69,3 +69,11 @@
 #tablaUsuarios {
   margin: auto;
 }
+
+#tablaUsuarios td, th {
+  text-align: center;
+}
+
+.btnEliminarUsuario {
+  color: red;
+}

@@ -57,4 +57,12 @@
   margin: auto;
 }
 
+#tablaUsuarios td, th{
+  text-align: center;
+}
+
+// Boton eliminar usuario
+.btnEliminarUsuario {
+  color: red;
+}
 

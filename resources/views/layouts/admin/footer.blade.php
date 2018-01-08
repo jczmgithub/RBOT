@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="footer-copyright">
-                <p>© 2017 Grupo Rbot Indrustries </p>
+                <p>© 2017/2018 Grupo Rbot</p>
             </div>
         </div>
     </div>

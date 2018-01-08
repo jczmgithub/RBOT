@@ -26,4 +26,10 @@ class AdminController extends Controller
     {
         return view('admin.home', ['users' => DB::table('users')->get()]);
     }
+
+    public function eliminarUsuario($id)
+    {
+        DB::table('users')->where('id', '=', $id)->delete();
+        return $this->index();
+    }
 }
