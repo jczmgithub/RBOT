@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Zekton";
   src: url("../fonts/zekton/zekton rg.ttf");
@@ -121,10 +122,18 @@ div {
   min-height: 66vh;
 }
 
-#enviar {
+#eliminar {
   margin-top: 4%;
 }
 
+#añadir {
+  margin-top: 4.5%;
+}
+
+#enviar {
+  margin-top: 4.5%;
+}
+
 #guardar {
-  margin-top: 4%;
+  margin-top: 4.5%;
 }

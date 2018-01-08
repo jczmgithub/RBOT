@@ -16,7 +16,7 @@
 
     <div id="divRobot" class="tabcontent">
 
-        <img id="robot" src="/img/robot.png" class="img-responsive" alt="Mando robot">
+        <img id="robot" src="/img/" class="img-responsive" alt="Mando robot">
 
     </div>
 
@@ -28,14 +28,11 @@
                 <th title="Motor">Motor</th>
                 <th title="Pasos">Pasos</th>
                 <th title="Velocidad">Velocidad</th>
+                <th title="Eliminar">Eliminar</th>
             </tr>
             </thead>
-            <tbody>
-            <?php
+            <tbody id="contenidoFormulario">
 
-
-
-            ?>
             </tbody>
         </table>
 
@@ -58,6 +55,8 @@
         }
 
         ?>
+
+        <button class="btn btn-primary" id="eliminar" value="eliminar">Eliminar</button>
 
     </div>
 
