@@ -65,7 +65,10 @@ function send() {
     });
 }
 
+function enableGuardar() {
+    document.getElementById("guardar").disabled=false;
+}
+
 function enableEnviar() {
     document.getElementById("enviar").disabled=false;
-    document.getElementById("guardar").disabled=false;
 }

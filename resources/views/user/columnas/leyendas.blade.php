@@ -5,7 +5,7 @@
     <div class="tab">
         <button class="tablinks" onclick="openLegend(event, 'divMando')">Mando</button>
         <button class="tablinks" onclick="openLegend(event, 'divRobot')">Robot</button>
-        <button class="tablinks" onclick="openLegend(event, 'divAmbos')">Ambos</button>
+        <button class="tablinks" onclick="openLegend(event, 'divDatos')">Datos</button>
     </div>
 
     <div id="divMando" class="tabcontent">
@@ -20,9 +20,44 @@
 
     </div>
 
-    <div id="divAmbos" class="tabcontent">
+    <div id="divDatos" class="tabcontent">
+
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+            <tr><th title="Robot">Robot</th>
+                <th title="Motor">Motor</th>
+                <th title="Pasos">Pasos</th>
+                <th title="Velocidad">Velocidad</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
 
 
+
+            ?>
+            </tbody>
+        </table>
+
+        <?php
+
+        //abrimos el archivo en lectura
+        $archivo = '../storage/app/datos.json';
+        $fp = fopen($archivo,'r');
+
+        if(filesize($archivo)!==0){
+
+            //leemos el archivo
+            $texto = fread($fp, filesize($archivo));
+
+            //transformamos los saltos de linea en etiquetas <br>
+            $texto = nl2br($texto);
+
+            //imprimimos los datos del archivo json
+            echo $texto;
+        }
+
+        ?>
 
     </div>
 

@@ -34,25 +34,24 @@
 
             <h5>Pasos:</h5>
 
-            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0"disabled onclick="enableEnviar()">
+            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0" disabled onclick="enableGuardar()">
 
             <h5>Velocidad:</h5>
 
             <div class="row">
                 <div class="col-xs-6">
                     <div class="range range-primary" >
-                        <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled onclick="enableEnviar()">
+                        <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled>
                         <output id="rangePrimary">50</output>
                     </div>
                 </div>
             </div>
 
-            <button type="submit" id="enviar" value="enviar" name="submit" disabled>Enviar datos</button>
+            <button type="submit" class="btn btn-primary" id="enviar" value="enviar" name="submit" disabled>Enviar datos</button>
 
-            <button type="submit" id="guardar" value="guardar" name="submit" disabled>Guardar datos</button>
+            <button type="submit" class="btn btn-primary" id="guardar" value="guardar" name="submit" disabled onclick="enableEnviar()">Guardar datos</button>
 
         </form>
-        <button id="prueba" onclick="send()">Prueba</button>
 
     </div>
 
