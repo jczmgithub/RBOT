@@ -1,4 +1,4 @@
-<div class="col-sm-4">
+<div class="col-sm-5">
 
     <h3>Leyendas</h3>
 
@@ -22,24 +22,13 @@
 
     <div id="divDatos" class="tabcontent">
 
-        <table class="table table-bordered table-hover table-condensed">
-            <thead>
-            <tr><th title="Robot">Robot</th>
-                <th title="Motor">Motor</th>
-                <th title="Pasos">Pasos</th>
-                <th title="Velocidad">Velocidad</th>
-                <th title="Eliminar">Eliminar</th>
-            </tr>
-            </thead>
-            <tbody id="contenidoFormulario">
+        <div class="embed-responsive embed-responsive-16by9">
 
-            </tbody>
-        </table>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5Q_xjJQmBE"
+                    frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+            </iframe>
 
-
-        <button class="btn btn-primary" id="eliminar" value="eliminar">Eliminar</button>
-
-
+        </div>
 
     </div>
 
