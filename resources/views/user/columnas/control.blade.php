@@ -57,6 +57,8 @@
 
         </form>
 
+        <button id="prueba" onclick="send()">Prueba</button>
+
     </div>
 
     {!! HTML::script('js/user/home.js'); !!}
