@@ -53,6 +53,8 @@
 
             <button type="submit" class="btn btn-primary" id="enviar" value="enviar" name="submit" disabled>Enviar</button>
 
+            <button type="submit" class="btn btn-primary" id="prueba" value="prueba" name="prueba">Prueba</button>
+
         </form>
 
     </div>

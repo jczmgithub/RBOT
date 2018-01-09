@@ -38,14 +38,11 @@ class RobotController extends Controller
                 fwrite($file,json_encode($datosRobot).PHP_EOL);
                 fclose($file);
                 break;
-
         }
+
 
         return back();
 
     }
-
-
-
 
 }

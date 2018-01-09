@@ -72,3 +72,4 @@ function enableGuardar() {
 function enableEnviar() {
     document.getElementById("enviar").disabled=false;
 }
+
