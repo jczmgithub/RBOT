@@ -30,5 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/pepsi-cyr-lat" type="text/css"/>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/>
+    <!-- Plugin tablas JSon-->
+    <script src="JSON-to-Table.min.1.0.0.js"></script>
 
 </head>

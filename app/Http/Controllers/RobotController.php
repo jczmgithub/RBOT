@@ -27,7 +27,10 @@ class RobotController extends Controller
         switch($request->submit) {
 
             case 'enviar':
-
+                $file=fopen('../storage/app/datos.json','w+');
+                //enviar contenido de formulario
+                fwrite($file,"");
+                fclose($file);
                 break;
 
             case 'guardar':
@@ -37,11 +40,9 @@ class RobotController extends Controller
                 break;
         }
 
+
         return back();
 
     }
-
-
-
 
 }
