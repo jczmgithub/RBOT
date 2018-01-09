@@ -37,6 +37,10 @@
   line-height: 1.7;
 }
 
+#myFooter [class='col-sm-4'] {
+  text-align: center;
+}
+
 #myFooter h5 {
   font-size: 18px;
   color: white;

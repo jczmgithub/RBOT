@@ -71,9 +71,6 @@
             </tbody>
         </table>
 
-
-        <button class="btn btn-primary" id="eliminar" value="eliminar">Eliminar</button>
-
     </div>
 
 </div>
