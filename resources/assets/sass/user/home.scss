@@ -139,7 +139,7 @@ div {
   background-color: #f1f1f1;
   overflow-x:auto;
   tbody{
-    height:31.2vh;
+    height:65vh;
     overflow-y:auto;
     width: 100%;
   }
@@ -161,8 +161,19 @@ div {
   }
 }
 
+#selecRobot{
+  width: 100%;
+}
 
+#selecMotor{
+  width: 100%;
+}
 
+#pasosForm{
+  width: 100%;
+}
 
-
-
+#botonesControl{
+  margin-top: -1%;
+  margin-bottom: 4%;
+}

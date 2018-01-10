@@ -17,7 +17,7 @@
         <button class="tablinks" onclick="openLegend(event, 'divRobot')">Robot</button>
     </div>
 
-    <div id="divMando" class="tabcontent">
+    <div id="divMando" class="tabcontent" >
 
         <img id="mando" src="/img/mando.png" class="img-responsive" alt="Mando robot">
 

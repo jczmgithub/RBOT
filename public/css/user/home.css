@@ -145,7 +145,7 @@ div {
 }
 
 .table-fixed tbody {
-  height: 31.2vh;
+  height: 65vh;
   overflow-y: auto;
   width: 100%;
 }
@@ -161,4 +161,21 @@ div {
 .table-fixed thead tr th {
   float: left;
   background-color: #337AB7;
+}
+
+#selecRobot {
+  width: 100%;
+}
+
+#selecMotor {
+  width: 100%;
+}
+
+#pasosForm {
+  width: 100%;
+}
+
+#botonesControl {
+  margin-top: -1%;
+  margin-bottom: 4%;
 }
