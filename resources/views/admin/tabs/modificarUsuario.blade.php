@@ -2,82 +2,70 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12" style="overflow-x:auto;">
                 <table id="tablaUsuarios">
                     <tr>
                         <th>Nombre</th>
                         <th>Email</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
+                        <th>Confirmado</th>
+                        <th>Tarifa</th>
+                        <th>Tarjeta</th>
+                        <th>Acciones</th>
                     </tr>
 
                     @foreach($users as $key => $data)
                         <tr>
                             <td>
-                                {{ $data->name }}
+                                <input type="text" value="{{ $data->name }}">
                             </td>
                             <td>
-                                {{ $data->email }}
+                                <input type="email" value="{{ $data->email }}">
                             </td>
                             <td>
-                                <button type="button">Editar</button>
+                                <input type="checkbox" value="{{ $data->confirmado }}">
                             </td>
                             <td>
-                                <a href="admin/eliminarUsuario/{{ $data -> id }}" class="btnEliminarUsuario">X</a>
+                                <select name="selecTarifa" id="selecTarifa">
+                                    <option value="0">Sin tarifa</option>
+                                    <option value="1" >Tarifa 1</option>
+                                    <option value="2">Tarifa 2</option>
+                                    <option value="3">Tarifa 3</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" value="{{ $data->confirmado }}">
+                            </td>
+                            <td>
+                                <a href="admin/editarUsuario/{{ $data -> id }}" class="btnEditarUsuario"><span class="fa fa-floppy-o"></span></a>
+                                <a href="admin/eliminarUsuario/{{ $data -> id }}" class="btnEliminarUsuario"><span class="fa fa-times"></span></a>
                             </td>
                         </tr>
                     @endforeach
 
                     <tr>
                         <td>
-                            <select name="selecMotor" class="form-control selector" id="selecMotor"  onclick="enablePasosVelocidad()">
-
-                                <option value="">-Seleccione el motor-</option>
-                                <option value="motor1" >Base</option>
-                                <option value="motor2">Hombro</option>
-                                <option value="motor3">Brazo</option>
-                                <option value="motor4">Codo</option>
-                                <option value="motor5">Muñeca</option>
-                                <option value="motor6">Mano</option>
-
+                            <input type="text" placeholder="Introduce nombre">
+                        </td>
+                        <td>
+                            <input type="email" placeholder="Introduce email">
+                        </td>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>
+                            <select name="selecTarifa" id="selecTarifa">
+                                <option value="" selected="true" disabled="disabled">Selecciona</option>
+                                <option value="0">Sin tarifa</option>
+                                <option value="1" >Tarifa 1</option>
+                                <option value="2">Tarifa 2</option>
+                                <option value="3">Tarifa 3</option>
                             </select>
                         </td>
                         <td>
-                            <select name="selecMotor2" class="form-control selector" id="selecMotor2"  onclick="enablePasosVelocidad()">
-
-                                <option value="">-Seleccione el motor-</option>
-                                <option value="motor1" >Base</option>
-                                <option value="motor2">Hombro</option>
-                                <option value="motor3">Brazo</option>
-                                <option value="motor4">Codo</option>
-                                <option value="motor5">Muñeca</option>
-                                <option value="motor6">Mano</option>
-
-                            </select>
+                            <input type="text" placeholder="Introduce tarjeta">
                         </td>
                         <td>
-                            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0" >
-                        </td>
-                        <td>
-                            <div class="range range-primary" >
-                                <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value"  onclick="enableGuardar()">
-                                <output id="rangePrimary">50</output>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <button type="button">Nueva fila</button>
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
+                            <a href="admin/nuevoUsuario/" class="btnNuevoUsuario"><span class="fa fa-floppy-o"></span></a>
                         </td>
                     </tr>
 
