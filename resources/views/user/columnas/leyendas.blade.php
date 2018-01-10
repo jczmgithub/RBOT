@@ -33,8 +33,30 @@
             </thead>
             <tbody id="contenidoFormulario">
 
+
             </tbody>
+
         </table>
+
+        <?php
+
+        //abrimos el archivo en lectura
+        $archivo = '../storage/app/datos.json';
+        $fp = fopen($archivo,'r');
+
+        if(filesize($archivo)!==0){
+
+            //leemos el archivo
+            $texto = fread($fp, filesize($archivo));
+
+            //transformamos los saltos de linea en etiquetas <br>
+            $texto = nl2br($texto);
+
+            //imprimimos los datos del archivo json
+            echo $texto;
+        }
+
+        ?>
 
 
         <button class="btn btn-primary" id="eliminar" value="eliminar">Eliminar</button>
