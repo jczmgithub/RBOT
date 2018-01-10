@@ -22,7 +22,7 @@
                                 <input type="email" value="{{ $data->email }}">
                             </td>
                             <td>
-                                <input type="checkbox" value="{{ $data->confirmado }}">
+                                <input type="checkbox" checked="{{ $data->confirmado }}">
                             </td>
                             <td>
                                 <select name="selecTarifa" id="selecTarifa">
@@ -36,8 +36,11 @@
                                 <input type="text" value="{{ $data->confirmado }}">
                             </td>
                             <td>
-                                <a href="admin/editarUsuario/{{ $data -> id }}" class="btnEditarUsuario"><span class="fa fa-floppy-o"></span></a>
-                                <a href="admin/eliminarUsuario/{{ $data -> id }}" class="btnEliminarUsuario"><span class="fa fa-times"></span></a>
+                                <a href="admin/editarUsuario/{{ $data -> id }}" class="btnEditarUsuario"><span class="fa fa-pencil-square-o"></span></a>
+                                <a class="btnEliminarUsuario" onclick="eliminarUsuario({{ $data -> id }})"><span class="fa fa-times"></span></a>
+                                <!--
+                                <a href="admin/eliminarUsuario/{{ $data -> id }}" class="btnEliminarUsuario" onclick="eliminarUsuario({{ $data -> id }})"><span class="fa fa-times"></span></a>
+                                -->
                             </td>
                         </tr>
                     @endforeach

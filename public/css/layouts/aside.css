@@ -79,3 +79,7 @@
 .btnEliminarUsuario {
   color: red;
 }
+
+.btnNuevoUsuario {
+  color: green;
+}

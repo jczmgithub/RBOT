@@ -32,3 +32,30 @@ function openTab(evt, tabName) {
 $( document ).ready(function() {
     openTab(null, "Home");
 });
+
+//eliminar usuario
+function eliminarUsuario(id) {
+
+    var datos = {
+        id: id
+    };
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/prueba2',
+        type: 'post',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (data) {
+            alert("fallo");
+        },
+        complete: function (data) {
+            alert("esto se hace siempre");
+        },
+        data: datos
+    });
+}

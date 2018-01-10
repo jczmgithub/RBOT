@@ -42,3 +42,7 @@ Route::get('showUsers', 'UserController@showUsers')->name('showUsers');
 Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
+
+Route::post('/prueba2', function(){
+    echo "Quieres borrar el usuario con id: ".$_POST["id"];
+});
