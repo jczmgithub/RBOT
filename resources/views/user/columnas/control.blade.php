@@ -1,4 +1,4 @@
-<div class="col-sm-3">
+<div class="col-sm-7">
 
     <h3>Controles</h3>
 
@@ -57,8 +57,20 @@
 
         <button id="prueba" onclick="send()">Prueba</button>
 
-    </div>
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+            <tr><th title="Robot">Robot</th>
+                <th title="Motor">Motor</th>
+                <th title="Pasos">Pasos</th>
+                <th title="Velocidad">Velocidad</th>
+                <th title="Eliminar">Eliminar</th>
+            </tr>
+            </thead>
+            <tbody id="contenidoFormulario">
 
-    {!! HTML::script('js/user/home.js'); !!}
+            </tbody>
+        </table>
+
+    </div>
 
 </div>

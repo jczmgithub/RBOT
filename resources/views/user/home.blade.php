@@ -20,16 +20,15 @@
 
         <div class="row">
 
-        @include('user.columnas.webcam')
+        @include('user.columnas.leyendas')
 
         @include('user.columnas.control')
-
-        @include('user.columnas.leyendas')
 
         </div>
 
     </div>
 
     {!! HTML::style('css/user/home.css') !!}
+    {!! HTML::script('js/user/home.js'); !!}
 
 @stop
