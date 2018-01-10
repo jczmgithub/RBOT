@@ -32,19 +32,14 @@ Route::prefix('admin')->group(function() {
     Route::post('/password/email', 'AuthAdmin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
     Route::get('/password/reset/{token}', 'AuthAdmin\ResetPasswordController@showResetForm')->name('admin.password.reset');
     Route::post('/password/reset', 'AuthAdmin\ResetPasswordController@reset');
-    Route::get('/eliminarUsuario/{id}', 'AdminController@eliminarUsuario')->name('admin.eliminarUsuario');
+    Route::post('/eliminarUsuario', 'AdminController@eliminarUsuario')->name('admin.eliminarUsuario');
+    Route::get('/cargarFilasUsuarios', 'AdminController@cargarFilasUsuarios')->name('admin.cargarFilasUsuarios');
+    Route::post('/editarUsuario', 'AdminController@editarUsuario')->name('admin.editarUsuario');
 });
 
 Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');
-
-Route::get('showUsers', 'UserController@showUsers')->name('showUsers');
 
 Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
 
-Route::post('/prueba2', function(){
-    echo "Quieres borrar el usuario con id: ".$_POST["id"];
-});
-
-Route::post('/prueba3', 'AdminController@eliminarUsuario2')->name('admin.eliminarUsuario2');

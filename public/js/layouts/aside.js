@@ -33,10 +33,8 @@ $( document ).ready(function() {
     openTab(null, "Home");
 });
 
-//eliminar usuario
 function eliminarUsuario(id) {
-
-    if (confirm('Esta segur@?')) {
+    if (confirm('Estas segur@???')) {
         var datos = {
             id: id
         };
@@ -45,20 +43,40 @@ function eliminarUsuario(id) {
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: '/prueba3',
+            url: '/admin/eliminarUsuario',
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                alert(data);
+                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios" );
             },
             error: function (data) {
-                alert("fallo");
-            },
-            complete: function (data) {
-                alert("esto se hace siempre");
+                alert("ERROR!!!");
             },
             data: datos
         });
     }
+}
 
+function editarUsuario(id) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            id: id
+        };
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/admin/editarUsuario',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios" );
+            },
+            error: function (data) {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
 }
