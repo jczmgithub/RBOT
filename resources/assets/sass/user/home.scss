@@ -134,4 +134,35 @@ div {
   margin-top: 4%;
 }
 
+.table-fixed{
+  width: 100%;
+  background-color: #f1f1f1;
+  overflow-x:auto;
+  tbody{
+    height:31.2vh;
+    overflow-y:auto;
+    width: 100%;
+  }
+  tbody,tr,td,th{
+    display:block;
+  }
+  tbody{
+    td{
+      float:left;
+    }
+  }
+  thead {
+    tr{
+      th{
+        float:left;
+        background-color: $colorAzul;
+      }
+    }
+  }
+}
+
+
+
+
+
 

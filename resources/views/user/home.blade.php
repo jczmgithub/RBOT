@@ -20,9 +20,9 @@
 
         <div class="row">
 
-        @include('user.columnas.leyendas')
+        @include('user.columnas.ayudasVisuales')
 
-        @include('user.columnas.control')
+        @include('user.columnas.controlInterfaz')
 
         </div>
 

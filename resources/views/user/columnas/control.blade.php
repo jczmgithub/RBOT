@@ -1,4 +1,4 @@
-<div class="col-sm-7">
+<div class="col-sm-8">
 
     <h3>Controles</h3>
 
