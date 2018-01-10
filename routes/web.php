@@ -46,3 +46,5 @@ Route::post('/prueba', function(){
 Route::post('/prueba2', function(){
     echo "Quieres borrar el usuario con id: ".$_POST["id"];
 });
+
+Route::post('/prueba3', 'AdminController@eliminarUsuario2')->name('admin.eliminarUsuario2');

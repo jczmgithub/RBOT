@@ -36,26 +36,29 @@ $( document ).ready(function() {
 //eliminar usuario
 function eliminarUsuario(id) {
 
-    var datos = {
-        id: id
-    };
+    if (confirm('Esta segur@?')) {
+        var datos = {
+            id: id
+        };
 
-    $.ajax({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/prueba2',
-        type: 'post',
-        dataType: 'text',
-        success: function (data) {
-            alert(data);
-        },
-        error: function (data) {
-            alert("fallo");
-        },
-        complete: function (data) {
-            alert("esto se hace siempre");
-        },
-        data: datos
-    });
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/prueba3',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                alert(data);
+            },
+            error: function (data) {
+                alert("fallo");
+            },
+            complete: function (data) {
+                alert("esto se hace siempre");
+            },
+            data: datos
+        });
+    }
+
 }

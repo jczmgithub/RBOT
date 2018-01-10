@@ -1,8 +1,12 @@
-<div id="ModificarUsu" class="tabcontent">
+<div id="modificarUsu" class="tabcontent">
 
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="overflow-x:auto;">
+                <h1>
+                    Administrar Usuarios
+                </h1>
+
                 <table id="tablaUsuarios">
                     <tr>
                         <th>Nombre</th>
@@ -37,7 +41,7 @@
                             </td>
                             <td>
                                 <a href="admin/editarUsuario/{{ $data -> id }}" class="btnEditarUsuario"><span class="fa fa-pencil-square-o"></span></a>
-                                <a class="btnEliminarUsuario" onclick="eliminarUsuario({{ $data -> id }})"><span class="fa fa-times"></span></a>
+                                <a href="#" class="btnEliminarUsuario" onclick="eliminarUsuario({{ $data -> id }})"><span class="fa fa-times"></span></a>
                                 <!--
                                 <a href="admin/eliminarUsuario/{{ $data -> id }}" class="btnEliminarUsuario" onclick="eliminarUsuario({{ $data -> id }})"><span class="fa fa-times"></span></a>
                                 -->
