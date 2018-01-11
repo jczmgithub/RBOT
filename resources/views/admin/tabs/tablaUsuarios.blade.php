@@ -63,7 +63,6 @@
         </td>
         <td>
             <a href="#" class="btnNuevoUsuario" onclick="nuevoUsuario()"><span class="fa fa-floppy-o"></span></a>
-            <a href="admin/nuevoUsuario/" class="btnNuevoUsuario"><span class="fa fa-floppy-o"></span></a>
         </td>
     </tr>
 

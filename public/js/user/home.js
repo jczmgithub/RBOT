@@ -25,8 +25,19 @@ function openLegend(evt, divEvent) {
 
 // Funcion para activar el siguiente campo del formulario de control robot
 
-function enableMotor() {
-    document.getElementById("selecMotor").disabled=false;
+function enableMotor(event) {
+    console.log(event);
+    for(var i = 0;i < event.path.length; i++) {
+
+        if(event.path[i].nodeName == "TR") {
+            var tr = event.path[i];
+            tr.querySelector("select[name='selecMotor']").disabled = false;
+
+            return;
+        }
+    }
+
+    // document.getElementById("selecMotor").disabled = false;
 }
 
 function enablePasosVelocidad() {
@@ -36,6 +47,7 @@ function enablePasosVelocidad() {
 }
 
 //pruebas mandar json en curpo de post
+
 function send() {
 
     var datos = {
@@ -73,3 +85,24 @@ function enableEnviar() {
     document.getElementById("enviar").disabled=false;
 }
 
+$(document).ready(function (){
+    try {
+        openLegend(null,"divMando");
+    } catch (e) {
+        console.error("Error on openLegeng");
+    }
+
+    document.getElementById("selecRobot").addEventListener("change", enableMotor);
+    document.getElementById("selecMotor").addEventListener("change", enablePasosVelocidad);
+
+});
+
+$(document).ready(function(){
+    $("#añadirColumna").on("click",function(){
+        $clone=$("table tbody tr:first").clone();
+        $clone.find("input").each(function(){
+            $(this).val("");
+        });
+        $("table tbody").append($clone);
+    });
+});
