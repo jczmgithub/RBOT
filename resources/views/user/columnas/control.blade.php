@@ -1,4 +1,4 @@
-<div class="col-sm-3">
+<div class="col-sm-7">
 
     <h3>Controles</h3>
 
@@ -34,28 +34,43 @@
 
             <h5>Pasos:</h5>
 
-            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0"disabled onclick="enableEnviar()">
+            <input type="number" class="form-control" id="pasosForm" name="pasos" value="0" disabled>
 
             <h5>Velocidad:</h5>
 
             <div class="row">
                 <div class="col-xs-6">
                     <div class="range range-primary" >
-                        <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled onclick="enableEnviar()">
+                        <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled onclick="enableGuardar()">
                         <output id="rangePrimary">50</output>
                     </div>
                 </div>
             </div>
 
-            <button type="submit" id="enviar" value="enviar" name="submit" disabled>Enviar datos</button>
+            <button type="submit" class="btn btn-primary" id="añadir" value="añadir" name="submit" disabled>Añadir</button>
 
-            <button type="submit" id="guardar" value="guardar" name="submit" disabled>Guardar datos</button>
+            <button type="submit" class="btn btn-primary" id="guardar" value="guardar" name="submit" disabled onclick="enableEnviar()">Guardar</button>
+
+            <button type="submit" class="btn btn-primary" id="enviar" value="enviar" name="submit" disabled>Enviar</button>
 
         </form>
+
         <button id="prueba" onclick="send()">Prueba</button>
 
-    </div>
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+            <tr><th title="Robot">Robot</th>
+                <th title="Motor">Motor</th>
+                <th title="Pasos">Pasos</th>
+                <th title="Velocidad">Velocidad</th>
+                <th title="Eliminar">Eliminar</th>
+            </tr>
+            </thead>
+            <tbody id="contenidoFormulario">
 
-    {!! HTML::script('js/user/home.js'); !!}
+            </tbody>
+        </table>
+
+    </div>
 
 </div>

@@ -65,3 +65,25 @@
   display: none;
   padding: 6px 12px;
 }
+
+#tablaUsuarios {
+  margin: auto;
+}
+
+#tablaUsuarios td, th {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#modificarUsu h1 {
+  text-align: center;
+}
+
+.btnEliminarUsuario {
+  color: red;
+}
+
+.btnNuevoUsuario {
+  color: green;
+}

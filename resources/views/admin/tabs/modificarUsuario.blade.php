@@ -1,20 +1,17 @@
-<div id="ModificarUsu" class="tabcontent">
+<div id="modificarUsu" class="tabcontent">
 
-    <div>
-        <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Email</th>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="overflow-x:auto;">
+                <h1>
+                    Administrar Usuarios
+                </h1>
+
+                <div id="tablaUsuariosDiv">
+                    @include('admin.tabs.tablaUsuarios')
+                </div>
+            </div>
+        </div>
     </div>
-
-    @foreach($users as $key => $data)
-        <p>
-            nombre: {{ $data->name }}
-            <br>
-            email: {{ $data->email }}
-        </p>
-    @endforeach
 
 </div>

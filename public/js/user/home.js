@@ -65,7 +65,11 @@ function send() {
     });
 }
 
-function enableEnviar() {
-    document.getElementById("enviar").disabled=false;
+function enableGuardar() {
     document.getElementById("guardar").disabled=false;
 }
+
+function enableEnviar() {
+    document.getElementById("enviar").disabled=false;
+}
+

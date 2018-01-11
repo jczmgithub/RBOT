@@ -32,3 +32,52 @@ function openTab(evt, tabName) {
 $( document ).ready(function() {
     openTab(null, "Home");
 });
+
+function eliminarUsuario(id) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            id: id
+        };
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/admin/eliminarUsuario',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios" );
+            },
+            error: function (data) {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+
+function editarUsuario(id) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            id: id
+        };
+
+        var obj = ["a"];
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/admin/editarUsuario',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios", obj, function () {} );
+            },
+            error: function (data) {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}

@@ -46,11 +46,34 @@
   }
 }
 
-
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
 }
 
+// Tabla con los usuarios
+#tablaUsuarios {
+  margin: auto;
+}
+
+#tablaUsuarios td, th{
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#modificarUsu h1 {
+  text-align: center;
+}
+
+// Boton eliminar usuario
+.btnEliminarUsuario {
+  color: red;
+}
+
+// Boton nuevo usuario
+.btnNuevoUsuario {
+  color: green;
+}
 

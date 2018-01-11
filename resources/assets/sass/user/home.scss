@@ -6,14 +6,23 @@ body{
   min-height: 100vh;
 }
 
-#divMando{
-  padding-top: 2%;
-  padding-bottom: 5%;
+#eliminar{
+  margin-top: 2%;
 }
 
-#divAmbos{
+#divMando{
   padding-top: 2%;
-  padding-bottom: 5%;
+  padding-bottom: 4%;
+}
+
+#divRobot{
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+#divDatos{
+  padding-top: 2%;
+  padding-bottom: 4%;
 }
 
 #mando{
@@ -108,4 +117,21 @@ div {
 #panelControl{
   min-height: 66vh;
 }
+
+#eliminar{
+  margin-top: 4%;
+}
+
+#añadir{
+  margin-top: 4%;
+}
+
+#enviar{
+  margin-top: 4%;
+}
+
+#guardar{
+  margin-top: 4%;
+}
+
 
