@@ -10,7 +10,6 @@
                 <div id="tablaUsuariosDiv">
                     @include('admin.tabs.tablaUsuarios')
                 </div>
-
             </div>
         </div>
     </div>

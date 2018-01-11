@@ -63,6 +63,7 @@ function editarUsuario(id) {
             id: id
         };
 
+        var obj = ["a"];
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -71,7 +72,7 @@ function editarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios" );
+                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios", obj, function () {} );
             },
             error: function (data) {
                 alert("ERROR!!!");
