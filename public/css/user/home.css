@@ -137,3 +137,45 @@ div {
 #guardar {
   margin-top: 4%;
 }
+
+.table-fixed {
+  width: 100%;
+  background-color: #f1f1f1;
+  overflow-x: auto;
+}
+
+.table-fixed tbody {
+  height: 65vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+
+.table-fixed tbody td {
+  float: left;
+}
+
+.table-fixed thead tr th {
+  float: left;
+  background-color: #337AB7;
+}
+
+#selecRobot {
+  width: 100%;
+}
+
+#selecMotor {
+  width: 100%;
+}
+
+#pasosForm {
+  width: 100%;
+}
+
+#botonesControl {
+  margin-top: -1%;
+  margin-bottom: 4%;
+}
