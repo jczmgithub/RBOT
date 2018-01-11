@@ -72,7 +72,8 @@ function nuevoUsuario() {
         var datos = {
             nombre: $("#nombre").val(),
             email: $("#email").val(),
-            confirmado: $("#confirmado").val(),
+            //confirmado: $("#confirmado").is(':selected'),
+            confirmado: 0,
             tarifa: $("#tarifa").val(),
             credito: $("#credito").val()
         };
