@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->integer('tarifa')->default(0);
             $table->string('credito');
             $table->string('password')->default(bcrypt('zubiri'));
-            $table->boolean('confirmado')->default(0);
+            $table->boolean('confirmado')->default(false);
             $table->string('emailToken', 254)->nullable();
             $table->rememberToken();
             $table->timestamps();

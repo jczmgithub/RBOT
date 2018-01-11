@@ -18,7 +18,11 @@
                     <input type="email" value="{{ $data->email }}">
                 </td>
                 <td>
-                    <input type="checkbox" checked="{{ $data->confirmado }}">
+                    @if($data->confirmado == 0)
+                        <input type="checkbox">
+                    @else
+                        <input type="checkbox" checked="checked">
+                    @endif
                 </td>
                 <td>
                     <select name="selecTarifa" id="selecTarifa">
