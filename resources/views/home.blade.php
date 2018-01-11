@@ -19,7 +19,7 @@
     </div>
 
 
-    <div id="seccionbrazo" class="container-fluid text-center bordeAzul">
+    <div id="seccionbrazo" class="container-fluid text-center bordeAzul anchor">
         <div class="row">
             <div class="col-lg-6 col-xs-12 col-sm-6">
 
@@ -44,7 +44,7 @@
 
     </div>
 
-    <div class="container bordeAzul" id="servicios">
+    <div class="container bordeAzul anchor" id="servicios">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">Servicios</h1>
@@ -78,7 +78,7 @@
         </div>
     </div>
 
-    <div id="contenedorContacto" class="text-center bordeAzul">
+    <div id="contenedorContacto" class="text-center bordeAzul anchor ">
         <div class="col-md-8  container">
             <h1>CONTACTO</h1>
             <ul>

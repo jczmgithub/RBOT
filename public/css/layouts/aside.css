@@ -76,6 +76,14 @@
   padding: 5px;
 }
 
+#modificarUsu h1 {
+  text-align: center;
+}
+
 .btnEliminarUsuario {
   color: red;
+}
+
+.btnNuevoUsuario {
+  color: green;
 }

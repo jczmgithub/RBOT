@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 595px;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -15,8 +15,6 @@
 }
 #titulo{
   font-size:20vmin;
-  margin-top: 5px;
-  margin-bottom: 0px;
   text-align: center;
   font-weight: bolder;
   color: $colorBlanco;
@@ -72,4 +70,10 @@
 }
 .bordeAzul{
   border-bottom: 2px solid $colorAzul;
+}
+.anchor::before {
+  content:"";
+  display:block;
+  height:50px; /* fixed header height*/
+  margin:-50px 0 0; /* negative fixed header height */
 }

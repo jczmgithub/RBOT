@@ -8,8 +8,10 @@
                     <div class="panel-heading">Entrar</div>
                     <div class="panel-body">
 
-                        @if($status = Session::get('status'))
-                            <div class="alert alert-info">{{ $status }}</div>
+                        @if (session('status'))
+                            <div class="alert alert-info">
+                                <li>{{ session('status') }}</li>
+                            </div>
                         @endif
 
                         <form class="form-horizontal" method="POST" action="{{ route('login') }}">

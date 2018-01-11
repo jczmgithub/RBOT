@@ -27,9 +27,21 @@ class AdminController extends Controller
         return view('admin.home', ['users' => DB::table('users')->get()]);
     }
 
-    public function eliminarUsuario($id)
+    public function cargarFilasUsuarios()
     {
-        DB::table('users')->where('id', '=', $id)->delete();
-        return $this->index();
+        // No pasar datos sensibles GET !!!
+        // Mejorar peticion BBDD !!!
+        return view('admin.tabs.tablaUsuarios', ['users' => DB::table('users')->get()]);
     }
+
+    public function eliminarUsuario()
+    {
+        DB::table('users')->where('id', '=', $_POST["id"])->delete();
+    }
+
+    public function editarUsuario()
+    {
+        DB::table('users')->where('id', '=', $_POST["id"])->delete();
+    }
+
 }

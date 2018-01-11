@@ -63,8 +63,17 @@
   padding: 5px;
 }
 
+#modificarUsu h1 {
+  text-align: center;
+}
+
 // Boton eliminar usuario
 .btnEliminarUsuario {
   color: red;
+}
+
+// Boton nuevo usuario
+.btnNuevoUsuario {
+  color: green;
 }
 
