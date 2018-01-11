@@ -39,7 +39,13 @@ class AdminController extends Controller
 
     public function nuevoUsuario()
     {
-        DB::table('users')->where('id', '=', $_POST["id"])->delete();
+        DB::table('users')->insert([
+            'name' => $_POST["nombre"],
+            'email' => $_POST["email"],
+            'confirmado' => $_POST["confirmado"],
+            'tarifa' => $_POST["tarifa"],
+            'credito' => $_POST["credito"],
+        ]);
     }
 
     public function editarUsuario()

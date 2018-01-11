@@ -41,16 +41,16 @@
 
     <tr>
         <td>
-            <input type="text" placeholder="Introduce nombre">
+            <input id="nombre" type="text" placeholder="Introduce nombre">
         </td>
         <td>
-            <input type="email" placeholder="Introduce email">
+            <input id="email" type="email" placeholder="Introduce email">
         </td>
         <td>
-            <input type="checkbox">
+            <input id="confirmado" type="checkbox">
         </td>
         <td>
-            <select name="selecTarifa" id="selecTarifa">
+            <select name="tarifa" id="tarifa">
                 <option value="" selected="true" disabled="disabled">Selecciona</option>
                 <option value="0">Sin tarifa</option>
                 <option value="1" >Tarifa 1</option>
@@ -59,7 +59,7 @@
             </select>
         </td>
         <td>
-            <input type="text" placeholder="Introduce tarjeta">
+            <input id="credito" type="text" placeholder="Introduce tarjeta">
         </td>
         <td>
             <a href="#" class="btnNuevoUsuario" onclick="nuevoUsuario()"><span class="fa fa-floppy-o"></span></a>

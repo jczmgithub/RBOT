@@ -70,7 +70,11 @@ function eliminarUsuario(id) {
 function nuevoUsuario() {
     if (confirm('Estas segur@???')) {
         var datos = {
-            
+            nombre: $("#nombre").val(),
+            email: $("#email").val(),
+            confirmado: $("#confirmado").val(),
+            tarifa: $("#tarifa").val(),
+            credito: $("#credito").val()
         };
 
         $.ajax({
