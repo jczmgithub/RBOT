@@ -37,6 +37,11 @@ class AdminController extends Controller
         DB::table('users')->where('id', '=', $_POST["id"])->delete();
     }
 
+    public function nuevoUsuario()
+    {
+        DB::table('users')->where('id', '=', $_POST["id"])->delete();
+    }
+
     public function editarUsuario()
     {
         DB::table('users')->where('id', '=', $_POST["id"])->delete();

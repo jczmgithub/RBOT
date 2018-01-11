@@ -34,6 +34,7 @@ Route::prefix('admin')->group(function() {
     Route::post('/password/reset', 'AuthAdmin\ResetPasswordController@reset');
     Route::post('/eliminarUsuario', 'AdminController@eliminarUsuario')->name('admin.eliminarUsuario');
     Route::post('/cargarFilasUsuarios', 'AdminController@cargarFilasUsuarios')->name('admin.cargarFilasUsuarios');
+    Route::post('/nuevoUsuario', 'AdminController@nuevoUsuario')->name('admin.nuevoUsuario');
     Route::post('/editarUsuario', 'AdminController@editarUsuario')->name('admin.editarUsuario');
 });
 

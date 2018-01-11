@@ -67,6 +67,30 @@ function eliminarUsuario(id) {
     }
 }
 
+function nuevoUsuario() {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            
+        };
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/admin/nuevoUsuario',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                cargarTabla();
+            },
+            error: function (data) {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+
 function editarUsuario(id) {
     if (confirm('Estas segur@???')) {
         var datos = {
