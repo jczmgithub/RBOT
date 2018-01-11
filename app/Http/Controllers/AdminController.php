@@ -29,8 +29,6 @@ class AdminController extends Controller
 
     public function cargarFilasUsuarios()
     {
-        // No pasar datos sensibles GET !!!
-        // Mejorar peticion BBDD !!!
         return view('admin.tabs.tablaUsuarios', ['users' => DB::table('users')->get()]);
     }
 

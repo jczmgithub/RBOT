@@ -29,7 +29,7 @@
                     </select>
                 </td>
                 <td>
-                    <input type="text" value="{{ $data->id }}">
+                    <input type="text" value="{{ $data->credito }}">
                 </td>
                 <td>
                     <a href="#" class="btnEditarUsuario" onclick="editarUsuario({{ $data -> id }})"><span class="fa fa-pencil-square-o"></span></a>
