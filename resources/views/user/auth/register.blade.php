@@ -7,6 +7,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Registrar</div>
                     <div class="panel-body">
+                        @if (session('status'))
+                            <div class="alert alert-info">
+                                <li>{{ session('status') }}</li>
+                            </div>
+                        @endif
                         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -32,13 +37,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="tarifas" class="col-md-4 control-label">Tarifas</label>
+                                <label for="tarifas" class="col-md-4 control-label{{ $errors->has('tarifa') ? ' has-error' : '' }}">Tarifas</label>
                                 <div class="col-md-6">
-                                    <select id="tarifas" class="col-md-3 form-control">
+                                    <select id="tarifas" class="col-md-3 form-control" name="tarifas">
                                         <option title="Seleccionar" disabled selected>Selecciona tarifa</option>
-                                <option title="Tarifa 1" value="tarifa1">1 robot, 3 usuarios - 5€/mes</option>
-                                <option title="Tarifa 2" value="tarifa2">3 robots, 5 usuarios - 10€/mes</option>
-                                <option title="Tarifa 3" value="tarifa3">5 robots, 20 usuarios - 20€/mes</option>
+                                <option title="Tarifa 1" value="1">1 robot, 3 usuarios - 5€/mes</option>
+                                <option title="Tarifa 2" value="2">3 robots, 5 usuarios - 10€/mes</option>
+                                <option title="Tarifa 3" value="3">5 robots, 20 usuarios - 20€/mes</option>
                                     </select>
                                 </div>
                             </div>

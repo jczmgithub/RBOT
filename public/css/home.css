@@ -94,3 +94,12 @@
 .bordeAzul {
   border-bottom: 2px solid #337AB7;
 }
+
+.anchor::before {
+  content: "";
+  display: block;
+  height: 50px;
+  /* fixed header height*/
+  margin: -50px 0 0;
+  /* negative fixed header height */
+}

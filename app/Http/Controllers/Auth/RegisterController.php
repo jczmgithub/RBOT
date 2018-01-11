@@ -60,7 +60,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'tarifa' => 'required',
-            'credito' => 'min:12'
+            'credito' => 'number'
         ]);
     }
 
@@ -76,7 +76,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'tarifa' => $data['tarifas'],
+            'tarifa' => $data['tarifa'],
             'credito' => $data['credito']
         ]);
     }
@@ -91,6 +91,7 @@ class RegisterController extends Controller
 
             $user = User::find($data['id']);
             $user -> emailToken = $data['emailToken'];
+            $user -> tarifa = $request->get('tarifas');
             $user -> save();
 
             Mail::send('email.confirmation', $data, function($message) use($data){
@@ -98,8 +99,10 @@ class RegisterController extends Controller
                 $message->subject('Registro de confirmación');
             });
             return redirect(route('login'))->with('status', 'Email de confirmación enviado. Compruebe su correo, por favor.');
+        } else{
+            return back()->with('errors',$validator->errors());
         }
-        return redirect (route('login'))->with('status', $validator->errors());
+
     }
     public function confirmation($token){
         $user = User::where('emailToken', $token)->first();
