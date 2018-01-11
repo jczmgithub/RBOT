@@ -97,17 +97,12 @@ $(document).ready(function (){
 
 });
 
-function addFila() {
-    var row = document.getElementById("filaDatos"); // find row to copy
-    var table = document.getElementById("tablaBody"); // find table to append to
-
-    var nuevaRow = row.cloneNode(true); // copy children too
-    nuevaRow.id = ''; // change id or other attributes/contents
-    table.appendChild(nuevaRow); // add new row to end of table
-    var selects = nuevaRow.getElementsByTagName("select");
-    selects[0].addEventListener("change", enableMotor);
-    selects[1].addEventListener("change", enablePasosVelocidad);
-    selects[1].disabled = true;
-
-
-}
+$(document).ready(function(){
+    $("#añadirColumna").on("click",function(){
+        $clone=$("table tbody tr:first").clone();
+        $clone.find("input").each(function(){
+            $(this).val("");
+        });
+        $("table tbody").append($clone);
+    });
+});

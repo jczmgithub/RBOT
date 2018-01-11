@@ -31,8 +31,8 @@
                     <option value="">-Seleccione el motor-</option>
                     <option value="motor1" >Base</option>
                     <option value="motor2">Hombro</option>
-                    <option value="motor3">Brazo</option>
-                    <option value="motor4">Codo</option>
+                    <option value="motor3">Codo</option>
+                    <option value="motor4">Brazo</option>
                     <option value="motor5">Muñeca</option>
                     <option value="motor6">Mano</option>
 
@@ -41,13 +41,13 @@
             </td>
             <td class="col-xs-2">
 
-                <input type="number" class="form-control" id="pasosForm" name="pasos" value="0" disabled>
+                <input type="number" class="form-control" id="pasosForm" name="pasosForm" value="0" disabled>
 
             </td>
             <td class="col-xs-2">
 
                 <div class="range range-primary" >
-                    <input type="range" name="velocidad" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled onclick="enableGuardar()">
+                    <input type="range" name="velocidadForm" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled>
                     <output id="rangePrimary">50</output>
                 </div>
 
@@ -62,7 +62,7 @@
     </table>
 
     <div id="botonesControl">
-        <button class="btn btn-success" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
+        <button class="btn btn-success" id="añadirColumna"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
         <button id="prueba" class="btn btn-primary" onclick="send()">Enviar</button>
     </div>
 
