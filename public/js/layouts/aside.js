@@ -33,6 +33,16 @@ $( document ).ready(function() {
     openTab(null, "Home");
 });
 
+function cargarTabla() {
+    $.ajax({
+        url: "admin/cargarFilasUsuarios",
+        type: 'post',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#tablaUsuariosDiv').html(data);
+    });
+}
+
 function eliminarUsuario(id) {
     if (confirm('Estas segur@???')) {
         var datos = {
@@ -47,7 +57,7 @@ function eliminarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios" );
+                cargarTabla();
             },
             error: function (data) {
                 alert("ERROR!!!");
@@ -63,8 +73,6 @@ function editarUsuario(id) {
             id: id
         };
 
-        var obj = {a:"a"};
-
         $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -73,7 +81,7 @@ function editarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios", obj);
+                cargarTabla();
             },
             error: function (data) {
                 alert("ERROR!!!");
