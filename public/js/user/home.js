@@ -98,11 +98,12 @@ $(document).ready(function (){
 });
 
 $(document).ready(function(){
-    $("#añadirColumna").on("click",function(){
-        $clone=$("table tbody tr:first").clone();
-        $clone.find("input").each(function(){
-            $(this).val("");
-        });
-        $("table tbody").append($clone);
+    var i=1;
+    $("#addFila").on("click",function(){
+        /*console.log('elem: ');
+        console.log($(event).get(0).currentTarget);*/
+
+            $("table tbody")
+        i++;
     });
 });
