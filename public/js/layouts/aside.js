@@ -112,7 +112,6 @@ function editarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                alert(data);
                 cargarTabla();
             },
             error: function (data) {

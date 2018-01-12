@@ -50,7 +50,8 @@ class AdminController extends Controller
 
     public function editarUsuario()
     {
-        echo ($_POST["id"]." ".$_POST["nombre"]." ".$_POST["email"]);
+        DB::update('update users set name = ?, email = ?, confirmado = ?, tarifa = ?, credito = ? where id = ?',
+            [$_POST["nombre"], $_POST["email"], $_POST["confirmado"], $_POST["tarifa"], $_POST["credito"], $_POST["id"]]);
     }
 
 }
