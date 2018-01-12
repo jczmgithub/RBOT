@@ -23,21 +23,6 @@ function openLegend(evt, divEvent) {
 
 }
 
-// Funcion para activar el siguiente campo del formulario de control robot
-
-function enableMotor(event) {
-    console.log(event);
-    for(var i = 0;i < event.path.length; i++) {
-
-        if(event.path[i].nodeName == "TR") {
-            var tr = event.path[i];
-            tr.querySelector("select[name='selecMotor']").disabled = false;
-
-            return;
-        }
-    }
-}
-
 //pruebas mandar json en curpo de post
 
 function send() {
@@ -90,7 +75,16 @@ function addFila() {
     });
 }
 
+function saveFila(){
+
+}
+
 function delFila()
 {
         $("#tablaBody tr").remove();
+}
+
+function mostrar() {
+    alert( $('#controles tbody tr').length );
+
 }
