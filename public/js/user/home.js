@@ -36,14 +36,6 @@ function enableMotor(event) {
             return;
         }
     }
-
-    // document.getElementById("selecMotor").disabled = false;
-}
-
-function enablePasosVelocidad() {
-    document.getElementById("pasosForm").disabled=false;
-    document.getElementById("velocidadForm").disabled=false;
-
 }
 
 //pruebas mandar json en curpo de post
@@ -77,22 +69,11 @@ function send() {
     });
 }
 
-function enableGuardar() {
-    document.getElementById("guardar").disabled=false;
-}
-
-function enableEnviar() {
-    document.getElementById("enviar").disabled=false;
-}
-
 $(document).ready(function (){
     try {
         openLegend(null,"divMando");
     } catch (e) {
     }
-
-    document.getElementById("selecRobot").addEventListener("change", enableMotor);
-    document.getElementById("selecMotor").addEventListener("change", enablePasosVelocidad);
 
 });
 

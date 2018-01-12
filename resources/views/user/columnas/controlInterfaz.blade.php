@@ -15,7 +15,7 @@
         <tbody id="tablaBody">
         <tr id="filaDatos">
             <td class="col-xs-3">
-                <select name="selecRobot" class="form-control selector totalWidth" id="selecRobot" onclickT="enableMotor()">
+                <select name="selecRobot" class="form-control selector totalWidth" id="selecRobot">
 
                     <option value="">-Seleccione el Robot-</option>
 
@@ -26,7 +26,7 @@
                 </select>
             </td>
             <td class="col-xs-3">
-                <select name="selecMotor" class="form-control selector totalWidth" id="selecMotor" disabled>
+                <select name="selecMotor" class="form-control selector totalWidth" id="selecMotor">
 
                     <option value="">-Seleccione el motor-</option>
                     <option value="motor1" >Base</option>
@@ -41,13 +41,13 @@
             </td>
             <td class="col-xs-2">
 
-                <input type="number" class="form-control totalWidth" id="pasosForm" name="pasosForm" value="0" disabled>
+                <input type="number" class="form-control totalWidth" id="pasosForm" name="pasosForm" value="0" >
 
             </td>
             <td class="col-xs-2">
 
                 <div class="range range-primary totalWidth" >
-                    <input type="range" name="velocidadForm" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled>
+                    <input type="range" name="velocidadForm" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" >
                     <output id="rangePrimary">50</output>
                 </div>
 
