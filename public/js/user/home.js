@@ -89,3 +89,8 @@ function addFila() {
         $('#tablaBody').append(data);
     });
 }
+
+function delFila()
+{
+        $("#tablaBody tr").remove();
+}
