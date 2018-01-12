@@ -96,7 +96,12 @@ function nuevoUsuario() {
 function editarUsuario(id) {
     if (confirm('Estas segur@???')) {
         var datos = {
-            id: id
+            id: id,
+            nombre: $("#nombre"+id).val(),
+            email: $("#email"+id).val(),
+            confirmado: + $("#confirmado"+id).is(':checked'),
+            tarifa: $("#tarifa"+id).val(),
+            credito: $("#credito"+id).val()
         };
 
         $.ajax({
