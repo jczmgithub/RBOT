@@ -29,14 +29,23 @@ class AdminController extends Controller
 
     public function cargarFilasUsuarios()
     {
-        // No pasar datos sensibles GET !!!
-        // Mejorar peticion BBDD !!!
         return view('admin.tabs.tablaUsuarios', ['users' => DB::table('users')->get()]);
     }
 
     public function eliminarUsuario()
     {
         DB::table('users')->where('id', '=', $_POST["id"])->delete();
+    }
+
+    public function nuevoUsuario()
+    {
+        DB::table('users')->insert([
+            'name' => $_POST["nombre"],
+            'email' => $_POST["email"],
+            'confirmado' => $_POST["confirmado"],
+            'tarifa' => $_POST["tarifa"],
+            'credito' => $_POST["credito"],
+        ]);
     }
 
     public function editarUsuario()
