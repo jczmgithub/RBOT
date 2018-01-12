@@ -62,7 +62,7 @@
     </table>
 
     <div id="botonesControl">
-        <button class="btn btn-success" id="addFila"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
+        <button class="btn btn-success" id="addFila" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
         <button id="prueba" class="btn btn-primary" onclick="send()">Enviar</button>
     </div>
 

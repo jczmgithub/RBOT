@@ -89,7 +89,6 @@ $(document).ready(function (){
     try {
         openLegend(null,"divMando");
     } catch (e) {
-        console.error("Error on openLegeng");
     }
 
     document.getElementById("selecRobot").addEventListener("change", enableMotor);
@@ -97,13 +96,15 @@ $(document).ready(function (){
 
 });
 
-$(document).ready(function(){
-    var i=1;
-    $("#addFila").on("click",function(){
-        /*console.log('elem: ');
-        console.log($(event).get(0).currentTarget);*/
-
-            $("table tbody")
-        i++;
+function addFila() {
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        async: false,
+    }).done(function(data) {
+        $('#tablaBody').append(data);
     });
-});
+}

@@ -43,4 +43,4 @@ Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')
 Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
-
+Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
