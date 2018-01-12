@@ -1,7 +1,6 @@
 <div class="col-sm-8">
 
 <h3>Controles</h3>
-
     <table id="controles" class="table table-fixed">
         <thead>
         <tr>
@@ -13,11 +12,12 @@
         </tr>
         </thead>
         <tbody id="tablaBody">
+
         <tr id="filaDatos">
             <td class="col-xs-3">
                 <select name="selecRobot" class="form-control selector totalWidth" id="selecRobot">
 
-                    <option value="">-Seleccione el Robot-</option>
+                    <option value="null">-Seleccione el Robot-</option>
 
                     @foreach ($modelos as $modelo)
                         <option> {{ $modelo->modelo }} </option>
@@ -28,7 +28,7 @@
             <td class="col-xs-3">
                 <select name="selecMotor" class="form-control selector totalWidth" id="selecMotor">
 
-                    <option value="">-Seleccione el motor-</option>
+                    <option value="null">-Seleccione el motor-</option>
                     <option value="motor1" >Base</option>
                     <option value="motor2">Hombro</option>
                     <option value="motor3">Codo</option>
@@ -53,8 +53,8 @@
 
             </td>
             <td class="col-xs-2">
-                <span class="fa fa-pencil-square-o"></span>
-                <span class="fa fa-times"></span>
+                <span class="fa fa-pencil-square-o fa-2x"></span>
+                <span class="fa fa-times fa-2x"></span>
             </td>
 
         </tr>
@@ -64,8 +64,9 @@
     <div id="botonesControl">
         <button class="btn btn-success botonesFunciones" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
         <button class="btn btn-primary botonesFunciones" onclick="send()">Enviar</button>
+        <button class="btn btn-primary botonesFunciones" id="mostrar">Mostrar</button>
+        <button class="btn btn-primary botonesFunciones" onclick="saveFila()">Guardar</button>
         <button class="btn btn-primary botonesFunciones" onclick="delFila()">Eliminar</button>
     </div>
-
 
 </div>
