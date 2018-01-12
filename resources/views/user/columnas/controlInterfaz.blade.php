@@ -64,7 +64,7 @@
     <div id="botonesControl">
         <button class="btn btn-success botonesFunciones" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
         <button class="btn btn-primary botonesFunciones" onclick="send()">Enviar</button>
-        <button class="btn btn-primary botonesFunciones" id="mostrar">Mostrar</button>
+        <button class="btn btn-primary botonesFunciones" onclick="mostrar()">Mostrar</button>
         <button class="btn btn-primary botonesFunciones" onclick="saveFila()">Guardar</button>
         <button class="btn btn-primary botonesFunciones" onclick="delFila()">Eliminar</button>
     </div>

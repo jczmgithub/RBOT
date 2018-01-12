@@ -84,3 +84,7 @@ function delFila()
         $("#tablaBody tr").remove();
 }
 
+function mostrar() {
+    alert( $('#controles tbody tr').length );
+
+}
