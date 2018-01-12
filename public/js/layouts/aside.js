@@ -33,6 +33,16 @@ $( document ).ready(function() {
     openTab(null, "Home");
 });
 
+function cargarTabla() {
+    $.ajax({
+        url: "admin/cargarFilasUsuarios",
+        type: 'post',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#tablaUsuariosDiv').html(data);
+    });
+}
+
 function eliminarUsuario(id) {
     if (confirm('Estas segur@???')) {
         var datos = {
@@ -47,7 +57,7 @@ function eliminarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios" );
+                cargarTabla();
             },
             error: function (data) {
                 alert("ERROR!!!");
@@ -57,13 +67,37 @@ function eliminarUsuario(id) {
     }
 }
 
+function nuevoUsuario() {
+    var datos = {
+        nombre: $("#nombre").val(),
+        email: $("#email").val(),
+        confirmado: + $("#confirmado").is(':checked'),
+        tarifa: $("#tarifa").val(),
+        credito: $("#credito").val()
+    };
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/admin/nuevoUsuario',
+        type: 'post',
+        dataType: 'text',
+        success: function (data) {
+            cargarTabla();
+        },
+        error: function (data) {
+            alert("ERROR!!!");
+        },
+        data: datos
+    });
+}
+
 function editarUsuario(id) {
     if (confirm('Estas segur@???')) {
         var datos = {
             id: id
         };
-
-        var obj = {a:"a"};
 
         $.ajax({
             headers: {
@@ -73,7 +107,7 @@ function editarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                $( "#tablaUsuariosDiv" ).load( "admin/cargarFilasUsuarios", obj);
+                cargarTabla();
             },
             error: function (data) {
                 alert("ERROR!!!");

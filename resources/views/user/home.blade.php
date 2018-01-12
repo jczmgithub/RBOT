@@ -31,4 +31,5 @@
     {!! HTML::style('css/user/home.css') !!}
     {!! HTML::script('js/user/home.js'); !!}
 
+
 @stop

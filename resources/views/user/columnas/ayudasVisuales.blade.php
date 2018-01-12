@@ -25,7 +25,7 @@
 
     <div id="divRobot" class="tabcontent">
 
-        <img id="robot" src="/img/6axisRobot.png" class="img-responsive" alt="Mando robot">
+        <img id="robot" src="/img/RobotAxis.png" class="img-responsive" alt="Mando robot">
 
     </div>
 

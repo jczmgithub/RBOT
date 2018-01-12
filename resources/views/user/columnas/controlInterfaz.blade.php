@@ -15,7 +15,7 @@
         <tbody id="tablaBody">
         <tr id="filaDatos">
             <td class="col-xs-3">
-                <select name="selecRobot" class="form-control selector" id="selecRobot" onclickT="enableMotor()">
+                <select name="selecRobot" class="form-control selector totalWidth" id="selecRobot" onclickT="enableMotor()">
 
                     <option value="">-Seleccione el Robot-</option>
 
@@ -26,7 +26,7 @@
                 </select>
             </td>
             <td class="col-xs-3">
-                <select name="selecMotor" class="form-control selector" id="selecMotor" disabled>
+                <select name="selecMotor" class="form-control selector totalWidth" id="selecMotor" disabled>
 
                     <option value="">-Seleccione el motor-</option>
                     <option value="motor1" >Base</option>
@@ -41,12 +41,12 @@
             </td>
             <td class="col-xs-2">
 
-                <input type="number" class="form-control" id="pasosForm" name="pasosForm" value="0" disabled>
+                <input type="number" class="form-control totalWidth" id="pasosForm" name="pasosForm" value="0" disabled>
 
             </td>
             <td class="col-xs-2">
 
-                <div class="range range-primary" >
+                <div class="range range-primary totalWidth" >
                     <input type="range" name="velocidadForm" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" disabled>
                     <output id="rangePrimary">50</output>
                 </div>
@@ -62,7 +62,7 @@
     </table>
 
     <div id="botonesControl">
-        <button class="btn btn-success" id="añadirColumna"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
+        <button class="btn btn-success" id="addFila" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
         <button id="prueba" class="btn btn-primary" onclick="send()">Enviar</button>
     </div>
 
