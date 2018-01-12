@@ -50,7 +50,7 @@ class AdminController extends Controller
 
     public function editarUsuario()
     {
-        DB::table('users')->where('id', '=', $_POST["id"])->delete();
+        echo ($_POST["id"]." ".$_POST["nombre"]." ".$_POST["email"]);
     }
 
 }

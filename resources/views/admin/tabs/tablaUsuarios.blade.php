@@ -12,20 +12,20 @@
         @foreach($users as $key => $data)
             <tr>
                 <td>
-                    <input type="text" value="{{ $data->name }}">
+                    <input id="nombre{{ $data->id }}" type="text" value="{{ $data->name }}">
                 </td>
                 <td>
-                    <input type="email" value="{{ $data->email }}">
+                    <input id="email{{ $data->id }}" type="email" value="{{ $data->email }}">
                 </td>
                 <td>
                     @if($data->confirmado == 0)
-                        <input type="checkbox">
+                        <input id="confirmado{{ $data->id }}" type="checkbox">
                     @else
-                        <input type="checkbox" checked="checked">
+                        <input id="confirmado{{ $data->id }}" type="checkbox" checked>
                     @endif
                 </td>
                 <td>
-                    <select name="selecTarifa" id="selecTarifa">
+                    <select id="tarifa{{ $data->id }}" name="tarifa">
                     @for ($i = 0; $i <= 3; $i++)
                         @if($data->tarifa == $i)
                             <option value={{ $i }} selected>Tarifa {{ $i }}</option>
@@ -36,7 +36,7 @@
                     </select>
                 </td>
                 <td>
-                    <input type="text" value="{{ $data->credito }}">
+                    <input id="credito{{ $data->id }}" type="text" value="{{ $data->credito }}">
                 </td>
                 <td>
                     <a href="#" class="btnEditarUsuario" onclick="editarUsuario({{ $data -> id }})"><span class="fa fa-pencil-square-o"></span></a>
