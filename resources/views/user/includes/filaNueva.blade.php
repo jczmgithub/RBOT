@@ -20,13 +20,10 @@
         <input type='number' class='form-control totalWidth' name='pasosForm' value='0' id="pasosForm">
     </td>
     <td class='col-xs-2'>
-        <div class='range range-primary totalWidth'>
-            <input type='range' name='velocidadForm' min='0' max='50' onchange='rangePrimary.value=value' id="velocidadForm">
-            <output id='rangePrimary'>50</output>
-        </div>
+        <input type='number' class='form-control totalWidth' name='velocidadForm' value='0' id="velocidadForm">
     </td>
     <td class='col-xs-2'>
-        <span class="fa fa-pencil-square-o fa-2x"></span>
-        <span class="fa fa-times fa-2x"></span>
+        <span class="fa fa-paper-plane fa-2x" onclick="send(this)"></span></span>
+        <span class="fa fa-times fa-2x" id="borrarFila" onclick="eliminarFila(this)"></span>
     </td>
 </tr>
