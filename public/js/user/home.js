@@ -103,7 +103,7 @@ function addFila() {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        async: false,
+        //async: false,
     }).done(function(data) {
         $('#tablaBody').append(data);
     });
