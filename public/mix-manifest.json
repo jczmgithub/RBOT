@@ -5,5 +5,7 @@
     "/css/layouts/footer.css": "/css/layouts/footer.css",
     "/css/layouts/admin/footer.css": "/css/layouts/admin/footer.css",
     "/css/home.css": "/css/home.css",
-    "/css/rbot.css": "/css/rbot.css"
+    "/css/rbot.css": "/css/rbot.css",
+    "/js/layouts/aside.min.js": "/js/layouts/aside.min.js",
+    "/js/user/home.min.js": "/js/user/home.min.js"
 }

@@ -33,3 +33,7 @@ mix.sass('resources/assets/sass/user/home.scss', 'public/css/user')
     .sass('resources/assets/sass/layouts/admin/footer.scss', 'public/css/layouts/admin')
     .sass('resources/assets/sass/home.scss', 'public/css')
     .sass('resources/assets/sass/rbot.scss', 'public/css');
+
+mix.scripts('public/js/layouts/aside.js', 'public/js/layouts/aside.min.js')
+    .scripts('public/js/user/home.js', 'public/js/user/home.min.js');
+
