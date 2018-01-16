@@ -67,5 +67,5 @@
         </div>
     </div>
 
-    {!! URL::secure('css/layouts/nav.css') !!}
+    {!! URL::secure('/css/layouts/nav.css') !!}
 </nav>
