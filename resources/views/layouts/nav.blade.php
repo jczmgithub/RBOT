@@ -67,5 +67,5 @@
         </div>
     </div>
 
-    {!! HTML::style('css/layouts/nav.css') !!}
+    {!! HTML::style('{{ asset("css/layouts/nav.css") }}') !!}
 </nav>

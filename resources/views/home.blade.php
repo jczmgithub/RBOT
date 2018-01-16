@@ -122,5 +122,5 @@
         </div>
     </div>
 
-    {!! HTML::style('css/home.css') !!}
+    {!! URL::asset('css/home.css') !!}
 @stop
