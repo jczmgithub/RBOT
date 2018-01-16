@@ -75,16 +75,14 @@ function addFila() {
     });
 }
 
-function saveFila(){
-
+function eliminarFila(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
 }
 
-function delFila()
+function delFilas()
 {
         $("#tablaBody tr").remove();
 }
 
-function mostrar() {
-    alert( $('#controles tbody tr').length );
 
-}

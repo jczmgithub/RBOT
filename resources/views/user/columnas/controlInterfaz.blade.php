@@ -39,22 +39,17 @@
                 </select>
 
             </td>
-            <td class="col-xs-2">
-
-                <input type="number" class="form-control totalWidth" id="pasosForm" name="pasosForm" value="0" >
-
+            <td class='col-xs-2'>
+                <input type='number' class='form-control totalWidth' name='pasosForm' value='0' id="pasosForm">
             </td>
-            <td class="col-xs-2">
-
-                <div class="range range-primary totalWidth" >
-                    <input type="range" name="velocidadForm" min="0" max="100" id="velocidadForm" onchange="rangePrimary.value=value" >
-                    <output id="rangePrimary">50</output>
-                </div>
-
+            <td class='col-xs-2'>
+                <input type='number' class='form-control totalWidth' name='velocidadForm' value='0' id="velocidadForm">
             </td>
+            </td>
+
             <td class="col-xs-2">
-                <span class="fa fa-pencil-square-o fa-2x"></span>
-                <span class="fa fa-times fa-2x"></span>
+                <span class="fa fa-paper-plane fa-2x" onclick="send(this)"></span>
+                <span class="fa fa-times fa-2x" onclick="eliminarFila(this)"></span>
             </td>
 
         </tr>
@@ -63,10 +58,7 @@
 
     <div id="botonesControl">
         <button class="btn btn-success botonesFunciones" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
-        <button class="btn btn-primary botonesFunciones" onclick="send()">Enviar</button>
-        <button class="btn btn-primary botonesFunciones" onclick="mostrar()">Mostrar</button>
-        <button class="btn btn-primary botonesFunciones" onclick="saveFila()">Guardar</button>
-        <button class="btn btn-primary botonesFunciones" onclick="delFila()">Eliminar</button>
+        <button class="btn btn-primary botonesFunciones" onclick="delFilas()">Eliminar</button>
     </div>
 
 </div>
