@@ -28,8 +28,7 @@
 
     </div>
 
-    {!! HTML::style('css/user/home.css') !!}
-    {!! HTML::script('js/user/home.js'); !!}
-
+    {!! HTML::style('css/user/home.css', array(), true) !!}
+    {!! HTML::script('js/user/home.js', array(), true); !!}
 
 @stop
