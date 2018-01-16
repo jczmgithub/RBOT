@@ -67,5 +67,8 @@
         </div>
     </div>
 
-    {!! HTML::style('/css/layouts/nav.css', array(), true) !!}
+    {!! HTML::style('/css/layouts/nav.css') !!}
+
+    {{--{!! HTML::style('/css/layouts/nav.css', array(), true) !!}--}}
+
 </nav>
