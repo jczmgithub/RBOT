@@ -23,29 +23,6 @@ function openLegend(evt, divEvent) {
 
 }
 
-// Funcion para activar el siguiente campo del formulario de control robot
-
-function enableMotor(event) {
-    console.log(event);
-    for(var i = 0;i < event.path.length; i++) {
-
-        if(event.path[i].nodeName == "TR") {
-            var tr = event.path[i];
-            tr.querySelector("select[name='selecMotor']").disabled = false;
-
-            return;
-        }
-    }
-
-    // document.getElementById("selecMotor").disabled = false;
-}
-
-function enablePasosVelocidad() {
-    document.getElementById("pasosForm").disabled=false;
-    document.getElementById("velocidadForm").disabled=false;
-
-}
-
 //pruebas mandar json en curpo de post
 
 function send() {
@@ -77,22 +54,11 @@ function send() {
     });
 }
 
-function enableGuardar() {
-    document.getElementById("guardar").disabled=false;
-}
-
-function enableEnviar() {
-    document.getElementById("enviar").disabled=false;
-}
-
 $(document).ready(function (){
     try {
         openLegend(null,"divMando");
     } catch (e) {
     }
-
-    document.getElementById("selecRobot").addEventListener("change", enableMotor);
-    document.getElementById("selecMotor").addEventListener("change", enablePasosVelocidad);
 
 });
 
@@ -107,4 +73,18 @@ function addFila() {
     }).done(function(data) {
         $('#tablaBody').append(data);
     });
+}
+
+function saveFila(){
+
+}
+
+function delFila()
+{
+        $("#tablaBody tr").remove();
+}
+
+function mostrar() {
+    alert( $('#controles tbody tr').length );
+
 }

@@ -9,7 +9,7 @@
 
     </div>
 
-    {!! HTML::style('css/layouts/aside.css') !!}
-    {!! HTML::script('js/layouts/aside.js'); !!}
+    {!! HTML::style('css/layouts/aside.css', array(), true) !!}
+    {!! HTML::script('js/layouts/aside.js', array(), true); !!}
 
 </aside>
