@@ -26,5 +26,5 @@
         <p>© 2017/2018 - Grupo Rbot</p>
     </div>
 
-    {!! HTML::style('/css/layouts/footer.css') !!}
+    {!! HTML::style('/css/layouts/footer.css', true) !!}
 </footer>
