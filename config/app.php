@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://calm-brushlands-53384.herokuapp.com/'),
+    'url' => env('APP_URL', 'https://gruporbot.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------
