@@ -44,5 +44,3 @@ Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
 Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
-
-Route::post('https://gruporbot.herokuapp.com/admin/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit2');

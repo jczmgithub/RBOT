@@ -8,7 +8,7 @@
                 <div class="panel-heading">Admin Login</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="https://gruporbot.herokuapp.com/admin/login">
+                    <form class="form-horizontal" method="POST" action="{{ route('admin.login.submit') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('code') ? ' has-error' : '' }}">
