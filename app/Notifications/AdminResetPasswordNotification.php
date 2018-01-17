@@ -43,9 +43,12 @@ class AdminResetPasswordNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('You are receiving this email because we received a password reset request for your account.')
-            ->action('Reset Password', route('admin.password.reset', $this->token))
-            ->line('Thank you for using our application!');
+            ->subject('Recuperar contraseña')
+            ->greeting('Hola')
+            ->line('Estás recibiendo este correo porque hiciste una solicitud de recuperación de contraseña para tu cuenta.')
+            ->action('Recuperar contraseña', route('user.auth.password.reset', $this->token))
+            ->line('Si no realizaste esta solicitud, no se requiere realizar ninguna otra acción.')
+            ->salutation('Saludos, '. config('app.name'));
     }
 
     /**
@@ -59,5 +62,8 @@ class AdminResetPasswordNotification extends Notification
         return [
             //
         ];
+    }
+    public function getEmailForPasswordReset(){
+
     }
 }
