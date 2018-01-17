@@ -27,6 +27,7 @@ function openLegend(evt, divEvent) {
 
 function send() {
 
+    //console.log(this);
     var datos = {
         robot: $("#selecRobot").val(),
         motor: $("#selecMotor").val(),
@@ -45,10 +46,10 @@ function send() {
             alert(data);
         },
         error: function (data) {
-            alert("fallo");
+            alert("Fallo al enviar..."+data);
         },
         complete: function (data) {
-            alert("esto se hace siempre");
+            //alert("esto se hace siempre");
         },
         data: datos
     });
@@ -80,8 +81,7 @@ function eliminarFila(btn) {
     row.parentNode.removeChild(row);
 }
 
-function delFilas()
-{
+function delFilas(){
         $("#tablaBody tr").remove();
 }
 

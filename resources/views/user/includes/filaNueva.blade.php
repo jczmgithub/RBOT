@@ -17,13 +17,13 @@
             <option value='motor6'>Mano</option>
         </select></td>
     <td class='col-xs-2'>
-        <input type='number' class='form-control totalWidth' name='pasosForm' value='0' id="pasosForm">
+        <input type='number' class='form-control totalWidth' name='pasosForm' value='10' id="pasosForm">
     </td>
     <td class='col-xs-2'>
-        <input type='number' class='form-control totalWidth' name='velocidadForm' value='0' id="velocidadForm">
+        <input type='number' class='form-control totalWidth' name='velocidadForm' value='50' id="velocidadForm">
     </td>
     <td class='col-xs-2'>
-        <span class="fa fa-paper-plane fa-2x" onclick="send(this)"></span></span>
-        <span class="fa fa-times fa-2x" id="borrarFila" onclick="eliminarFila(this)"></span>
+        <button class="btn btn-sm btn-success" onclick="send(this)"><span class="fa fa-paper-plane" ></span></button>
+        <button class="btn btn-sm btn-danger" onclick="eliminarFila(this)"><span class="fa fa-times" id="borrarFila" ></span></button>
     </td>
 </tr>
