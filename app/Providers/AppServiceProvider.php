@@ -16,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
+        
+        if (!\App::environment('local')) {
+            \URL::forceSchema('https');
+        }
     }
 
     /**
