@@ -123,8 +123,9 @@
     </div>
 
     <h1>{{Request::root()}}</h1>
+    <h1>{{Config::get('app.url')}}</h1>
 
-    @if(Request::root() == 'http://calm-brushlands-53384.herokuapp.com')
+    @if(Request::root() == Config::get('app.url'))
         {!! HTML::style('/css/home.css', array(), true) !!}
     @else
         {!! HTML::style('/css/home.css') !!}
