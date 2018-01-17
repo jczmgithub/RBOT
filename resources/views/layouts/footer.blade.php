@@ -26,7 +26,10 @@
         <p>© 2017/2018 - Grupo Rbot</p>
     </div>
 
-    {!! HTML::style('/css/layouts/footer.css') !!}
+    @if(Request::root() == 'http://calm-brushlands-53384.herokuapp.com')
+        {!! HTML::style('/css/layouts/footer.css', array(), true) !!}
+    @else
+        {!! HTML::style('/css/layouts/footer.css') !!}
+    @endif
 
-    {{--{!! HTML::style('/css/layouts/footer.css', array(), true) !!}--}}
 </footer>

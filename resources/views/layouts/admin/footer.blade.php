@@ -7,7 +7,10 @@
         </div>
     </div>
 
-    {!! HTML::style('css/layouts/admin/footer.css') !!}
+    @if(Request::root() == 'http://calm-brushlands-53384.herokuapp.com')
+        {!! HTML::style('css/layouts/admin/footer.css', array(), true) !!}
+    @else
+        {!! HTML::style('css/layouts/admin/footer.css') !!}
+    @endif
 
-    {{--{!! HTML::style('css/layouts/admin/footer.css', array(), true) !!}--}}
 </footer>
