@@ -1,4 +1,6 @@
+
 <tr>
+    <form>
     <td class='col-xs-3'>
         <select name='selecRobot' class='form-control selector totalWidth' id="selecRobot">
             <option value='null'>-Seleccione el Robot-</option>
@@ -26,4 +28,5 @@
         <button class="btn btn-sm btn-success" onclick="send(this)"><span class="fa fa-paper-plane" ></span></button>
         <button class="btn btn-sm btn-danger" onclick="eliminarFila(this)"><span class="fa fa-times" id="borrarFila" ></span></button>
     </td>
+    </form>
 </tr>

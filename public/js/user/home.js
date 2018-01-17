@@ -27,7 +27,7 @@ function openLegend(evt, divEvent) {
 
 function send() {
 
-    //console.log(this);
+    console.log(this);
     var datos = {
         robot: $("#selecRobot").val(),
         motor: $("#selecMotor").val(),
