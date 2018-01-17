@@ -14,7 +14,7 @@
         {!! HTML::script('js/layouts/aside.min.js', array(), true); !!}
     @else
         {!! HTML::style('css/layouts/aside.css') !!}
-        {!! HTML::script('js/layouts/aside.min.js'); !!}
+        {!! HTML::script('js/layouts/aside.js'); !!}
     @endif
 
 </aside>

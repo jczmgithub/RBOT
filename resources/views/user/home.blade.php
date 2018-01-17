@@ -33,7 +33,7 @@
         {!! HTML::script('js/user/home.min.js', array(), true); !!}
     @else
         {!! HTML::style('css/user/home.css') !!}
-        {!! HTML::script('js/user/home.min.js'); !!}
+        {!! HTML::script('js/user/home.js'); !!}
     @endif
 
 @stop
