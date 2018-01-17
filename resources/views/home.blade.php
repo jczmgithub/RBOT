@@ -122,6 +122,8 @@
         </div>
     </div>
 
+    <h1>{{Request::root()}}</h1>
+
     @if(Request::root() == 'https://calm-brushlands-53384.herokuapp.com')
         {!! HTML::style('/css/home.css', array(), true) !!}
     @else
