@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h1 class="logo">RBOT Industries</h1>
+                <h1 class="logo">Grupo RBOT</h1>
             </div>
             <div class="col-sm-4">
                 <h5>Empresa Colaboradora</h5>
