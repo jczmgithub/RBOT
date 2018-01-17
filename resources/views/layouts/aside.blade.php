@@ -9,7 +9,12 @@
 
     </div>
 
-    {!! HTML::style('css/layouts/aside.css', array(), true) !!}
-    {!! HTML::script('js/layouts/aside.js', array(), true); !!}
+    @if(Request::root() == 'http://calm-brushlands-53384.herokuapp.com')
+        {!! HTML::style('css/layouts/aside.css', array(), true) !!}
+        {!! HTML::script('js/layouts/aside.min.js', array(), true); !!}
+    @else
+        {!! HTML::style('css/layouts/aside.css') !!}
+        {!! HTML::script('js/layouts/aside.min.js'); !!}
+    @endif
 
 </aside>
