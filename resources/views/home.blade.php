@@ -122,7 +122,10 @@
         </div>
     </div>
 
-    {!! HTML::style('/css/home.css') !!}
+    @if(Request::root() == 'https://calm-brushlands-53384.herokuapp.com')
+        {!! HTML::style('/css/home.css', array(), true) !!}
+    @else
+        {!! HTML::style('/css/home.css') !!}
+    @endif
 
-    {{--{!! HTML::style('/css/home.css', array(), true) !!}--}}
 @stop
