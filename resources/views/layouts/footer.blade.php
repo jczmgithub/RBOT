@@ -26,7 +26,7 @@
         <p>© 2017/2018 - Grupo Rbot</p>
     </div>
 
-    @if(Request::root() == 'http://calm-brushlands-53384.herokuapp.com')
+    @if(str_contains(Request::fullUrl(), 'herokuapp'))
         {!! HTML::style('/css/layouts/footer.css', array(), true) !!}
     @else
         {!! HTML::style('/css/layouts/footer.css') !!}
