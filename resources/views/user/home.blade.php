@@ -28,7 +28,7 @@
 
     </div>
 
-    @if(Request::root() == 'https://calm-brushlands-53384.herokuapp.com')
+    @if(Request::root() == 'http://calm-brushlands-53384.herokuapp.com')
         {!! HTML::style('css/user/home.css', array(), true) !!}
         {!! HTML::script('js/user/home.min.js', array(), true); !!}
     @else
