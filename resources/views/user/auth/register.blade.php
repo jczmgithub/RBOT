@@ -36,8 +36,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="tarifas" class="col-md-4 control-label{{ $errors->has('tarifa') ? ' has-error' : '' }}">Tarifas</label>
+                            <div class="form-group{{ $errors->has('tarifas') ? ' has-error' : '' }}">
+                                <label for="tarifas" class="col-md-4 control-label">Tarifas</label>
                                 <div class="col-md-6">
                                     <select id="tarifas" class="col-md-3 form-control" name="tarifas">
                                         <option title="Seleccionar" disabled selected>Selecciona tarifa</option>
@@ -47,15 +47,10 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Tajeta de Crédito</label>
+                            <div class="form-group{{ $errors->has('credito') ? ' has-error' : '' }}">
+                                <label for="credito" class="col-md-4 control-label">Tajeta de Crédito</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-                                    @if ($errors->has('name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input id="credito" type="text" class="form-control" name="credito" required>
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
