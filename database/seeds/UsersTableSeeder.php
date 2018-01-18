@@ -16,14 +16,14 @@ class UsersTableSeeder extends Seeder
                 'name' => 'A',
                 'email' => 'a@a.a',
                 'password' => bcrypt('a'),
-                'tarifas' => 3,
+                'tarifa' => 3,
                 'credito' => '1234000012340000',
                 'confirmado' => 1
             ],
             [
                 'name' => 'usuAdmin',
                 'email' => 'admin@admin.com',
-                'tarifas' => 1,
+                'tarifa' => 1,
                 'credito' => '1234000012341111',
                 'password' => bcrypt('password'),
                 'confirmado' => 1
@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'usuUsu',
                 'email' => 'usu@usu.com',
-                'tarifas' => 2,
+                'tarifa' => 2,
                 'credito' => '1234000012342222',
                 'password' => bcrypt('password'),
                 'confirmado' => 1
@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'User',
                 'email' => 'user@mail.com',
-                'tarifas' => 3,
+                'tarifa' => 3,
                 'credito' => '1234000012343333',
                 'password' => bcrypt('zubiri'),
                 'confirmado' => 1

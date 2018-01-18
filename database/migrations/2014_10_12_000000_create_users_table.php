@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('tarifas')->default(0);
+            $table->integer('tarifa')->default(0);
             $table->string('credito');
             $table->string('password')->default(bcrypt('zubiri'));
             $table->boolean('confirmado')->default(false);

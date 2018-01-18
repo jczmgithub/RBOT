@@ -36,10 +36,10 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('tarifas') ? ' has-error' : '' }}">
-                                <label for="tarifas" class="col-md-4 control-label">Tarifas</label>
+                            <div class="form-group{{ $errors->has('tarifa') ? ' has-error' : '' }}">
+                                <label for="tarifa" class="col-md-4 control-label">Tarifas</label>
                                 <div class="col-md-6">
-                                    <select id="tarifas" class="col-md-3 form-control" name="tarifas">
+                                    <select id="tarifa" class="col-md-3 form-control" name="tarifa">
                                         <option title="Seleccionar" disabled selected>Selecciona tarifa</option>
                                 <option title="Tarifa 1" value="1">1 robot, 3 usuarios - 5€/mes</option>
                                 <option title="Tarifa 2" value="2">3 robots, 5 usuarios - 10€/mes</option>
