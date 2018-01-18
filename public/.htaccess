@@ -8,7 +8,7 @@
     ##Force SSL
 
     #Normal way (in case you need to deploy to NON-heroku)
-    #RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTPS} !=on
 
     #Heroku way
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
@@ -29,6 +29,5 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
 
 </IfModule>
