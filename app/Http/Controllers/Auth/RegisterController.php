@@ -99,8 +99,8 @@ class RegisterController extends Controller
             });
             return redirect(route('login'))->with('status', 'Email de confirmación enviado. Compruebe su correo, por favor.');
         } else{
-            //return back()->with('errors',$validator->errors());
-            return redirect (route('register'))->with('status', $validator->errors());
+            return back()->with('errors',$validator->errors());
+            //return redirect (route('register'))->with('status', $validator->errors());
         }
 
     }
