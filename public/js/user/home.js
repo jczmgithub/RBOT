@@ -23,11 +23,13 @@ function openLegend(evt, divEvent) {
 
 }
 
-//pruebas mandar json en curpo de post
+//pruebas mandar json en cuerpo de post
 
 function send() {
 
+    event.preventDefault();
     console.log(this);
+
     var datos = {
         robot: $("#selecRobot").val(),
         motor: $("#selecMotor").val(),
@@ -36,6 +38,7 @@ function send() {
     };
 
     $.ajax({
+
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -53,17 +56,44 @@ function send() {
         },
         data: datos
     });
+
 }
 
 $(document).ready(function (){
+
     try {
+
+        $('#sendFila').click(function (event) {
+            event.preventDefault();
+            sendDatas();
+
+        });
+
+        $('#delFila').click(function (event) {
+            event.preventDefault();
+            delFilas();
+
+        });
+
+        $('#addFila').click(function (event) {
+            event.preventDefault();
+            addFila();
+
+        });
+
+
         openLegend(null,"divMando");
+        alert('ok');
+
     } catch (e) {
     }
 
 });
 
 function addFila() {
+
+    event.preventDefault();
+
     $.ajax({
         url: "/user/tablaDatos",
         type: 'POST',
@@ -74,15 +104,45 @@ function addFila() {
     }).done(function(data) {
         $('#tablaBody').append(data);
     });
+
 }
 
 function eliminarFila(btn) {
+
+    event.preventDefault();
+
     var row = btn.parentNode.parentNode;
     row.parentNode.removeChild(row);
+
 }
 
 function delFilas(){
-        $("#tablaBody tr").remove();
+
+    event.preventDefault();
+
+    $("#tablaBody tr").remove();
+
+}
+
+function mostrarFila(data) {
+
+    event.preventDefault();
+
+    var row = data.parentNode.parentNode;
+
+    var datosInput = $(row).find('input').serialize();
+    var datosSelect = $(row).find('select').serialize();
+
+    alert(datosSelect+"&"+datosInput);
+
+}
+
+function sendDatas(){
+
+    var datos = $('#formulario').serialize();
+    alert(datos);
+
+
 }
 
 

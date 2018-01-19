@@ -1,3 +1,4 @@
+<form id="formulario" method="post" action="#">
 <div class="col-sm-8">
 
 <h3>Controles</h3>
@@ -17,8 +18,10 @@
     </table>
 
     <div id="botonesControl">
-        <button class="btn btn-success botonesFunciones" onclick="addFila()"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
-        <button class="btn btn-primary botonesFunciones" onclick="delFilas()">Eliminar</button>
+        <button id="addFila" class="btn btn-success botonesFunciones"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
+        <button id="sendFila" type="submit" class="btn btn-primary botonesFunciones">Enviar Todo</button>
+        <button id="delFila" type="submit" class="btn btn-primary botonesFunciones">Eliminar</button>
     </div>
 
 </div>
+</form>
