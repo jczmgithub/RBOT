@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->default(bcrypt('zubiri'));
             $table->boolean('confirmado')->default(false);
             $table->string('emailToken', 254)->nullable();
+            $table->string('owner')->default('true');
             $table->rememberToken();
             $table->timestamps();
         });

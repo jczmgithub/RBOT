@@ -14,10 +14,11 @@ class CreateRobotsTable extends Migration
     public function up()
     {
         Schema::create('robots', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('idUsuario');
             $table->string('modelo');
-            $table->string('direccion');
+            $table->string('host');
+            //$table->string("motores");
+
             $table->timestamps();
         });
     }
