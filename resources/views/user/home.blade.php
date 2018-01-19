@@ -4,6 +4,25 @@
 
     @auth
         <li><a href="/home">Controles</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                Usuarios <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/user/registrarUser">Crear Usuarios</a></li>
+                <li><a href="/user/verUser">Ver Usuarios</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                Robots <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/user/registrarRobot">Crear Robots</a></li>
+                <li><a href="/user/verUser">Ver Robots</a></li>
+            </ul>
+        </li>
+
     @endauth
 
 @endsection

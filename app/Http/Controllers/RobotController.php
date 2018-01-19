@@ -45,7 +45,10 @@ class RobotController extends Controller
 
     }
     public function addFila(){
-    return view('user.includes.filaNueva', ['modelos' => DB::table('robots')->get()]);
+        return view('user.includes.filaNueva', ['modelos' => DB::table('robots')->get()]);
+    }
+    public function formRobot(){
+        return view('user.columnas.registrarRobot');
     }
 
 }

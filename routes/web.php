@@ -26,10 +26,10 @@ Route::post("/datosRobot","RobotController@dataRobot")->name('datosRobot');
 Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.home');
     Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
-//    Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
-    Route::post('/login', function(){
-        return DB::table('users')->get();
-    })->name('admin.login.submit');
+    Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
+//    Route::post('/login', function(){
+//        return DB::table('users')->get();
+//    })->name('admin.login.submit');
     Route::post('/logout', 'AuthAdmin\LoginController@logout')->name('admin.logout');
     Route::get('/password/reset', 'AuthAdmin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
     Route::post('/password/email', 'AuthAdmin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
@@ -47,3 +47,10 @@ Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
 Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
+
+//Rutas admin robot para registro de user y robots
+Route::get('/user/registrarUser', 'UserController@formRegistro')->name('formUser');
+Route::get('/user/verUser', 'UserController@tablaUser')->name('tablaUsuarios');
+//Route::post('/registrar-user', 'UserController@register')->name('registrarUser');
+
+Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');

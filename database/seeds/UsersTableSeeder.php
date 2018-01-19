@@ -18,7 +18,8 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('a'),
                 'tarifa' => 3,
                 'credito' => '1234000012340000',
-                'confirmado' => 1
+                'confirmado' => 1,
+                'owner' => 'true'
             ],
             [
                 'name' => 'usuAdmin',
@@ -26,7 +27,8 @@ class UsersTableSeeder extends Seeder
                 'tarifa' => 1,
                 'credito' => '1234000012341111',
                 'password' => bcrypt('password'),
-                'confirmado' => 1
+                'confirmado' => 1,
+                'owner' => 'true'
             ],
             [
                 'name' => 'usuUsu',
@@ -34,7 +36,8 @@ class UsersTableSeeder extends Seeder
                 'tarifa' => 2,
                 'credito' => '1234000012342222',
                 'password' => bcrypt('password'),
-                'confirmado' => 1
+                'confirmado' => 1,
+                'owner' => 'true'
             ],
             [
                 'name' => 'User',
@@ -42,7 +45,17 @@ class UsersTableSeeder extends Seeder
                 'tarifa' => 3,
                 'credito' => '1234000012343333',
                 'password' => bcrypt('zubiri'),
-                'confirmado' => 1
+                'confirmado' => 1,
+                'owner' => 'true'
+            ],
+            [
+                'name' => 'Usuario1Prueba',
+                'email' => 'usera1aa@mail.com',
+                'tarifa' => 1,
+                'credito' => '1234000012343333',
+                'password' => bcrypt('zubiri'),
+                'confirmado' => 1,
+                'owner' => 1
             ],
         ];
 
