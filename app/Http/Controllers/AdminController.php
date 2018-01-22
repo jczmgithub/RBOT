@@ -24,7 +24,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home', ['users' => DB::table('users')->get()]);
+        return view('admin.home', ['users' => DB::table('users')->get(), 'robots' => DB::table('robots')->get()]);
     }
 
     public function cargarFilasUsuarios()
