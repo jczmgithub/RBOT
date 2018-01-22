@@ -12,6 +12,7 @@
         <div class="row">
             @include('admin.tabs.home')
             @include('admin.tabs.modificarUsuario')
+            @include('admin.tabs.modificarRobot')
         </div>
     </div>
 

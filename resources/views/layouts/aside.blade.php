@@ -5,7 +5,7 @@
         <br><br>
         <a href="#" class="tablinks" onclick="openTab(event, 'Home')">Home</a>
         <a href="#" class="tablinks" onclick="openTab(event, 'modificarUsu')">Administrar usuarios</a>
-        <a href="#">Administrar robots</a>
+        <a href="#" class="tablinks" onclick="openTab(event, 'modificarRbt')">Administrar robots</a>
 
     </div>
 
