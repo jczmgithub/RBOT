@@ -33,7 +33,9 @@ $( document ).ready(function() {
     openTab(null, "Home");
 });
 
-function cargarTabla() {
+
+// Usuarios
+function cargarTablaUsuarios() {
     $.ajax({
         url: "admin/cargarFilasUsuarios",
         type: 'post',
@@ -57,7 +59,7 @@ function eliminarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                cargarTabla();
+                cargarTablaUsuarios();
             },
             error: function (data) {
                 alert("ERROR!!!");
@@ -84,7 +86,7 @@ function nuevoUsuario() {
         type: 'post',
         dataType: 'text',
         success: function (data) {
-            cargarTabla();
+            cargarTablaUsuarios();
         },
         error: function (data) {
             alert("ERROR!!!");
@@ -112,7 +114,94 @@ function editarUsuario(id) {
             type: 'post',
             dataType: 'text',
             success: function (data) {
-                cargarTabla();
+                cargarTablaUsuarios();
+            },
+            error: function (data) {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+
+
+// Robots
+function cargarTablaRobots() {
+    $.ajax({
+        url: "admin/cargarFilasRobots",
+        type: 'post',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#tablaRobotsDiv').html(data);
+    });
+}
+
+function eliminarRobot(id) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            id: id
+        };
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/admin/eliminarRobot',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                cargarTablaRobots();
+            },
+            error: function (data) {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+
+function nuevoRobot() {
+    var datos = {
+        usuario: $("#usuario").val(),
+        modelo: $("#modelo").val(),
+        host: $("#host").val()
+    };
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/admin/nuevoRobot',
+        type: 'post',
+        dataType: 'text',
+        success: function (data) {
+            cargarTablaRobots();
+        },
+        error: function (data) {
+            alert("ERROR!!!");
+        },
+        data: datos
+    });
+}
+
+function editarRobot(id) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            id: id,
+            usuario: $("#usuario").val(),
+            modelo: $("#modelo").val(),
+            host: $("#host").val()
+        };
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/admin/editarRobot',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                cargarTablaRobots();
             },
             error: function (data) {
                 alert("ERROR!!!");

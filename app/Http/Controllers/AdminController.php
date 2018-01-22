@@ -54,4 +54,29 @@ class AdminController extends Controller
             [$_POST["nombre"], $_POST["email"], $_POST["confirmado"], $_POST["tarifa"], $_POST["credito"], $_POST["id"]]);
     }
 
+
+    public function cargarFilasRobots()
+    {
+        return view('admin.tabs.tablaRobots', ['robots' => DB::table('robots')->get()]);
+    }
+
+    public function eliminarRobot()
+    {
+        DB::table('robots')->where('id', '=', $_POST["id"])->delete();
+    }
+
+    public function nuevoRobot()
+    {
+        DB::table('robots')->insert([
+            'user_id' => $_POST["usuario"],
+            'modelo' => $_POST["modelo"],
+            'host' => $_POST["host"],
+        ]);
+    }
+
+    public function editarRobot()
+    {
+        DB::update('update robots set user_id = ?, modelo = ?, host = ? where id = ?',
+            [$_POST["usuario"], $_POST["modelo"], $_POST["host"], $_POST["id"]]);
+    }
 }
