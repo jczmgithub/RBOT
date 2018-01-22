@@ -17,7 +17,7 @@ class CreateRobotsTable extends Migration
             $table->engine = "InnoDB";
 
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned(); //->nullable()
             $table->string('modelo');
             $table->string('host');
             //$table->string("motores");
@@ -27,7 +27,7 @@ class CreateRobotsTable extends Migration
 
         Schema::table('robots', function (Blueprint $table) {
             //Foreign key
-            $table->foreign('user_id')->references('id')->on('users'); //->onDelete('cascade')
+            $table->foreign('user_id')->references('id')->on('users'); //->onDelete('set null'); //->onDelete('cascade');
         });
     }
 
