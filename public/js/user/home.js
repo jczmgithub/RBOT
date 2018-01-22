@@ -146,8 +146,18 @@ function sendDatas(){
 
         var datos = $('#formulario').serialize();
         alert(datos);
+        playVid();
+
 
     });
+
+}
+
+function playVid() {
+    setTimeout(function () {
+        var vid = document.getElementById("video");
+        vid.play();
+    },4000);
 
 }
 
