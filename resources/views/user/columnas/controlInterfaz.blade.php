@@ -18,9 +18,9 @@
     </table>
 
     <div id="botonesControl">
-        <button id="addFila" class="btn btn-success botonesFunciones"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
-        <button id="sendFila" type="submit" class="btn btn-primary botonesFunciones">Enviar Todo</button>
-        <button id="delFila" type="submit" class="btn btn-primary botonesFunciones">Eliminar</button>
+        <button id="addFilas"  type="submit" class="btn btn-success botonesFunciones"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
+        <button id="sendFilas" type="submit" class="btn btn-primary botonesFunciones">Enviar Todo</button>
+        <button id="delFilas" type="submit" class="btn btn-primary botonesFunciones">Eliminar</button>
     </div>
 
 </div>

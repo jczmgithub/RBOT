@@ -63,24 +63,23 @@ $(document).ready(function (){
 
     try {
 
-        $('#sendFila').click(function (event) {
+        $('#sendFilas').click(function (event) {
             event.preventDefault();
             sendDatas();
 
         });
 
-        $('#delFila').click(function (event) {
+        $('#delFilas').click(function (event) {
             event.preventDefault();
             delFilas();
 
         });
 
-        $('#addFila').click(function (event) {
+        $('#addFilas').click(function (event) {
             event.preventDefault();
             addFila();
 
         });
-
 
         openLegend(null,"divMando");
         alert('ok');
@@ -91,8 +90,6 @@ $(document).ready(function (){
 });
 
 function addFila() {
-
-    event.preventDefault();
 
     $.ajax({
         url: "/user/tablaDatos",
@@ -107,9 +104,7 @@ function addFila() {
 
 }
 
-function eliminarFila(btn) {
-
-    event.preventDefault();
+function delFila(btn) {
 
     var row = btn.parentNode.parentNode;
     row.parentNode.removeChild(row);
@@ -118,13 +113,11 @@ function eliminarFila(btn) {
 
 function delFilas(){
 
-    event.preventDefault();
-
     $("#tablaBody tr").remove();
 
 }
 
-function mostrarFila(data) {
+function sendFila(data) {
 
     event.preventDefault();
 
@@ -133,7 +126,9 @@ function mostrarFila(data) {
     var datosInput = $(row).find('input').serialize();
     var datosSelect = $(row).find('select').serialize();
 
-    alert(datosSelect+"&"+datosInput);
+    var dataFila = datosSelect+"&"+datosInput;
+
+    alert(dataFila);
 
 }
 
