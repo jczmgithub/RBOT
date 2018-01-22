@@ -26,6 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home', ['modelos' => DB::table('robots')->where('idUsuario','=',Auth::user()->id)->get()]);
+        return view('user.home', ['modelos' => DB::table('robots')->where('user_id','=',Auth::user()->id)->get()]);
     }
 }

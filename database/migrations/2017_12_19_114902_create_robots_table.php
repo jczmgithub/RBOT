@@ -14,12 +14,20 @@ class CreateRobotsTable extends Migration
     public function up()
     {
         Schema::create('robots', function (Blueprint $table) {
-            $table->integer('idUsuario');
+            $table->engine = "InnoDB";
+
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('modelo');
             $table->string('host');
             //$table->string("motores");
 
             $table->timestamps();
+        });
+
+        Schema::table('robots', function (Blueprint $table) {
+            //Foreign key
+            $table->foreign('user_id')->references('id')->on('users'); //->onDelete('cascade')
         });
     }
 
