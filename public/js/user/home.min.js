@@ -81,6 +81,16 @@ $(document).ready(function (){
 
         });
 
+        $('#tablaBody').on('click', '.enviar', function(event){
+            event.preventDefault();
+            enviarFila(event);
+        });
+
+        /*$('#tablaBody').on('click', '.borrar', function(event){
+            event.preventDefault();
+            delFila(event);
+        });
+*/
         openLegend(null,"divMando");
         alert('ok');
 
@@ -96,7 +106,7 @@ function addFila() {
         type: 'POST',
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
+        }
         //async: false,
     }).done(function(data) {
         $('#tablaBody').append(data);
@@ -104,39 +114,60 @@ function addFila() {
 
 }
 
-function delFila(btn) {
-
-    var row = btn.parentNode.parentNode;
-    row.parentNode.removeChild(row);
-
-}
-
 function delFilas(){
+
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
+
+    }).done(function() {
 
     $("#tablaBody tr").remove();
 
-}
-
-function sendFila(data) {
-
-    event.preventDefault();
-
-    var row = data.parentNode.parentNode;
-
-    var datosInput = $(row).find('input').serialize();
-    var datosSelect = $(row).find('select').serialize();
-
-    var dataFila = datosSelect+"&"+datosInput;
-
-    alert(dataFila);
+    });
 
 }
 
 function sendDatas(){
 
-    var datos = $('#formulario').serialize();
-    alert(datos);
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
 
+    }).done(function() {
+
+        var datos = $('#formulario').serialize();
+        alert(datos);
+
+    });
+
+}
+
+function enviarFila(event) {
+
+    var row = event.target.parentNode.parentNode;
+
+    var datosInput = $(row).find('input').serialize();
+    var datosSelect = $(row).find('select').serialize();
+
+    var datosFila = datosSelect+"&"+datosInput;
+
+    alert(datosFila);
+
+}
+
+function delFila(data) {
+    
+    var row = data.parentNode.parentNode;
+    row.parentNode.removeChild(row);
 
 }
 

@@ -24,7 +24,7 @@
         <input type='number' class='form-control totalWidth' name='velocidadForm' value='50' id="velocidadForm">
     </td>
     <td class='col-xs-2'>
-        <button id="addFila" class="btn btn-sm btn-success enviar"><span class="fa fa-paper-plane" ></span></button>
-        <button id="delFila" class="btn btn-sm btn-danger"><span class="fa fa-times" id="borrarFila" ></span></button>
+        <button class="btn btn-sm btn-success enviar" id="enviarFila"><span class="fa fa-paper-plane" ></span></button>
+        <button class="btn btn-sm btn-danger borrar" onclick="delFila(this)"><span class="fa fa-times" id="borrarFila" ></span></button>
     </td>
 </tr>
