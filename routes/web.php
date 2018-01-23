@@ -27,9 +27,6 @@ Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.home');
     Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
-//    Route::post('/login', function(){
-//        return DB::table('users')->get();
-//    })->name('admin.login.submit');
     Route::post('/logout', 'AuthAdmin\LoginController@logout')->name('admin.logout');
     Route::get('/password/reset', 'AuthAdmin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
     Route::post('/password/email', 'AuthAdmin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
@@ -39,6 +36,10 @@ Route::prefix('admin')->group(function() {
     Route::post('/cargarFilasUsuarios', 'AdminController@cargarFilasUsuarios')->name('admin.cargarFilasUsuarios');
     Route::post('/nuevoUsuario', 'AdminController@nuevoUsuario')->name('admin.nuevoUsuario');
     Route::post('/editarUsuario', 'AdminController@editarUsuario')->name('admin.editarUsuario');
+    Route::post('/eliminarRobot', 'AdminController@eliminarRobot')->name('admin.eliminarRobot');
+    Route::post('/cargarFilasRobots', 'AdminController@cargarFilasRobots')->name('admin.cargarFilasRobots');
+    Route::post('/nuevoRobot', 'AdminController@nuevoRobot')->name('admin.nuevoRobot');
+    Route::post('/editarRobot', 'AdminController@editarRobot')->name('admin.editarRobot');
 });
 
 Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');

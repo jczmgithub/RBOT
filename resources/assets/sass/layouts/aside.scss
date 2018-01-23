@@ -77,3 +77,28 @@
   color: green;
 }
 
+//
+// Tabla con los robots
+#tablaRobots {
+  margin: auto;
+}
+
+#tablaRobots td, th{
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#modificarRbt h1 {
+  text-align: center;
+}
+
+// Boton eliminar robot
+.btnEliminarRobot {
+  color: red;
+}
+
+// Boton nuevo robot
+.btnNuevoRobot {
+  color: green;
+}
