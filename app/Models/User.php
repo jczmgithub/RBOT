@@ -26,7 +26,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'credito'
     ];
-    
+
     public function robots() {
         return $this->hasMany('App\Models\Robot');
     }
