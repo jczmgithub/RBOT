@@ -26,10 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token','credito'
     ];
-    public function roles()
-    {
-        return $this
-            ->belongsToMany('App\Role')
-            ->withTimestamps();
-    }
 }

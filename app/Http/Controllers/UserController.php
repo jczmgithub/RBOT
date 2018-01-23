@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use DB;
 use Auth;
+use Mail;
 
 class UserController extends Controller
 {
@@ -42,11 +42,12 @@ class UserController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'owner' => $data[$id]
+            'owner' => $id,
+            'credito' => 'NO_DISPONIBLE'
         ]);
     }
 
-    public function adminRegistrarUser(Request $request){
+    public function register(Request $request){
         $input = $request -> all();
         $validator =  $this->validator($input);
 
@@ -63,8 +64,50 @@ class UserController extends Controller
                 $message->to($data['email']);
                 $message->subject('Registro de confirmación');
             });
-            return redirect(route('/user/verUser'))->with('status', 'Se le ha enviado un correo de confirmación a '.$user);
+            return redirect(route('user.columnas.registrarUser'))->with('status', 'Email de confirmación enviado.');
+        } else{
+            return back()->with('errors',$validator->errors());
+            //return redirect (route('register'))->with('status', $validator->errors());
         }
-        return back()->with('errors',$validator->errors());
     }
+    public function completarRegistro($token){
+        $user = User::where('emailToken', $token)->first();
+
+        if(!is_null($user)) {
+            //$user->confirmado = 1;
+            $user->emailToken = '';
+            $user->save();
+            $token = NULL;
+            return view('user.auth.passwords.addPassword')->with(
+                ['token' => $token, 'email' => $user->email]
+            );
+        }
+        return redirect (route('user.columnas.registrarUser'))->with('status', 'Ha ocurrido un error.');
+    }
+    public function reset(Request $request){
+
+        $user->password = Hash::make($password);
+        $user->setRememberToken(Str::random(60));
+        $user->save();
+        event(new PasswordReset($user));
+        $this->guard()->login($user);
+
+        }
+
+        protected function rules()
+        {
+            return [
+                'token' => 'required',
+                'email' => 'required|email',
+                'password' => 'required|confirmed|min:6',
+            ];
+        }
+        protected function credentials(Request $request)
+        {
+            return $request->only(
+                'email', 'password', 'password_confirmation', 'token'
+            );
+        }
+
+
 }

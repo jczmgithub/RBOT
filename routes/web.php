@@ -49,8 +49,9 @@ Route::post('/prueba', function(){
 Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
 
 //Rutas admin robot para registro de user y robots
-Route::get('/user/registrarUser', 'UserController@formRegistro')->name('formUser');
+    Route::get('/user/registrarUser', 'UserController@formRegistro')->name('user.columnas.registrarUser');
 Route::get('/user/verUser', 'UserController@tablaUser')->name('tablaUsuarios');
-//Route::post('/registrar-user', 'UserController@register')->name('registrarUser');
-
+Route::get('/user/registrarUser/{token}', 'UserController@completarRegistro')->name('completarRegistro');
+Route::post('/registrar-user', 'UserController@register')->name('registrarUser');
+Route::post('/register/user/completarRegistro','UserController@reset')->name('userPassword.request');
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');

@@ -1,47 +1,36 @@
-@extends('layouts.default')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Making Accessible Emails</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+        /* CLIENT-SPECIFIC STYLES */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; }
 
-@section('home')
-    <div class="container contenidoLogin">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Restablecer contraseña</div>
+        /* RESET STYLES */
+        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    </style>
+</head>
+<body style="background-color: aliceblue; margin: 0 !important; padding: 60px 0 60px 0 !important;">
+<table border="0" cellspacing="0" cellpadding="0" role="presentation" width="100%">
+    <tr>
+        <td bgcolor="aliceblue" style="font-size: 0;">&​nbsp;</td>
+        <td bgcolor="white" width="600" style="border-radius: 4px; font-family: sans-serif; padding: 20px 40px;">
+            <h2>Hola {{ $name }},
+                Se ha solicitado un registro en RBOT. Por favor, click en el enlace para tener acceso.</h2>
+            <h1><a href="{{url('/user/registrarUser', $emailToken)}}">Click para confirmar</a></h1>
 
-                    <div class="panel-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+        </td>
+        <td bgcolor="aliceblue" style="font-size: 0;">&​nbsp;
+        En caso de que no te funcione prueba a copiar y pegar el link: http://127.0.0.1/user/registrarUser/{{$emailToken}}</td>
 
-                        <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
-                            {{ csrf_field() }}
-
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail</label>
-
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                    @if ($errors->has('email'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-rbt">
-                                        Enviar link de recuperación
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
+    </tr>
+</table>
+</body>
+</html>
