@@ -27,7 +27,12 @@ class User extends Authenticatable
         'password', 'remember_token', 'credito'
     ];
 
-    public function robots() {
+    /*public function robots() {
         return $this->hasMany('App\Models\Robot');
+    }
+    */
+
+    public function robots() {
+        return $this->belongsToMany('App\Models\Robot');
     }
 }

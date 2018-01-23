@@ -9,4 +9,8 @@ class Robot extends Model
     protected $fillable = [
         'user_id', 'modelo', 'host',
     ];
+
+    public function users() {
+        return $this->belongsToMany('App\Models\User');
+    }
 }
