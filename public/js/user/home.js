@@ -23,11 +23,13 @@ function openLegend(evt, divEvent) {
 
 }
 
-//pruebas mandar json en curpo de post
+//pruebas mandar json en cuerpo de post
 
 function send() {
 
+    event.preventDefault();
     console.log(this);
+
     var datos = {
         robot: $("#selecRobot").val(),
         motor: $("#selecMotor").val(),
@@ -36,6 +38,7 @@ function send() {
     };
 
     $.ajax({
+
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -53,36 +56,129 @@ function send() {
         },
         data: datos
     });
+
 }
 
 $(document).ready(function (){
+
     try {
+
+        $('#sendFilas').click(function (event) {
+            event.preventDefault();
+            sendDatas();
+
+        });
+
+        $('#delFilas').click(function (event) {
+            event.preventDefault();
+            delFilas();
+
+        });
+
+        $('#addFilas').click(function (event) {
+            event.preventDefault();
+            addFila();
+
+        });
+
+        $('#tablaBody').on('click', '.enviar', function(event){
+            event.preventDefault();
+            enviarFila(event);
+        });
+
+        /*$('#tablaBody').on('click', '.borrar', function(event){
+            event.preventDefault();
+            delFila(event);
+        });
+*/
         openLegend(null,"divMando");
+        alert('ok');
+
     } catch (e) {
     }
 
 });
 
 function addFila() {
+
     $.ajax({
         url: "/user/tablaDatos",
         type: 'POST',
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
+        }
         //async: false,
     }).done(function(data) {
         $('#tablaBody').append(data);
     });
-}
 
-function eliminarFila(btn) {
-    var row = btn.parentNode.parentNode;
-    row.parentNode.removeChild(row);
 }
 
 function delFilas(){
-        $("#tablaBody tr").remove();
+
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
+
+    }).done(function() {
+
+    $("#tablaBody tr").remove();
+
+    });
+
+}
+
+function sendDatas(){
+
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
+
+    }).done(function() {
+
+        var datos = $('#formulario').serialize();
+        alert(datos);
+        playVid();
+
+
+    });
+
+}
+
+function playVid() {
+    setTimeout(function () {
+        var vid = document.getElementById("video");
+        vid.play();
+    },4000);
+
+}
+
+function enviarFila(event) {
+
+    var row = event.target.parentNode.parentNode;
+
+    var datosInput = $(row).find('input').serialize();
+    var datosSelect = $(row).find('select').serialize();
+
+    var datosFila = datosSelect+"&"+datosInput;
+
+    alert(datosFila);
+
+}
+
+function delFila(data) {
+    
+    var row = data.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+
 }
 
 

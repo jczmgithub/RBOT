@@ -122,20 +122,20 @@
         </div>
     </div>
 
-    <h1>{{Request::root()}}</h1>
-    <h1>{{Config::get('app.url')}}</h1>
-    @if(Request::secure())
-        <h1>HTTPS</h1>
-    @else
-        <h1>HTTP</h1>
-    @endif
-    @if(str_contains(Request::fullUrl(), 'herokuapp'))
-        <h1>HTTPS</h1>
-    @else
-        <h1>HTTP</h1>
-    @endif
-    <h1>{{url()->current()}}</h1>
-    <h1>{{Request::url()}}</h1>
+    {{--<h1>{{Request::root()}}</h1>--}}
+    {{--<h1>{{Config::get('app.url')}}</h1>--}}
+    {{--@if(Request::secure())--}}
+        {{--<h1>HTTPS</h1>--}}
+    {{--@else--}}
+        {{--<h1>HTTP</h1>--}}
+    {{--@endif--}}
+    {{--@if(str_contains(Request::fullUrl(), 'herokuapp'))--}}
+        {{--<h1>HTTPS</h1>--}}
+    {{--@else--}}
+        {{--<h1>HTTP</h1>--}}
+    {{--@endif--}}
+    {{--<h1>{{url()->current()}}</h1>--}}
+    {{--<h1>{{Request::url()}}</h1>--}}
 
     @if(str_contains(Request::fullUrl(), 'herokuapp'))
         {!! HTML::style('/css/home.css', array(), true) !!}

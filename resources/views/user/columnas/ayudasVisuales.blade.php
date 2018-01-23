@@ -3,11 +3,9 @@
     <h3>Webcam</h3>
 
         <div id="divWebcam" class="embed-responsive embed-responsive-16by9">
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5Q_xjJQmBE"
-                    frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
-            </iframe>
-
+            <video id="video">
+            <source src="webcam.mp4" type="video/mp4" />
+            </video>
         </div>
 
     <h3>Leyendas</h3>
