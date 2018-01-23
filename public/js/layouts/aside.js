@@ -188,9 +188,9 @@ function editarRobot(id) {
     if (confirm('Estas segur@???')) {
         var datos = {
             id: id,
-            usuario: $("#usuario").val(),
-            modelo: $("#modelo").val(),
-            host: $("#host").val()
+            usuario: $("#usuario"+id).val(),
+            modelo: $("#modelo"+id).val(),
+            host: $("#host"+id).val()
         };
 
         $.ajax({

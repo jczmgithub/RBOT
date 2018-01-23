@@ -77,6 +77,6 @@ class AdminController extends Controller
     public function editarRobot()
     {
         DB::update('update robots set user_id = ?, modelo = ?, host = ? where id = ?',
-            [(int)$_POST["usuario"], $_POST["modelo"], $_POST["host"], $_POST["id"]]);
+            [intval($_POST["usuario"]), $_POST["modelo"], $_POST["host"], $_POST["id"]]);
     }
 }
