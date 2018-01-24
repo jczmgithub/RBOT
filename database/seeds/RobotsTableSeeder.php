@@ -23,6 +23,10 @@ class RobotsTableSeeder extends Seeder
             [
                 'modelo' => 'RBX3',
                 'host' => '192.168.1.203'
+            ],
+            [
+                'modelo' => 'ASD4',
+                'host' => '192.168.1.220'
             ]
         ];
 

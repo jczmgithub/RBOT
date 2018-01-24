@@ -23,6 +23,10 @@ class UserRobotTableSeeder extends Seeder
             [
                 'user_id' => 1,
                 'robot_id' => 3
+            ],
+            [
+                'user_id' => 2,
+                'robot_id' => 4
             ]
 
         ];
