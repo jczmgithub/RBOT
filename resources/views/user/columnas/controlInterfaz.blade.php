@@ -20,6 +20,8 @@
     <div id="botonesControl">
         <button id="addFilas" class="btn btn-success botonesFunciones"><span class="fa fa-plus-square" aria-hidden="true"></span></button>
         <button id="sendFilas" class="btn btn-primary botonesFunciones">Enviar Todo</button>
+        <button id="saveSecuencia" class="btn btn-primary botonesFunciones">Guardar</button>
+        <button id="loadSecuencia" class="btn btn-primary botonesFunciones">Cargar</button>
         <button id="delFilas" class="btn btn-primary botonesFunciones">Eliminar</button>
     </div>
 

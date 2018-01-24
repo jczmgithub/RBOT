@@ -81,16 +81,22 @@ $(document).ready(function (){
 
         });
 
+        $('#saveSecuencia').click(function (event) {
+            event.preventDefault();
+            saveSecuencia();
+
+        });
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
             enviarFila(event);
         });
 
-        /*$('#tablaBody').on('click', '.borrar', function(event){
+        $('#tablaBody').on('click', '.borrar', function(event){
             event.preventDefault();
             delFila(event);
         });
-*/
+
         openLegend(null,"divMando");
         alert('ok');
 
@@ -161,9 +167,9 @@ function playVid() {
 
 }
 
-function enviarFila(event) {
+function enviarFila(data) {
 
-    var row = event.target.parentNode.parentNode;
+    var row = data.parentNode.parentNode;
 
     var datosInput = $(row).find('input').serialize();
     var datosSelect = $(row).find('select').serialize();
@@ -171,6 +177,8 @@ function enviarFila(event) {
     var datosFila = datosSelect+"&"+datosInput;
 
     alert(datosFila);
+
+
 
 }
 
@@ -181,4 +189,20 @@ function delFila(data) {
 
 }
 
+function saveSecuencia(){
 
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
+
+    }).done(function() {
+
+
+
+    });
+
+}
