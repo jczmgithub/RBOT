@@ -92,11 +92,11 @@ $(document).ready(function (){
             enviarFila(event);
         });
 
-        $('#tablaBody').on('click', '.borrar', function(event){
+        /*$('#tablaBody').on('click', '.borrar', function(event){
             event.preventDefault();
             delFila(event);
         });
-
+*/
         openLegend(null,"divMando");
         alert('ok');
 
@@ -167,9 +167,9 @@ function playVid() {
 
 }
 
-function enviarFila(data) {
+function enviarFila(event) {
 
-    var row = data.parentNode.parentNode;
+    var row = event.target.parentNode.parentNode;
 
     var datosInput = $(row).find('input').serialize();
     var datosSelect = $(row).find('select').serialize();
@@ -177,8 +177,6 @@ function enviarFila(data) {
     var datosFila = datosSelect+"&"+datosInput;
 
     alert(datosFila);
-
-
 
 }
 
@@ -189,20 +187,4 @@ function delFila(data) {
 
 }
 
-function saveSecuencia(){
 
-    $.ajax({
-        url: "/user/tablaDatos",
-        type: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-        //async: false,
-
-    }).done(function() {
-
-
-
-    });
-
-}
