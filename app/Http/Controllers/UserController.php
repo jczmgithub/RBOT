@@ -74,40 +74,17 @@ class UserController extends Controller
         $user = User::where('emailToken', $token)->first();
 
         if(!is_null($user)) {
-            //$user->confirmado = 1;
+            $user->confirmado = 1;
             $user->emailToken = '';
             $user->save();
             $token = NULL;
             return view('user.auth.passwords.addPassword')->with(
-                ['token' => $token, 'email' => $user->email]
-            );
-        }
+                ['token' => $token, 'email' => $user->email],('status', 'Has activado la cuenta!'));
+
+        }return redirect(route('login'))->with('status', 'Has activado la cuenta!');
         return redirect (route('user.columnas.registrarUser'))->with('status', 'Ha ocurrido un error.');
     }
-    public function reset(Request $request){
 
-        $user->password = Hash::make($password);
-        $user->setRememberToken(Str::random(60));
-        $user->save();
-        event(new PasswordReset($user));
-        $this->guard()->login($user);
-
-        }
-
-        protected function rules()
-        {
-            return [
-                'token' => 'required',
-                'email' => 'required|email',
-                'password' => 'required|confirmed|min:6',
-            ];
-        }
-        protected function credentials(Request $request)
-        {
-            return $request->only(
-                'email', 'password', 'password_confirmation', 'token'
-            );
-        }
 
 
 }

@@ -54,5 +54,5 @@ Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
 Route::get('/user/verUser', 'UserController@tablaUser')->name('tablaUsuarios');
 Route::get('/user/registrarUser/{token}', 'UserController@completarRegistro')->name('completarRegistro');
 Route::post('/registrar-user', 'UserController@register')->name('registrarUser');
-Route::post('/register/user/completarRegistro','UserController@reset')->name('userPassword.request');
+Route::post('/register/user/completarRegistro','PasswordController@reset')->name('userPassword.request');
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');
