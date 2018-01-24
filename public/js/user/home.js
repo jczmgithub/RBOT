@@ -169,7 +169,7 @@ function playVid() {
 
 function enviarFila(event) {
 
-    var row = event.target.parentNode.parentNode;
+    var row = event.parentNode.parentNode;
 
     var datosInput = $(row).find('input').serialize();
     var datosSelect = $(row).find('select').serialize();
@@ -187,4 +187,9 @@ function delFila(data) {
 
 }
 
+function saveSecuencia(form) {
+    var data = JSON.stringify( $(form).serializeArray() );
+    console.log( data );
+    return false; //don't submit
 
+}
