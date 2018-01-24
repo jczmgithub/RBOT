@@ -6,6 +6,8 @@ use DeepCopy\Filter\KeepFilter;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\DatosRobot;
+use App\Models\User;
+use Auth;
 use Illuminate\Support\Facades\Input;
 
 class RobotController extends Controller
