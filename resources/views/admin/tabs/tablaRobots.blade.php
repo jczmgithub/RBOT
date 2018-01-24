@@ -1,6 +1,6 @@
 <table id="tablaRobots">
     <tr>
-        <th>Usuario</th>
+        {{--<th>Usuario</th>--}}
         <th>Modelo</th>
         <th>Host</th>
         <th>Acciones</th>
@@ -9,9 +9,9 @@
     <div id="filasRobots">
         @foreach($robots as $key => $data)
             <tr>
-                <td>
-                    <input id="usuario{{ $data->id }}" type="number" value="{{ $data->user_id }}">
-                </td>
+                {{--<td>--}}
+                    {{--<input id="usuario{{ $data->id }}" type="number" value="{{ $data->user_id }}">--}}
+                {{--</td>--}}
                 <td>
                     <input id="modelo{{ $data->id }}" type="text" value="{{ $data->modelo }}">
                 </td>
@@ -27,9 +27,9 @@
     </div>
 
     <tr>
-        <td>
-            <input id="usuario" type="number" placeholder="Introduce usuario">
-        </td>
+        {{--<td>--}}
+            {{--<input id="usuario" type="number" placeholder="Introduce usuario">--}}
+        {{--</td>--}}
         <td>
             <input id="modelo" type="text" placeholder="Introduce modelo">
         </td>
