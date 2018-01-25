@@ -6,6 +6,8 @@ use DeepCopy\Filter\KeepFilter;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\DatosRobot;
+use App\Models\User;
+use Auth;
 use Illuminate\Support\Facades\Input;
 
 class RobotController extends Controller
@@ -45,7 +47,11 @@ class RobotController extends Controller
 
     }
     public function addFila(){
-        return view('user.includes.filaNueva', ['modelos' => DB::table('robots')->get()]);
+        return view('user.includes.filaNueva', ['modelos' => DB::table('user_robot')
+            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
+            ->select('user_robot.user_id' ,'robots.modelo')
+            ->where('user_robot.user_id','=',Auth::user()->id)
+            ->get()]);
     }
     public function formRobot(){
         return view('user.columnas.registrarRobot');

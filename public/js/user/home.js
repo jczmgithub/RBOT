@@ -81,6 +81,12 @@ $(document).ready(function (){
 
         });
 
+        $('#saveSecuencia').click(function (event) {
+            event.preventDefault();
+            saveSecuencia();
+
+        });
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
             enviarFila(event);
@@ -163,7 +169,7 @@ function playVid() {
 
 function enviarFila(event) {
 
-    var row = event.target.parentNode.parentNode;
+    var row = event.parentNode.parentNode;
 
     var datosInput = $(row).find('input').serialize();
     var datosSelect = $(row).find('select').serialize();
@@ -204,4 +210,9 @@ function eliminarUser(correo) {
 }
 
 
+function saveSecuencia(form) {
+    var data = JSON.stringify( $(form).serializeArray() );
+    console.log( data );
+    return false; //don't submit
 
+}
