@@ -55,4 +55,5 @@ Route::get('/user/verUser', 'UserController@tablaUser')->name('tablaUsuarios');
 Route::get('/user/registrarUser/{token}', 'UserController@completarRegistro')->name('completarRegistro');
 Route::post('/registrar-user', 'UserController@register')->name('registrarUser');
 Route::post('/register/user/completarRegistro','PasswordController@reset')->name('userPassword.request');
+Route::post('/user/eliminarUser', 'UserController@eliminarUser')->name('eliminar.user');
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');

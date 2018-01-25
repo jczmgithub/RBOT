@@ -17,7 +17,7 @@
                                 <li>{{ session('status') }}</li>
                             </div>
                         @endif
-                            <table class=table id="">
+                            <table class=table id="usuarios">
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Email</th>
@@ -32,10 +32,11 @@
                                        {{ $data->email }}
                                     </td>
                                     <td>
-                                        <button class="btn btn-sm btn-danger" onclick="eliminarFila(this)"><span class="fa fa-times" id="borrarFila" ></span></button>
+                                        <button class="btn btn-sm btn-danger" onclick="eliminarUser('{{ $data->email }}')">
+                                            <span class="fa fa-times"></span>
+                                        </button>
                                     </td>
                                 </tr>
-
 
                             @endforeach
                             </table>
@@ -44,5 +45,12 @@
             </div>
         </div>
     </div>
+    @if(str_contains(Request::fullUrl(), 'herokuapp'))
+        {!! HTML::style('css/user/home.css', array(), true) !!}
+        {!! HTML::script('js/user/home.min.js', array(), true); !!}
+    @else
+        {!! HTML::style('css/user/home.css') !!}
+        {!! HTML::script('js/user/home.js'); !!}
+    @endif
 @stop
 

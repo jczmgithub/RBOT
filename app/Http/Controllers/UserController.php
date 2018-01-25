@@ -79,10 +79,14 @@ class UserController extends Controller
             $user->save();
             $token = NULL;
             return view('user.auth.passwords.addPassword')->with(
-                ['token' => $token, 'email' => $user->email],('status', 'Has activado la cuenta!'));
+                ['token' => $token, 'email' => $user->email]);
 
-        }return redirect(route('login'))->with('status', 'Has activado la cuenta!');
-        return redirect (route('user.columnas.registrarUser'))->with('status', 'Ha ocurrido un error.');
+        }
+        return redirect(route('login'))->with('status', 'Ha ocurrido un error inesperado en el email');
+
+    }
+    public function eliminarUser(){
+        DB::table('users')->where('email', '=', $_POST["email"])->delete();
     }
 
 

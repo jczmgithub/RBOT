@@ -180,5 +180,28 @@ function delFila(data) {
     row.parentNode.removeChild(row);
 
 }
+function eliminarUser(correo) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            email: correo
+        };
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/user/eliminarUser',
+            type: 'post',
+            dataType: 'text',
+            success: function (data) {
+                console.log("todo correcto");
+            },
+            error: function () {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+
 
 
