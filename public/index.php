@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+header("Access-Control-Allow-Origin: http://10.14.1.206:8000/prueba");
+
 define('LARAVEL_START', microtime(true));
 
 /*

@@ -159,8 +159,8 @@ function send(btn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'https://enautirakasle.000webhostapp.com/paraRobot.php',
-        type: 'post',
+        url: 'http://10.14.1.209:8000/prueba',
+        type: 'POST',
         dataType: 'text',
         success: function (data) {
             alert(data);
