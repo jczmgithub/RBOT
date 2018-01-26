@@ -1,4 +1,3 @@
-
 <tr>
     <td class='col-xs-3'>
         <select name='selecRobot' class='form-control selector totalWidth' id="selecRobot">
@@ -8,7 +7,8 @@
             @endforeach
         </select>
     </td>
-    <td class='col-xs-3'><select name='selecMotor' class='form-control selector totalWidth' id="selecMotor">
+    <td class='col-xs-3'>
+        <select name='selecMotor' class='form-control selector totalWidth' id="selecMotor">
             <option value='null'>-Seleccione el motor-</option>
             <option value='motor1'>Base</option>
             <option value='motor2'>Hombro</option>
@@ -24,7 +24,7 @@
         <input type='number' class='form-control totalWidth' name='velocidadForm' value='50' id="velocidadForm">
     </td>
     <td class='col-xs-2'>
-        <button class="btn btn-sm btn-success enviar" onclick="enviarFila(this)"><span class="fa fa-paper-plane" ></span></button>
+        <button class="btn btn-sm btn-success enviar" onclick="send(this)"><span class="fa fa-paper-plane" ></span></button>
         <button class="btn btn-sm btn-danger borrar" onclick="delFila(this)"><span class="fa fa-times" id="borrarFila" ></span></button>
     </td>
 </tr>
