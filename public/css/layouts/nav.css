@@ -1,10 +1,1 @@
-/* NAV */
-#logo {
-  max-height: 150%;
-  margin-top: -4px;
-}
-
-.navbar-inverse {
-  border-bottom: 2px solid #337AB7;
-  display: block;
-}
+#logo{max-height:150%;margin-top:-4px}.navbar-inverse{border-bottom:2px solid #337ab7}

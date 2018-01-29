@@ -228,5 +228,35 @@ function enviarFilas() {
 function saveSecuencia() {
 
 
-
+}
+function eliminarUser(correo) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            email: correo
+        };
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/user/eliminarUser',
+            type: 'post',
+            dataType: 'text',
+            success: function () {
+                cargarTablaUser();
+            },
+            error: function () {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+function cargarTablaUser() {
+    $.ajax({
+        url: "/user/verUser/tablaUser",
+        type: 'get',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#usuarios').html(data);
+    });
 }
