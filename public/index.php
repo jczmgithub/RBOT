@@ -7,7 +7,9 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
-header("Access-Control-Allow-Origin: http://10.14.1.206:8000/prueba");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE");
+header("Access-Control-Allow-Headers: Content-Type, Accept, X-Requested-With, remember-me, x-csrf-token");
 
 define('LARAVEL_START', microtime(true));
 
