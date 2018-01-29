@@ -198,8 +198,8 @@ function eliminarUser(correo) {
             url: '/user/eliminarUser',
             type: 'post',
             dataType: 'text',
-            success: function (data) {
-                console.log("todo correcto");
+            success: function () {
+                cargarTablaUser();
             },
             error: function () {
                 alert("ERROR!!!");
@@ -208,7 +208,15 @@ function eliminarUser(correo) {
         });
     }
 }
-
+function cargarTablaUser() {
+    $.ajax({
+        url: "/user/verUser/tablaUser",
+        type: 'get',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#usuarios').html(data);
+    });
+}
 
 function saveSecuencia(form) {
     var data = JSON.stringify( $(form).serializeArray() );

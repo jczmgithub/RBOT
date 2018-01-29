@@ -5,25 +5,45 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+use Illuminate\Support\Str;
 
 class PasswordController extends Controller
 {
 
     use ResetsPasswords;
-    public function reset(Request $request)
+    protected function validator(array $data)
     {
-        $this->validate($request, [
+        return Validator::make($data, [
             'token' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed',
         ]);
-        $credentials = $request->only(
-            'email', 'password', 'password_confirmation'
+    }
+    public function reset(Request $request){
+        $input = $request->only(
+            'email', 'password', 'password_confirmation', 'token'
         );
-        $user = User::where('email',$credentials['email']);
-        $user->password = bcrypt($credentials['password']);
-        $user->save();
-        return redirect(route('user.home'))->with('status', 'Password establecido.');
+        $validator =  $this->validator($input);
+
+        if($validator->passes()) {
+            $user = User::where('email', $input['email'])->first();
+            if(!is_null($user)) {
+                $user->confirmado = 1;
+                $user->emailToken = '';
+                $user->password = Hash::make($input['password']);
+                $user->setRememberToken(Str::random(60));
+                $user->save();
+                return redirect(route('login'))->with('status', 'Password establecido.');
+            } else{
+                return redirect(route('login'))->with('status', 'No se ha encontrado el user');
+            }
+        }
+        return redirect(route('login'))->with('status', 'Ha ocurrido un error al establecer password');
+        //return redirect(route('login'))->with('status', 'Ha ocurrido al establecer la password.');
+
+
     }
 }

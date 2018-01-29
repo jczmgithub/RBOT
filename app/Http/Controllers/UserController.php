@@ -17,10 +17,14 @@ class UserController extends Controller
     public function formRegistro(){
         return view('user.columnas.registrarUser');
     }
+    public function verUsers(){
+        $id = Auth::user()->id;
+        return view('user.columnas.verUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
+
+    }
     public function tablaUser(){
         $id = Auth::user()->id;
-        return view('user.columnas.tablaUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
-
+        return view('user.includes.tablaUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
     }
     protected function validator(array $data)
     {
@@ -74,13 +78,8 @@ class UserController extends Controller
         $user = User::where('emailToken', $token)->first();
 
         if(!is_null($user)) {
-            $user->confirmado = 1;
-            $user->emailToken = '';
-            $user->save();
-            $token = NULL;
             return view('user.auth.passwords.addPassword')->with(
                 ['token' => $token, 'email' => $user->email]);
-
         }
         return redirect(route('login'))->with('status', 'Ha ocurrido un error inesperado en el email');
 

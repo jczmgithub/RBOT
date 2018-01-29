@@ -1,1 +1,142 @@
-body{height:100vh;min-height:100vh}#eliminar{margin-top:2%}#divDatos,#divMando,#divRobot{padding-top:2%;padding-bottom:4%}#mando,#robot{margin:auto;height:85%;width:85%}#controles{font-size:90%}div{-webkit-transition:width 2s;transition:width 2s}#botonMotores{padding-top:3%;padding-left:1%}.selector{width:68%}.column-left{float:left;width:33%}.column-right{float:right;width:33%}.column-center{display:inline-block;width:33%}#botonFormRobot{margin-top:4%}.tab{overflow:hidden;border:1px solid #ccc;background-color:#f1f1f1}.tab button{background-color:inherit;float:left;border:none;outline:none;cursor:pointer;padding:14px 16px;-webkit-transition:.3s;transition:.3s}.tab button:hover{background-color:#ddd}.tab button.active{background-color:#ccc}.tabcontent{display:none;padding:6px 12px;border:1px solid #ccc;border-top:none}#panelControl{min-height:66vh}.table-fixed{width:100%;background-color:#f1f1f1;overflow-x:auto}.table-fixed tbody{height:65vh;overflow-y:auto;width:100%}.table-fixed tbody,.table-fixed td,.table-fixed th,.table-fixed tr{display:block}.table-fixed tbody td{float:left}.table-fixed thead tr th{float:left;background-color:#337ab7}.totalWidth{width:100%}
+body {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+#eliminar {
+  margin-top: 2%;
+}
+
+#divMando {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+#divRobot {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+#divDatos {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+#mando {
+  margin: auto;
+  height: 85%;
+  width: 85%;
+}
+
+#robot {
+  margin: auto;
+  height: 85%;
+  width: 85%;
+}
+
+#controles {
+  font-size: 90%;
+}
+
+div {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+#botonMotores {
+  padding-top: 3%;
+  padding-left: 1%;
+}
+
+.selector {
+  width: 68%;
+}
+
+.column-left {
+  float: left;
+  width: 33%;
+}
+
+.column-right {
+  float: right;
+  width: 33%;
+}
+
+.column-center {
+  display: inline-block;
+  width: 33%;
+}
+
+#botonFormRobot {
+  margin-top: 4%;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+#panelControl {
+  min-height: 66vh;
+}
+
+.table-fixed {
+  width: 100%;
+  background-color: #f1f1f1;
+  overflow-x: auto;
+}
+
+.table-fixed tbody {
+  height: 65vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+
+.table-fixed tbody td {
+  float: left;
+}
+
+.table-fixed thead tr th {
+  float: left;
+  background-color: #337AB7;
+}
+
+.totalWidth {
+  width: 100%;
+}
