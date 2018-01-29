@@ -225,6 +225,21 @@ function enviarFilas() {
     }
 }
 
+function guardarFila() {
+    
+}
+
+function guardarFilas() {
+
+    var filas = $('tr');
+
+    for(var i=1; i<filas.length; i++){
+
+        guardarFila(filas[i]);
+    }
+
+}
+
 function saveSecuencia() {
 
 

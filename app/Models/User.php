@@ -35,4 +35,13 @@ class User extends Authenticatable
     public function robots() {
         return $this->belongsToMany('App\Models\Robot');
     }
+
+    public function isOwner(){
+        if ($this->owner == "true") {
+            return true;
+        } else {
+            return false;
+        }
+//        return $this -> user()->where('owner', 'true')->first();
+    }
 }

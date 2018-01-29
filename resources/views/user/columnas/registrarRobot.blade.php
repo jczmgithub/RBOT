@@ -5,6 +5,7 @@
     @endauth
 @endsection
 @section('home')
+    @if(Auth::user()->isOwner())
     {{--TODO Comprobar permisos del admin robot para que le saque el formulario--}}
     <div class="contenidoLogin container">
         <div class="row">
@@ -55,4 +56,5 @@
             </div>
         </div>
     </div>
+    @endif
 @stop

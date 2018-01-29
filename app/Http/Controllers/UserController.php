@@ -15,16 +15,29 @@ class UserController extends Controller
 
 
     public function formRegistro(){
-        return view('user.columnas.registrarUser');
+        if(Auth::user()->isOwner()){
+            return view('user.columnas.registrarUser');
+        }else{
+            return view('home');
+        }
+
     }
     public function verUsers(){
-        $id = Auth::user()->id;
-        return view('user.columnas.verUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
+        if(Auth::user()->isOwner()) {
+            $id = Auth::user()->id;
+            return view('user.columnas.verUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
+        }else{
+            return view('home');
+        }
 
     }
     public function tablaUser(){
-        $id = Auth::user()->id;
-        return view('user.includes.tablaUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
+        if(Auth::user()->isOwner()) {
+            $id = Auth::user()->id;
+            return view('user.includes.tablaUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
+        }else{
+            return view('home');
+        }
     }
     protected function validator(array $data)
     {
