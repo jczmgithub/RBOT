@@ -176,24 +176,53 @@ function send(btn) {
 
 }
 
+function enviarFila(row) {
+
+    var datos = {
+        robot: $(row).find('select[name="selecRobot"]').val(),
+        motor: $(row).find('select[name="selecMotor"]').val(),
+        pasos: $(row).find('input[name="pasosForm"]').val(),
+        velocidad: $(row).find('input[name="velocidadForm"]').val()
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: 'http://10.14.1.209:8000/prueba',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (data) {
+            alert("Fallo al enviar..."+data);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+}
+
 function enviarFilas() {
 
     var filas = $('tr');
-    var columnas;
+    // var columnas;
+
 
     for(var i=1; i<filas.length; i++){
 
-        columnas = $(filas[i]).find('td');
-        console.log(columnas);
+        // columnas = $(filas[i]).find('td');
+        // console.log(columnas);
+        //
+        // for (var j=0; j<(columnas.length-1); j++){
+        //     console.log($(columnas[j].children).val());
+        // }
 
-        for (var j=0; j<(columnas.length-1); j++){
-            console.log($(columnas[j].children).val());
-        }
-
-
+        enviarFila(filas[i]);
     }
-
-
 }
 
 function saveSecuencia() {
