@@ -8,7 +8,7 @@
                     <div class="panel-heading">Cambiar Password</div>
 
                     <div class="panel-body">
-                        <form class="form-horizontal" method="POST" action="{{ route('userPassword.request') }}">
+                        <form class="form-horizontal" method="POST" action="{{ route('user.newPassword') }}">
                             {{ csrf_field() }}
 
                             <input type="hidden" name="token" value="{{ $token }}">
