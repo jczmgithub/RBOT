@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use DeepCopy\Filter\KeepFilter;
+//use DeepCopy\Filter\KeepFilter;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\DatosRobot;
-use App\Models\User;
-use Auth;
+//use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
 class RobotController extends Controller
@@ -45,6 +45,25 @@ class RobotController extends Controller
 //        return back();
 //
 //    }
+    public function guardarFila(Request $request) {
+        $robot=request()->get('robot');
+        $motor=request()->get('motor');
+        $pasos=request()->get('pasos');
+        $velocidad=request()->get('velocidad');
+        $fichero=request()->get('fichero');
+
+        $datosRobot = new DatosRobot();
+
+        $datosRobot->robot=$robot;
+        $datosRobot->motor=$motor;
+        $datosRobot->pasos=$pasos;
+        $datosRobot->velocidad=$velocidad;
+
+        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
+        fwrite($file,json_encode($datosRobot).PHP_EOL);
+        fclose($file);
+
+    }
     public function dataRobot(Request $request ){
 
         $robot=Input::get('selecRobot');
@@ -82,7 +101,7 @@ class RobotController extends Controller
         return view('user.includes.filaNueva', ['modelos' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
             ->select('user_robot.user_id' ,'robots.modelo')
-            ->where('user_robot.user_id','=',Auth::user()->id)
+            ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
     public function formRobot(){

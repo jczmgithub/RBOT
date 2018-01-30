@@ -62,3 +62,5 @@ Route::post('/user/eliminarUser', 'UserController@eliminarUser')->name('eliminar
 
 
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');
+
+Route::post('/guardarFila', 'RobotController@guardarFila')->name('guardarFila');
