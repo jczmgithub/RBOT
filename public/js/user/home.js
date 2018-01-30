@@ -23,39 +23,6 @@ function openLegend(evt, divEvent) {
 
 }
 
-function send(btn) {
-
-    var row = $(btn).parent().parent();
-
-    var datos = {
-        robot: $(row).find('select[name="selecRobot"]').val(),
-        motor: $(row).find('select[name="selecMotor"]').val(),
-        pasos: $(row).find('input[name="pasosForm"]').val(),
-        velocidad: $(row).find('input[name="velocidadForm"]').val()
-    };
-
-    $.ajax({
-
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/prueba',
-        type: 'post',
-        dataType: 'text',
-        success: function (data) {
-            alert(data);
-        },
-        error: function (data) {
-            alert("Fallo al enviar..."+data);
-        },
-        complete: function (data) {
-            //alert("esto se hace siempre");
-        },
-        data: datos
-    });
-
-}
-
 $(document).ready(function (){
 
     try {
@@ -80,7 +47,7 @@ $(document).ready(function (){
 
         $('#saveSecuencia').click(function (event) {
             event.preventDefault();
-            saveSecuencia();
+            guardarFilas();
 
         });
 
@@ -223,27 +190,56 @@ function enviarFilas() {
 
         enviarFila(filas[i]);
     }
+
+    playVid();
 }
 
-function guardarFila() {
-    
+function guardarFila(row, fichero) {
+
+    var datos = {
+        robot: $(row).find('select[name="selecRobot"]').val(),
+        motor: $(row).find('select[name="selecMotor"]').val(),
+        pasos: $(row).find('input[name="pasosForm"]').val(),
+        velocidad: $(row).find('input[name="velocidadForm"]').val(),
+        fichero: fichero
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: 'http://10.14.1.209:8000/guardarFila',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (data) {
+            alert("Fallo al enviar..."+data);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+
 }
 
 function guardarFilas() {
+
+    var fichero = prompt("Introduce nombre de la secuencia");
 
     var filas = $('tr');
 
     for(var i=1; i<filas.length; i++){
 
-        guardarFila(filas[i]);
+        guardarFila(filas[i], fichero);
+
     }
 
 }
 
-function saveSecuencia() {
-
-
-}
 function eliminarUser(correo) {
     if (confirm('Estas segur@???')) {
         var datos = {
