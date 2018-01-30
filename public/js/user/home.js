@@ -84,6 +84,11 @@ $(document).ready(function (){
 
         });
 
+        $('#guardarFilas').click(function (event){
+            event.preventDefault();
+            guardarFilas();
+        })
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
         });
@@ -223,6 +228,8 @@ function enviarFilas() {
 
         enviarFila(filas[i]);
     }
+
+    playVid();
 }
 
 function guardarFila() {
