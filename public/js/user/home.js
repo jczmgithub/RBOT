@@ -80,14 +80,9 @@ $(document).ready(function (){
 
         $('#saveSecuencia').click(function (event) {
             event.preventDefault();
-            saveSecuencia();
+            guardarFilas();
 
         });
-
-        $('#guardarFilas').click(function (event){
-            event.preventDefault();
-            guardarFilas();
-        })
 
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
@@ -232,13 +227,15 @@ function enviarFilas() {
     playVid();
 }
 
-function guardarFila(row) {
+function guardarFila() {
 
-    var fichero = prompt("Introduce nombre de la función");
+    alert("Hola");
 
 }
 
 function guardarFilas() {
+
+    var fichero = prompt("Introduce nombre de la función");
 
     var filas = $('tr');
 
@@ -250,10 +247,6 @@ function guardarFilas() {
 
 }
 
-function saveSecuencia() {
-
-
-}
 function eliminarUser(correo) {
     if (confirm('Estas segur@???')) {
         var datos = {
