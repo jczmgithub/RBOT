@@ -232,8 +232,10 @@ function enviarFilas() {
     playVid();
 }
 
-function guardarFila() {
-    
+function guardarFila(row) {
+
+    var fichero = prompt("Introduce nombre de la función");
+
 }
 
 function guardarFilas() {
@@ -243,6 +245,7 @@ function guardarFilas() {
     for(var i=1; i<filas.length; i++){
 
         guardarFila(filas[i]);
+
     }
 
 }
