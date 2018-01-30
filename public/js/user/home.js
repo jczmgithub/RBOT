@@ -51,6 +51,11 @@ $(document).ready(function (){
 
         });
 
+        $('#loadSecuencia').click(function (event) {
+            event.preventDefault();
+            cargarSecuncia();
+        });
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
         });
@@ -126,7 +131,7 @@ function send(btn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'http://10.14.1.209:8000/prueba',
+        url: '/prueba',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
@@ -157,7 +162,7 @@ function enviarFila(row) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'http://10.14.1.209:8000/prueba',
+        url: '/prueba',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
@@ -209,14 +214,14 @@ function guardarFila(row, fichero) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'http://10.14.1.209:8000/guardarFila',
+        url: '/guardarFila',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
-            alert(data);
+            //alert(data);
         },
         error: function (data) {
-            alert("Fallo al enviar..."+data);
+            //alert("Fallo al enviar..."+data);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
@@ -270,4 +275,10 @@ function cargarTablaUser() {
     }).done(function(data) {
         $('#usuarios').html(data);
     });
+}
+
+function cargarSecuncia(){
+
+
+
 }
