@@ -51,6 +51,11 @@ $(document).ready(function (){
 
         });
 
+        $('#loadSecuencia').click(function (event) {
+            event.preventDefault();
+            cargarSecuncia();
+        });
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
         });
@@ -270,4 +275,10 @@ function cargarTablaUser() {
     }).done(function(data) {
         $('#usuarios').html(data);
     });
+}
+
+function cargarSecuncia(){
+
+
+
 }
