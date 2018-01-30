@@ -126,7 +126,7 @@ function send(btn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'http://10.14.1.209:8000/prueba',
+        url: '/prueba',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
@@ -157,7 +157,7 @@ function enviarFila(row) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'http://10.14.1.209:8000/prueba',
+        url: '/prueba',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
