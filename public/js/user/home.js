@@ -23,49 +23,13 @@ function openLegend(evt, divEvent) {
 
 }
 
-//pruebas mandar json en cuerpo de post
-
-function send() {
-
-    event.preventDefault();
-    console.log(this);
-
-    var datos = {
-        robot: $("#selecRobot").val(),
-        motor: $("#selecMotor").val(),
-        pasos: $("#pasosForm").val(),
-        velocidad: $("#velocidadForm").val()
-    };
-
-    $.ajax({
-
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/prueba',
-        type: 'post',
-        dataType: 'text',
-        success: function (data) {
-            alert(data);
-        },
-        error: function (data) {
-            alert("Fallo al enviar..."+data);
-        },
-        complete: function (data) {
-            //alert("esto se hace siempre");
-        },
-        data: datos
-    });
-
-}
-
 $(document).ready(function (){
 
     try {
 
-        $('#sendFilas').click(function (event) {
+        $('#addFilas').click(function (event) {
             event.preventDefault();
-            sendDatas();
+            addFila();
 
         });
 
@@ -75,30 +39,23 @@ $(document).ready(function (){
 
         });
 
-        $('#addFilas').click(function (event) {
+        $('#sendFilas').click(function (event) {
             event.preventDefault();
-            addFila();
+            enviarFilas();
 
         });
 
         $('#saveSecuencia').click(function (event) {
             event.preventDefault();
-            saveSecuencia();
+            guardarFilas();
 
         });
 
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
-            enviarFila(event);
         });
 
-        /*$('#tablaBody').on('click', '.borrar', function(event){
-            event.preventDefault();
-            delFila(event);
-        });
-*/
         openLegend(null,"divMando");
-        alert('ok');
 
     } catch (e) {
     }
@@ -120,6 +77,13 @@ function addFila() {
 
 }
 
+function delFila(data) {
+
+    var row = data.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+
+}
+
 function delFilas(){
 
     $.ajax({
@@ -138,27 +102,6 @@ function delFilas(){
 
 }
 
-function sendDatas(){
-
-    $.ajax({
-        url: "/user/tablaDatos",
-        type: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-        //async: false,
-
-    }).done(function() {
-
-        var datos = $('#formulario').serialize();
-        alert(datos);
-        playVid();
-
-
-    });
-
-}
-
 function playVid() {
     setTimeout(function () {
         var vid = document.getElementById("video");
@@ -167,24 +110,164 @@ function playVid() {
 
 }
 
-function enviarFila(event) {
+function send(btn) {
 
-    var row = event.target.parentNode.parentNode;
+    var row = $(btn).parent().parent();
 
-    var datosInput = $(row).find('input').serialize();
-    var datosSelect = $(row).find('select').serialize();
+    var datos = {
+        robot: $(row).find('select[name="selecRobot"]').val(),
+        motor: $(row).find('select[name="selecMotor"]').val(),
+        pasos: $(row).find('input[name="pasosForm"]').val(),
+        velocidad: $(row).find('input[name="velocidadForm"]').val()
+    };
 
-    var datosFila = datosSelect+"&"+datosInput;
+    $.ajax({
 
-    alert(datosFila);
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: 'http://10.14.1.209:8000/prueba',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (data) {
+            alert("Fallo al enviar..."+data);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
 
 }
 
-function delFila(data) {
-    
-    var row = data.parentNode.parentNode;
-    row.parentNode.removeChild(row);
+function enviarFila(row) {
+
+    var datos = {
+        robot: $(row).find('select[name="selecRobot"]').val(),
+        motor: $(row).find('select[name="selecMotor"]').val(),
+        pasos: $(row).find('input[name="pasosForm"]').val(),
+        velocidad: $(row).find('input[name="velocidadForm"]').val()
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: 'http://10.14.1.209:8000/prueba',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (data) {
+            alert("Fallo al enviar..."+data);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+}
+
+function enviarFilas() {
+
+    var filas = $('tr');
+    // var columnas;
+
+
+    for(var i=1; i<filas.length; i++){
+
+        // columnas = $(filas[i]).find('td');
+        // console.log(columnas);
+        //
+        // for (var j=0; j<(columnas.length-1); j++){
+        //     console.log($(columnas[j].children).val());
+        // }
+
+        enviarFila(filas[i]);
+    }
+
+    playVid();
+}
+
+function guardarFila(row, fichero) {
+
+    var datos = {
+        robot: $(row).find('select[name="selecRobot"]').val(),
+        motor: $(row).find('select[name="selecMotor"]').val(),
+        pasos: $(row).find('input[name="pasosForm"]').val(),
+        velocidad: $(row).find('input[name="velocidadForm"]').val(),
+        fichero: fichero
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/guardarFila',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            //alert(data);
+        },
+        error: function (data) {
+            //alert("Fallo al enviar..."+data);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
 
 }
 
+function guardarFilas() {
 
+    var fichero = prompt("Introduce nombre de la secuencia");
+
+    var filas = $('tr');
+
+    for(var i=1; i<filas.length; i++){
+
+        guardarFila(filas[i], fichero);
+
+    }
+
+}
+
+function eliminarUser(correo) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            email: correo
+        };
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/user/eliminarUser',
+            type: 'post',
+            dataType: 'text',
+            success: function () {
+                cargarTablaUser();
+            },
+            error: function () {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
+}
+function cargarTablaUser() {
+    $.ajax({
+        url: "/user/verUser/tablaUser",
+        type: 'get',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#usuarios').html(data);
+    });
+}

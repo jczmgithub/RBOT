@@ -3,8 +3,9 @@
 @section('huecoNav')
 
     @auth
-        <li><a href="/home">Controles</a></li>
+        @if(Auth::user()->isOwner())
         <li class="dropdown">
+
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 Usuarios <span class="caret"></span>
             </a>
@@ -22,7 +23,7 @@
                 <li><a href="/user/verUser">Ver Robots</a></li>
             </ul>
         </li>
-
+        @endif
     @endauth
 
 @endsection
