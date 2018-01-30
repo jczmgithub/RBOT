@@ -209,14 +209,14 @@ function guardarFila(row, fichero) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: 'http://10.14.1.209:8000/guardarFila',
+        url: '/guardarFila',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
-            alert(data);
+            //alert(data);
         },
         error: function (data) {
-            alert("Fallo al enviar..."+data);
+            //alert("Fallo al enviar..."+data);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
