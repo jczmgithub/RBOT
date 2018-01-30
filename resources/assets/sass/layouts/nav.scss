@@ -12,4 +12,14 @@
 .arreglar-nav{
   //margin-bottom:50px;
 }
-
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a, .navbar-inverse .navbar-nav .open .dropdown-menu {
+  background-color: #3c3c3c;
+  color: #9d9d9d;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-image:none !important;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: #9d9d9d !important;
+  color: white !important;
+}
