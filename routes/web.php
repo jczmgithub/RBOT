@@ -58,6 +58,8 @@ Route::post('/registrar-user', 'UserController@register')->name('user.registrarU
 Route::post('/register/completarRegistro','PasswordController@reset')->name('user.newPassword');
 Route::post('/eliminarUser', 'UserController@eliminarUser')->name('user.eliminarUser');
 Route::get('/registrarRobot', 'RobotController@formRobot')->name('formRobot');
+Route::get('/verRobot', 'RobotController@verRobot')->name("user.tablaRobot");
+Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot');
 });
 
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');

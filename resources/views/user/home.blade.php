@@ -20,7 +20,7 @@
             </a>
             <ul class="dropdown-menu" role="menu">
                 <li><a href="/user/registrarRobot">Crear Robots</a></li>
-                <li><a href="/user/verUser">Ver Robots</a></li>
+                <li><a href="/user/verRobot">Ver Robots</a></li>
             </ul>
         </li>
         @endif
