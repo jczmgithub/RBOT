@@ -280,5 +280,35 @@ function cargarTablaUser() {
 function cargarSecuncia(){
 
 
-
+}
+function cargarTablaRobot() {
+    $.ajax({
+        url: "/user/verRobot/tablaRobot",
+        type: 'get',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        $('#robots').html(data);
+    });
+}
+function eliminarRobot(id) {
+    if (confirm('Estas segur@???')) {
+        var datos = {
+            id: id
+        };
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/user/eliminarRobot',
+            type: 'post',
+            dataType: 'text',
+            success: function () {
+                cargarTablaRobot();
+            },
+            error: function () {
+                alert("ERROR!!!");
+            },
+            data: datos
+        });
+    }
 }
