@@ -113,5 +113,8 @@ class RobotController extends Controller
     public function tablaRobot(){
         return view('user.includes.tablaRobots', ['robots' => DB::table('robots')->get()]);
     }
+    public function eliminarRobot(){
+        DB::table('robots')->where('id', '=', $_POST["id"])->delete();
+    }
 
 }

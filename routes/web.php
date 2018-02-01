@@ -60,6 +60,7 @@ Route::post('/eliminarUser', 'UserController@eliminarUser')->name('user.eliminar
 Route::get('/registrarRobot', 'RobotController@formRobot')->name('formRobot');
 Route::get('/verRobot', 'RobotController@verRobot')->name("user.tablaRobot");
 Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot');
+Route::post('/eliminarRobot', 'RobotController@eliminarRobot')->name("user.eliminarRobot");
 });
 
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');

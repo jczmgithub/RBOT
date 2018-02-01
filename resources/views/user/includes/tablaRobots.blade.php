@@ -14,7 +14,7 @@
             </td>
 
             <td>
-                <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $data->modelo }}')">
+                <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $data->id }}')">
                     <span class="fa fa-times"></span>
                 </button>
             </td>
