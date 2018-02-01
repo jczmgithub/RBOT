@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
+    'cloud' => env('FILESYSTEM_CLOUD', 'ftp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -61,6 +61,20 @@ return [
             'secret' => env('AWS_SECRET'),
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
+        ],
+
+        'ftp' => [
+            'driver'   => 'ftp',
+            'host'     => 'ftp.drivehq.com',
+            'username' => 'rbot',
+            'password' => 'Zubiri2017',
+
+            // Optional FTP Settings...
+            // 'port'     => 21,
+            // 'root'     => '',
+            // 'passive'  => true,
+            // 'ssl'      => true,
+            // 'timeout'  => 30,
         ],
 
     ],
