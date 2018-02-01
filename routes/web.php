@@ -48,18 +48,20 @@ Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
 Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
-
 //Rutas admin robot para registro de user y robots
-
-Route::get('/user/verUser', 'UserController@verUsers')->name('verUsers');
-Route::get('/user/verUser/tablaUser', 'UserController@tablaUser')->name('tablaUser');
-Route::get('/user/registrarUser/{token}', 'UserController@completarRegistro')->name('completarRegistro');
-Route::get('/user/registrarUser', 'UserController@formRegistro')->name('user.columnas.registrarUser');
-
-Route::post('/registrar-user', 'UserController@register')->name('registrarUser');
-Route::post('/register/user/completarRegistro','PasswordController@reset')->name('userPassword.request');
-Route::post('/user/eliminarUser', 'UserController@eliminarUser')->name('eliminar.user');
-
+Route::prefix('user')->group(function() {
+Route::get('/verUser', 'UserController@verUsers')->name('user.verUsers');
+Route::get('/verUser/tablaUser', 'UserController@tablaUser')->name('user.tablaUser');
+Route::get('/registrarUser/{token}', 'UserController@completarRegistro')->name('user.rellenarPassword');
+Route::get('/registrarUser', 'UserController@formRegistro')->name('user.columnas.registrarUser');
+Route::post('/registrar-user', 'UserController@register')->name('user.registrarUser');
+Route::post('/register/completarRegistro','PasswordController@reset')->name('user.newPassword');
+Route::post('/eliminarUser', 'UserController@eliminarUser')->name('user.eliminarUser');
+Route::get('/registrarRobot', 'RobotController@formRobot')->name('formRobot');
+Route::get('/verRobot', 'RobotController@verRobot')->name("user.tablaRobot");
+Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot');
+Route::post('/eliminarRobot', 'RobotController@eliminarRobot')->name("user.eliminarRobot");
+});
 
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');
 

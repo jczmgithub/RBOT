@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function formRegistro(){
         if(Auth::user()->isOwner()){
-            return view('user.columnas.registrarUser');
+            return view('user.pages.registrarUser');
         }else{
             return view('home');
         }
@@ -25,7 +25,7 @@ class UserController extends Controller
     public function verUsers(){
         if(Auth::user()->isOwner()) {
             $id = Auth::user()->id;
-            return view('user.columnas.verUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
+            return view('user.pages.verUsuarios', ['users' => DB::table('users')->get()->where('owner', '=', "$id")]);
         }else{
             return view('home');
         }
@@ -81,7 +81,7 @@ class UserController extends Controller
                 $message->to($data['email']);
                 $message->subject('Registro de confirmación');
             });
-            return redirect(route('user.columnas.registrarUser'))->with('status', 'Email de confirmación enviado.');
+            return redirect(route('user.pages.registrarUser'))->with('status', 'Email de confirmación enviado.');
         } else{
             return back()->with('errors',$validator->errors());
             //return redirect (route('register'))->with('status', $validator->errors());

@@ -105,7 +105,16 @@ class RobotController extends Controller
             ->get()]);
     }
     public function formRobot(){
-        return view('user.columnas.registrarRobot');
+        return view('user.pages.registrarRobot');
+    }
+    public function verRobot(){
+        return view('user.pages.verRobots', ['robots' => DB::table('robots')->get()]);
+    }
+    public function tablaRobot(){
+        return view('user.includes.tablaRobots', ['robots' => DB::table('robots')->get()]);
+    }
+    public function eliminarRobot(){
+        DB::table('robots')->where('id', '=', $_POST["id"])->delete();
     }
 
 }
