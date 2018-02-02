@@ -37,7 +37,7 @@
 
             </div>
             <video id="videoRobot" class="embed-responsive-item col-lg-6 col-xs-12 col-sm-6"  loop autoplay muted >
-                <source src="robotexample.mp4" type="video/mp4">
+                <source src="video/robotexample.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>

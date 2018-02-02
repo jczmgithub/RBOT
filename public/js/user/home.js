@@ -56,6 +56,11 @@ $(document).ready(function (){
             cargarSecuncia();
         });
 
+        $('#cargarDatos').click(function (event) {
+            event.preventDefault();
+            mostrarDatos();
+        });
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
         });
@@ -278,9 +283,13 @@ function cargarTablaUser() {
 }
 
 function cargarSecuncia(){
+        $("#myModal").modal();
+}
 
+function mostrarDatos(){
 
 }
+
 function cargarTablaRobot() {
     $.ajax({
         url: "/user/verRobot/tablaRobot",

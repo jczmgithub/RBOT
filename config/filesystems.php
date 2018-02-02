@@ -57,10 +57,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_KEY'),
-            'secret' => env('AWS_SECRET'),
-            'region' => env('AWS_REGION'),
-            'bucket' => env('AWS_BUCKET'),
+            'key' => env('AWS_KEY',  'AKIAJAIQGTDE3BUFDWLQ'),
+            'secret' => env('AWS_SECRET', '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'),
+            'region' => env('AWS_REGION', 'eu-west-3'),
+            'bucket' => env('AWS_BUCKET','secuencias'),
         ],
 
         'ftp' => [

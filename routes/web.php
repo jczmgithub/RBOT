@@ -53,7 +53,7 @@ Route::prefix('user')->group(function() {
 Route::get('/verUser', 'UserController@verUsers')->name('user.verUsers');
 Route::get('/verUser/tablaUser', 'UserController@tablaUser')->name('user.tablaUser');
 Route::get('/registrarUser/{token}', 'UserController@completarRegistro')->name('user.rellenarPassword');
-Route::get('/registrarUser', 'UserController@formRegistro')->name('user.columnas.registrarUser');
+Route::get('/registrarUser', 'UserController@formRegistro')->name('user.pages.registrarUser');
 Route::post('/registrar-user', 'UserController@register')->name('user.registrarUser');
 Route::post('/register/completarRegistro','PasswordController@reset')->name('user.newPassword');
 Route::post('/eliminarUser', 'UserController@eliminarUser')->name('user.eliminarUser');
@@ -61,6 +61,8 @@ Route::get('/registrarRobot', 'RobotController@formRobot')->name('formRobot');
 Route::get('/verRobot', 'RobotController@verRobot')->name("user.tablaRobot");
 Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot');
 Route::post('/eliminarRobot', 'RobotController@eliminarRobot')->name("user.eliminarRobot");
+Route::get('/verRobotUser', 'RobotController@verRobotUser')->name("user.verRobotUser");
+Route::post('/asignarRobot', 'RobotController@asignarRobot')->name("user.asignarRobot");
 });
 
 Route::get('/user/registrarRobot', 'RobotController@formRobot')->name('formRobot');
