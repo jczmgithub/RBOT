@@ -204,13 +204,57 @@ function enviarFilas() {
     playVid();
 }
 
-function guardarFila(row, fichero) {
+// function guardarFila(row, fichero) {
+//
+//     var datos = {
+//         robot: $(row).find('select[name="selecRobot"]').val(),
+//         motor: $(row).find('select[name="selecMotor"]').val(),
+//         pasos: $(row).find('input[name="pasosForm"]').val(),
+//         velocidad: $(row).find('input[name="velocidadForm"]').val(),
+//         fichero: fichero
+//     };
+//
+//     $.ajax({
+//
+//         headers: {
+//             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//         },
+//         url: '/guardarFila',
+//         type: 'POST',
+//         dataType: 'text',
+//         success: function (data) {
+//             //alert(data);
+//         },
+//         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+//             alert(xhr.status);
+//             alert(xhr.responseText);
+//         },
+//         complete: function (data) {
+//             //alert("esto se hace siempre");
+//         },
+//         data: datos
+//     });
+//
+// }
+//
+// function guardarFilas() {
+//
+//     var fichero = prompt("Introduce nombre de la secuencia");
+//
+//     var filas = $('tr');
+//
+//     for(var i=1; i<filas.length; i++){
+//
+//         guardarFila(filas[i], fichero);
+//
+//     }
+//
+// }
+
+function guardarFila(string, fichero) {
 
     var datos = {
-        robot: $(row).find('select[name="selecRobot"]').val(),
-        motor: $(row).find('select[name="selecMotor"]').val(),
-        pasos: $(row).find('input[name="pasosForm"]').val(),
-        velocidad: $(row).find('input[name="velocidadForm"]').val(),
+        filas: string,
         fichero: fichero
     };
 
@@ -243,11 +287,31 @@ function guardarFilas() {
 
     var filas = $('tr');
 
+    var filasString = '';
+
     for(var i=1; i<filas.length; i++){
 
-        guardarFila(filas[i], fichero);
+        filasString = filasString+'{'+$(filas[i]).find('select[name="selecRobot"]').val()+','+
+            $(filas[i]).find('select[name="selecMotor"]').val()+','+
+            $(filas[i]).find('input[name="pasosForm"]').val()+','+
+            $(filas[i]).find('input[name="velocidadForm"]').val()+'}'+'\r\n';
 
+        $(filas[i]).find('select[name="selecRobot"]').val();
+
+        // filasString = filasString+$filas[i][0]+'\r\n';
+        //
+        // for(var j=1; j<$($filas[i]).children().length; j++){
+        //
+        //     $($filas[i]).children().val();
+        //
+        //     console.log($($filas[j]).children());
+        //     filasString = filasString+$filas[i][0]+'\r\n';
+        //
+        // }
     }
+
+    // console.log(filasString);
+    guardarFila(filasString, fichero);
 
 }
 

@@ -46,25 +46,33 @@ class RobotController extends Controller
 //        return back();
 //
 //    }
+//    public function guardarFila(Request $request) {
+//        $robot=request()->get('robot');
+//        $motor=request()->get('motor');
+//        $pasos=request()->get('pasos');
+//        $velocidad=request()->get('velocidad');
+//        $fichero=request()->get('fichero');
+//
+//        $datosRobot = new DatosRobot();
+//
+//        $datosRobot->robot=$robot;
+//        $datosRobot->motor=$motor;
+//        $datosRobot->pasos=$pasos;
+//        $datosRobot->velocidad=$velocidad;
+//
+////        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
+////        fwrite($file,json_encode($datosRobot).PHP_EOL);
+////        fclose($file);
+//
+//        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
+//
+//    }
+
     public function guardarFila(Request $request) {
-        $robot=request()->get('robot');
-        $motor=request()->get('motor');
-        $pasos=request()->get('pasos');
-        $velocidad=request()->get('velocidad');
+        $filas=request()->get('filas');
         $fichero=request()->get('fichero');
 
-        $datosRobot = new DatosRobot();
-
-        $datosRobot->robot=$robot;
-        $datosRobot->motor=$motor;
-        $datosRobot->pasos=$pasos;
-        $datosRobot->velocidad=$velocidad;
-
-//        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
-//        fwrite($file,json_encode($datosRobot).PHP_EOL);
-//        fclose($file);
-
-        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
+        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', $filas);
 
     }
     public function addFila(){
