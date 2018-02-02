@@ -173,9 +173,8 @@ function enviarFila(row) {
         success: function (data) {
             alert(data);
         },
-        error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
-            alert(xhr.status);
-            alert(xhr.responseText);
+        error: function (data) {
+            alert("Fallo al enviar..."+data);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
@@ -226,8 +225,9 @@ function guardarFila(row, fichero) {
         success: function (data) {
             //alert(data);
         },
-        error: function (data) {
-            //alert("Fallo al enviar..."+data);
+        error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+            alert(xhr.status);
+            alert(xhr.responseText);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
