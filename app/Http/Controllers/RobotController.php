@@ -64,7 +64,7 @@ class RobotController extends Controller
 //        fwrite($file,json_encode($datosRobot).PHP_EOL);
 //        fclose($file);
 
-        Storage::disk('ftp')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
+        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
 
     }
     public function dataRobot(Request $request ){
