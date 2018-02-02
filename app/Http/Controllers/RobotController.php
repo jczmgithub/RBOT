@@ -67,39 +67,6 @@ class RobotController extends Controller
         Storage::disk('ftp')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
 
     }
-    public function dataRobot(Request $request ){
-
-        $robot=Input::get('selecRobot');
-        $motor=Input::get('selecMotor');
-        $pasos=request()->get('pasos');
-        $velocidad=request()->get('velocidad');
-
-        $datosRobot = new DatosRobot();
-
-        $datosRobot->robot=$robot;
-        $datosRobot->motor=$motor;
-        $datosRobot->pasos=$pasos;
-        $datosRobot->velocidad=$velocidad;
-
-        switch($request->submit) {
-
-            case 'enviar':
-                $file=fopen('../storage/app/datos.json','w+');
-                //enviar contenido de formulario
-                fwrite($file,"");
-                fclose($file);
-                break;
-
-            case 'guardar':
-                $file=fopen('../storage/app/datos.json','a+');
-                fwrite($file,json_encode($datosRobot).PHP_EOL);
-                fclose($file);
-                break;
-        }
-
-        return back();
-
-    }
     public function addFila(){
         return view('user.includes.filaNueva', ['modelos' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
