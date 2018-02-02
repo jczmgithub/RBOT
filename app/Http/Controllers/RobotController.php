@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\DatosRobot;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
 
 class RobotController extends Controller
 {
@@ -59,9 +60,11 @@ class RobotController extends Controller
         $datosRobot->pasos=$pasos;
         $datosRobot->velocidad=$velocidad;
 
-        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
-        fwrite($file,json_encode($datosRobot).PHP_EOL);
-        fclose($file);
+//        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
+//        fwrite($file,json_encode($datosRobot).PHP_EOL);
+//        fclose($file);
+
+        Storage::disk('ftp')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
 
     }
     public function dataRobot(Request $request ){
