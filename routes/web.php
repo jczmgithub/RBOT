@@ -56,8 +56,8 @@ Route::get('/verUser/tablaUser', 'UserController@tablaUser')->name('user.tablaUs
 Route::get('/registrarUser/{token}', 'UserController@completarRegistro')->name('user.rellenarPassword');
 Route::get('/registrarUser', 'UserController@formRegistro')->name('user.pages.registrarUser');
 Route::get('/registrarRobot', 'RobotController@formRobot')->name('formRobot');
-Route::get('/verRobot', 'RobotController@verRobot')->name("user.tablaRobot");
-Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot');
+Route::get('/verRobot', 'RobotController@tablaRobot')->name("user.tablaRobot");
+//Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot1');
 Route::get('/verRobotUser', 'RobotController@verRobotUser')->name("user.verRobotUser");
 Route::get('/registrarRobot', 'RobotController@formRobot')->name('user.formRobot');
     //POST

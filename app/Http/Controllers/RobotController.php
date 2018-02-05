@@ -84,19 +84,27 @@ class RobotController extends Controller
     public function formRobot(){
         return view('user.pages.registrarRobot');
     }
-    public function verRobot(){
-        return view('user.pages.verRobots', ['robots' => DB::table('user_robot')
+//    public function verRobot(){
+//        $this->tablaRobot();
+//    }
+    public function tablaRobot(){
+        //$this->verUsuariosRobot();
+        return view('user.pages.verRobots',
+            ['users' => DB::table('users')
+                ->join('user_robot', 'user_robot.user_id', '=', 'users.id')
+                ->select('user_robot.user_id' ,'users.name', 'users.owner')
+                //->where('user_robot.user_id', '=', Auth::user()->id)
+                ->where('user_robot.user_id', '=', $this->dameUsers())
+                ->get(),
+            'robots' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
+            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name as robotName')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
-    public function tablaRobot(){
-        return view('user.includes.tablaRobots', ['robots' => DB::table('user_robot')
-            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
-            ->where('user_robot.user_id', '=', Auth::user()->id)
-            ->get()]);
+    public function dameUsers(){
+        $query = DB::table("users")->where('owner', '=', Auth::user()->id)->get()->id;
+        return $query;
     }
     public function eliminarRobot(){
         DB::table('robots')->where('id', '=', $_POST["id"])->delete();
@@ -108,18 +116,16 @@ class RobotController extends Controller
             ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
-
     }
     public function asignarRobot(Request $request){
+
         $userid = DB::table("users")->where('name', "=", $request->input('selectUser'))->first();
-        $robotid = DB::table("robots")->where('modelo', "=", $request->input('selectRobot'))->first();
+        $robotid = DB::table("robots")->where('name', "=", $request->input('selectRobot'))->first();
         $idU= $userid->id;
         $idR = $robotid->id;
         DB::table('user_robot')->insert(
            ['user_id' => $idU, 'robot_id' => $idR]
             );
-
-
         return redirect (route('user.verRobotUser'))->with('status', 'Se ha asignado correctamente');
     }
     protected function validator(array $data)
@@ -160,8 +166,14 @@ class RobotController extends Controller
         } else{
             return back()->with('errors',$validator->errors());
         }
-
     }
+    public function verUsuariosRobot(){
 
+        return view('user.includes.usersRobots', ['users' => DB::table('users')->get()->where('owner', '=', Auth::user()->id), 'usuarios' => DB::table('user_robot')
+            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
+            ->select('user_robot.user_id', 'users.name')
+            ->where('user_robot.user_id', '=', Auth::user()->id)
+            ->get()]);
+    }
 
 }
