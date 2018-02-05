@@ -70,3 +70,4 @@ Route::post('/registrarRobot', 'RobotController@registrarRobot')->name("user.reg
 });
 
 Route::post('/guardarFila', 'RobotController@guardarFila')->name('guardarFila');
+Route::get('/listadoS3','RobotController@listadoS3')->name('listadoS3');

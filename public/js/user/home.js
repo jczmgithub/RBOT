@@ -56,11 +56,6 @@ $(document).ready(function (){
             cargarSecuncia();
         });
 
-        $('#cargarDatos').click(function (event) {
-            event.preventDefault();
-            mostrarDatos();
-        });
-
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
         });
@@ -349,10 +344,14 @@ function cargarTablaUser() {
 
 function cargarSecuncia(){
         $("#myModal").modal();
-}
-
-function mostrarDatos(){
-
+    $.ajax({
+        url: "/listadoS3",
+        type: 'get',
+        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+    }).done(function(data) {
+        alert(data);
+        console.log(data);
+    });
 }
 
 function cargarTablaRobot() {

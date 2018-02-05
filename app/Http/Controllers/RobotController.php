@@ -163,5 +163,10 @@ class RobotController extends Controller
 
     }
 
+    public function listadoS3(){
+        $files=Storage::files('/');
+        return $files;
+    }
+
 
 }
