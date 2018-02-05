@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\DatosRobot;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
 
 class RobotController extends Controller
 {
@@ -46,56 +47,33 @@ class RobotController extends Controller
 //        return back();
 //
 //    }
+//    public function guardarFila(Request $request) {
+//        $robot=request()->get('robot');
+//        $motor=request()->get('motor');
+//        $pasos=request()->get('pasos');
+//        $velocidad=request()->get('velocidad');
+//        $fichero=request()->get('fichero');
+//
+//        $datosRobot = new DatosRobot();
+//
+//        $datosRobot->robot=$robot;
+//        $datosRobot->motor=$motor;
+//        $datosRobot->pasos=$pasos;
+//        $datosRobot->velocidad=$velocidad;
+//
+////        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
+////        fwrite($file,json_encode($datosRobot).PHP_EOL);
+////        fclose($file);
+//
+//        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', json_encode($datosRobot).PHP_EOL);
+//
+//    }
+
     public function guardarFila(Request $request) {
-        $robot=request()->get('robot');
-        $motor=request()->get('motor');
-        $pasos=request()->get('pasos');
-        $velocidad=request()->get('velocidad');
+        $filas=request()->get('filas');
         $fichero=request()->get('fichero');
 
-        $datosRobot = new DatosRobot();
-
-        $datosRobot->robot=$robot;
-        $datosRobot->motor=$motor;
-        $datosRobot->pasos=$pasos;
-        $datosRobot->velocidad=$velocidad;
-
-        $file=fopen('../storage/app/'.$fichero.'.txt','a+');
-        fwrite($file,json_encode($datosRobot).PHP_EOL);
-        fclose($file);
-
-    }
-    public function dataRobot(Request $request ){
-
-        $robot=Input::get('selecRobot');
-        $motor=Input::get('selecMotor');
-        $pasos=request()->get('pasos');
-        $velocidad=request()->get('velocidad');
-
-        $datosRobot = new DatosRobot();
-
-        $datosRobot->robot=$robot;
-        $datosRobot->motor=$motor;
-        $datosRobot->pasos=$pasos;
-        $datosRobot->velocidad=$velocidad;
-
-        switch($request->submit) {
-
-            case 'enviar':
-                $file=fopen('../storage/app/datos.json','w+');
-                //enviar contenido de formulario
-                fwrite($file,"");
-                fclose($file);
-                break;
-
-            case 'guardar':
-                $file=fopen('../storage/app/datos.json','a+');
-                fwrite($file,json_encode($datosRobot).PHP_EOL);
-                fclose($file);
-                break;
-        }
-
-        return back();
+        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', $filas);
 
     }
     public function addFila(){

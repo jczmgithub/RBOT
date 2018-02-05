@@ -2,6 +2,7 @@
 <div class="col-sm-8">
 
 <h3>Controles</h3>
+
     <table id="controles" class="table table-fixed">
         <thead>
         <tr>
@@ -24,6 +25,8 @@
         <button id="loadSecuencia" class="btn btn-primary botonesFunciones">Cargar</button>
         <button id="delFilas" class="btn btn-primary botonesFunciones">Eliminar</button>
     </div>
+
+    @include('user.includes.secuencias')
 
 </div>
 </form>
