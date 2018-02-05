@@ -81,6 +81,15 @@ class RobotController extends Controller
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
+
+//    public function addFilaS3(Request $request){
+//        return view('user.includes.filaNueva', ['modelos' => DB::table('user_robot')
+//            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
+//            ->select('user_robot.user_id' ,'robots.modelo')
+//            ->where('user_robot.user_id', '=', Auth::user()->id)
+//            ->get()]);
+//    }
+
     public function formRobot(){
         return view('user.pages.registrarRobot');
     }

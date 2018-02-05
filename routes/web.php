@@ -48,6 +48,7 @@ Route::post('/prueba', function(){
     echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
 });
 Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
+//Route::post('/user/tablaDatosS3', 'RobotController@addFilaS3')->name('addFilaS3');
 //Rutas admin robot para registro de user y robots
 Route::prefix('user')->group(function() {
     //GET

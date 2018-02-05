@@ -76,6 +76,7 @@ $(document).ready(function (){
                 data:datos
                 //async: false,
             }).done(function(data) {
+                $('#tablaBody').empty();
                 var filasArray=data.split(';');
                 var contenidoFilaArray;
 
@@ -84,9 +85,10 @@ $(document).ready(function (){
                     contenidoFilaArray = filasArray[i].split(',');
                     for(var j=0; j < contenidoFilaArray.length; j++){
 
-                        // console.log(contenidoFilaArray[j]);
+
 
                     }
+                    addFilaS3('robot1','motor1',55,45);
                 }
             });
 
@@ -114,6 +116,31 @@ function addFila() {
         //async: false,
     }).done(function(data) {
         $('#tablaBody').append(data);
+    });
+
+}
+
+function addFilaS3(robot,motor,pasos,velocidad) {
+
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
+    }).done(function(data) {
+
+        $filaContenido = $(data);
+
+        $($filaContenido).find('select[name="selecRobot"]').val(robot);
+        $($filaContenido).find('select[name="selecMotor"]').val(motor);
+        $($filaContenido).find('input[name="pasosForm"]').val(pasos);
+        $($filaContenido).find('input[name="velocidadForm"]').val(velocidad);
+
+        // console.log($pasos.val());
+
+        $('#tablaBody').append($filaContenido);
     });
 
 }
