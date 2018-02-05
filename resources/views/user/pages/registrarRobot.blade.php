@@ -45,7 +45,7 @@
                             <div class="form-group{{ $errors->has('host') ? ' has-error' : '' }}">
                                 <label for="host" class="col-md-4 control-label">Dirección</label>
                                 <div class="col-md-6">
-                                    <input id="host" type="host" class="form-control" name="email" value="{{ old('host') }}" required>
+                                    <input id="host" type="text" class="form-control" name="host" value="{{ old('host') }}" required>
                                     @if ($errors->has('host'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('host') }}</strong>

@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 //use DeepCopy\Filter\KeepFilter;
 use App\Models\Robot;
-use App\Models\UserRobot;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\Models\DatosRobot;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
 class RobotController extends Controller
@@ -107,7 +105,7 @@ class RobotController extends Controller
     public function verRobotUser(){
         return view('user.pages.verRobotUser', ['users' => DB::table('users')->get()->where('owner', '=', Auth::user()->id), 'robots' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id')
+            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
 
@@ -158,7 +156,7 @@ class RobotController extends Controller
             DB::table('user_robot')->insert(
                 ['user_id' => $userID, 'robot_id' => $robotID]
             );
-            return redirect(route('home'))->with('user.formRobot', 'Robot registrado.');
+            return redirect(route('user.formRobot'))->with('status', 'Robot registrado.');
         } else{
             return back()->with('errors',$validator->errors());
         }
