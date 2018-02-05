@@ -168,5 +168,9 @@ class RobotController extends Controller
         return $files;
     }
 
+    public function mostrarValores(){
+
+    }
+
 
 }

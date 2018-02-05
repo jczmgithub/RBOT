@@ -56,6 +56,14 @@ $(document).ready(function (){
             cargarSecuncia();
         });
 
+        $('#selecSecuencia').on('change', function (event) {
+           var $optionSelected=$('option:selected',this);
+           var valueSelected=$optionSelected.val();
+           //var valueSelected=$('this.value');
+           console.log($optionSelected);
+           console.log(valueSelected);
+        });
+
         $('#tablaBody').on('click', '.enviar', function(event){
             event.preventDefault();
         });
@@ -344,14 +352,30 @@ function cargarTablaUser() {
 
 function cargarSecuncia(){
         $("#myModal").modal();
-    $.ajax({
-        url: "/listadoS3",
-        type: 'get',
-        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
-    }).done(function(data) {
-        alert(data);
-        console.log(data);
-    });
+
+        $('#selecSecuencia').empty();
+
+        $.ajax({
+            url: "/listadoS3",
+            type: 'get',
+            headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+        }).done(function(data) {
+            //alert(data);
+            $('<option/>',{
+                text:'--Selecciona la secuencia--',
+                disabled:'disabled',
+                selected:'selected'
+            }).appendTo('#selecSecuencia');
+            for(var i=0;i<data.length;i++){
+                //console.log(data[i]);
+
+                $('<option/>',{
+                    text:data[i],
+                    value:data[i]
+                }).appendTo('#selecSecuencia');
+            }
+
+        });
 }
 
 function cargarTablaRobot() {

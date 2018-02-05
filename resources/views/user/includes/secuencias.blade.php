@@ -17,7 +17,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" id="cargarDatos" class="btn btn-primary" data-dismiss="modal">Abrir</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" name="cerrar">Cerrar</button>
             </div>
         </div>
 
