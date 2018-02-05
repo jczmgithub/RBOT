@@ -1,11 +1,15 @@
 <table class=table id="robots">
     <tr>
+        <th>Nombre</th>
         <th>Modelo</th>
         <th>Direccion</th>
         <th>Acciones</th>
     </tr>
     @foreach($robots as $key => $data)
         <tr>
+            <td>
+                {{ $data->name }}
+            </td>
             <td>
                 {{ $data->modelo }}
             </td>

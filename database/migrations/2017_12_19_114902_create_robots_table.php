@@ -18,6 +18,7 @@ class CreateRobotsTable extends Migration
 
             $table->increments('id');
             //$table->integer('user_id')->unsigned(); //->nullable()
+            $table->string('name');
             $table->string('modelo');
             $table->string('host');
             //$table->string("motores");

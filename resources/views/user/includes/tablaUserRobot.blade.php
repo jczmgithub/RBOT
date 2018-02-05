@@ -20,7 +20,7 @@
                 <select name='selectRobot' class='form-control selector' id="selectRobot">
                     <option value='null'>-Seleccione el Robot-</option>
                     @foreach($robots as $key => $robot)
-                    <option> {{$robot->modelo}} </option>
+                    <option> {{$robot->name}} </option>
                     @endforeach
                 </select>
             </td>

@@ -13,18 +13,22 @@ class RobotsTableSeeder extends Seeder
     {
         $robots = [
             [
+                'name' => 'Robot 1',
                 'modelo' => 'RBX1',
                 'host' => '192.168.1.209'
             ],
             [
+                'name' => 'Robot 2',
                 'modelo' => 'RBX2',
                 'host' => '192.168.1.206'
             ],
             [
+                'name' => 'Robot 3',
                 'modelo' => 'RBX3',
                 'host' => '192.168.1.203'
             ],
             [
+                'name' => 'Robot 4',
                 'modelo' => 'ASD4',
                 'host' => '192.168.1.220'
             ]

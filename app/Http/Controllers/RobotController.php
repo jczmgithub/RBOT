@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 //use DeepCopy\Filter\KeepFilter;
+use App\Models\Robot;
 use App\Models\UserRobot;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -110,15 +111,14 @@ class RobotController extends Controller
     public function verRobot(){
         return view('user.pages.verRobots', ['robots' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id')
+            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
     public function tablaRobot(){
-        //TODO Cambiar la query BBDD relacionado
         return view('user.includes.tablaRobots', ['robots' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id')
+            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
@@ -145,6 +145,46 @@ class RobotController extends Controller
 
 
         return redirect (route('user.verRobotUser'))->with('status', 'Se ha asignado correctamente');
+    }
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|string|max:255|unique:robots',
+            'modelo' => 'required|string|max:255',
+            'host' => 'required|string',
+        ]);
+    }
+
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\User
+     */
+    protected function create(array $data)
+    {
+        return Robot::create([
+            'name' => $data['name'],
+            'modelo' => $data['modelo'],
+            'host' => $data['host'],
+        ]);
+    }
+    protected function registrarRobot(Request $request){
+        $input = $request -> all();
+        $validator =  $this->validator($input);
+
+        if($validator->passes()){
+            $data = $this ->create($input)->toArray();
+            $userID = Auth::user()->id;
+            $robotID = $data['id'];
+            DB::table('user_robot')->insert(
+                ['user_id' => $userID, 'robot_id' => $robotID]
+            );
+            return redirect(route('home'))->with('user.formRobot', 'Robot registrado.');
+        } else{
+            return back()->with('errors',$validator->errors());
+        }
+
     }
 
 

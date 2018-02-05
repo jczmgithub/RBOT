@@ -68,7 +68,7 @@ class AdminController extends Controller
     public function nuevoRobot()
     {
         DB::table('robots')->insert([
-            'user_id' => $_POST["usuario"],
+            'name' => $_POST["nombre"],
             'modelo' => $_POST["modelo"],
             'host' => $_POST["host"],
         ]);
@@ -76,7 +76,7 @@ class AdminController extends Controller
 
     public function editarRobot()
     {
-        DB::update('update robots set user_id = ?, modelo = ?, host = ? where id = ?',
-            [intval($_POST["usuario"]), $_POST["modelo"], $_POST["host"], $_POST["id"]]);
+        DB::update('update robots set name = ?, modelo = ?, host = ? where id = ?',
+            [intval($_POST["nombre"]), $_POST["modelo"], $_POST["host"], $_POST["id"]]);
     }
 }

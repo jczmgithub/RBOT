@@ -10,7 +10,7 @@
         @foreach($robots as $key => $data)
             <tr>
                 <td>
-                    <input id="usuario{{ $data->id }}" type="number" value="{{ $data->user_id }}">
+                    <input id="nombre{{ $data->name }}" type="text" value="{{ $data->name }}">
                 </td>
                 <td>
                     <input id="modelo{{ $data->id }}" type="text" value="{{ $data->modelo }}">
@@ -28,7 +28,7 @@
 
     <tr>
         <td>
-            <input id="usuario" type="number" placeholder="Introduce usuario">
+            <input id="nombre" type="text" placeholder="Introduce nombre">
         </td>
         <td>
             <input id="modelo" type="text" placeholder="Introduce modelo">
