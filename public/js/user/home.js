@@ -85,7 +85,7 @@ $(document).ready(function (){
                     for(var j=0; j < contenidoFilaArray.length; j++){
 
                         // console.log(contenidoFilaArray[j]);
-                        
+
                     }
                 }
             });
