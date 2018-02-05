@@ -71,7 +71,7 @@ class RobotController extends Controller
         $filas=request()->get('filas');
         $fichero=request()->get('fichero');
 
-        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', $filas);
+        Storage::disk('s3')->put('/'.$fichero, $filas);
 
     }
     public function addFila(){
@@ -170,6 +170,11 @@ class RobotController extends Controller
 
     public function mostrarValores(){
 
+        $selFichero = $_POST["fichero"];
+
+        $contenido = Storage::get($selFichero);
+
+        return $contenido;
     }
 
 

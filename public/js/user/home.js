@@ -62,6 +62,34 @@ $(document).ready(function (){
            //var valueSelected=$('this.value');
            console.log($optionSelected);
            console.log(valueSelected);
+
+           var datos={
+             fichero: valueSelected
+           };
+
+            $.ajax({
+                url: "/mostrarValores",
+                type: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data:datos
+                //async: false,
+            }).done(function(data) {
+                var filasArray=data.split(';');
+                var contenidoFilaArray;
+
+                for(var i=1; i < filasArray.length; i++){
+                    console.log(filasArray[i]);
+                    contenidoFilaArray = filasArray[i].split(',');
+                    for(var j=0; j < contenidoFilaArray.length; j++){
+
+                        // console.log(contenidoFilaArray[j]);
+                        
+                    }
+                }
+            });
+
         });
 
         $('#tablaBody').on('click', '.enviar', function(event){
@@ -294,10 +322,10 @@ function guardarFilas() {
 
     for(var i=1; i<filas.length; i++){
 
-        filasString = filasString+'{'+$(filas[i]).find('select[name="selecRobot"]').val()+','+
+        filasString = filasString+';'+$(filas[i]).find('select[name="selecRobot"]').val()+','+
             $(filas[i]).find('select[name="selecMotor"]').val()+','+
             $(filas[i]).find('input[name="pasosForm"]').val()+','+
-            $(filas[i]).find('input[name="velocidadForm"]').val()+'}'+'\r\n';
+            $(filas[i]).find('input[name="velocidadForm"]').val();
 
         $(filas[i]).find('select[name="selecRobot"]').val();
 
