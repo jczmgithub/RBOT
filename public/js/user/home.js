@@ -206,7 +206,7 @@ function playVidPos(motor) {
 }
 
 function playVidOrigen() {
-    console.log($('#videoSrc').attr('src'));
+    console.log($('#videoSrc').attr('src.substring(4,1'));
 }
 
 function send(btn) {
