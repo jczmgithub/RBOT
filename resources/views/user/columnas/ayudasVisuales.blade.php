@@ -4,7 +4,7 @@
 
         <div id="divWebcam" class="embed-responsive embed-responsive-16by9">
             <video id="video">
-            <source src="webcam.mp4" type="video/mp4" />
+            <source id="videoSrc" src="/video/secuencia_completa.mp4" type="video/mp4" />
             </video>
         </div>
 

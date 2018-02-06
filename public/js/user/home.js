@@ -187,6 +187,8 @@ function delFilas(){
 }
 
 function playVid() {
+    $('#videoSrc').attr('src', '/video/secuencia_completa.mp4');
+    document.getElementById("video").load();
     setTimeout(function () {
         var vid = document.getElementById("video");
         vid.play();
@@ -194,11 +196,17 @@ function playVid() {
 
 }
 
-function playVidPos() {
+function playVidPos(motor) {
+    $('#videoSrc').attr('src', '/video/'+motor+'.mp4');
+    document.getElementById("video").load();
     setTimeout(function () {
         var vid = document.getElementById("video");
         vid.play();
-    },4000);
+    },2000);
+}
+
+function playVidOrigen() {
+    console.log($('#videoSrc').attr('src'));
 }
 
 function send(btn) {
@@ -222,7 +230,7 @@ function send(btn) {
         dataType: 'text',
         success: function (data) {
             alert(data);
-            playVidPos();
+            playVidPos($(row).find('select[name="selecMotor"]').val());
         },
         error: function (data) {
             alert("Fallo al enviar..."+data);
@@ -280,6 +288,7 @@ function vueltaOrigen() {
         dataType: 'text',
         success: function (data) {
             alert(data);
+            playVidOrigen();
         },
         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
             // alert(xhr.status);
