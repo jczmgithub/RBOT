@@ -24,7 +24,7 @@ class ContactoController extends Controller
                 $message->subject('Contacto enviado');
             });
             Mail::send('email.contactoOpinion', $data, function ($message) use ($data) {
-                $message->to('jcasinoste16dw@ikzubirimanteo.com');
+                $message->to('soporterbot@gmail.com');
                 $message->subject('Contacto recibido');
             });
         return redirect (url('/#contenedorContacto'))->with('status', 'Se ha enviado correctamente.');
