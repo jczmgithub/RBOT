@@ -484,11 +484,11 @@ function eliminarUser(correo) {
 }
 function cargarTablaUser() {
     $.ajax({
-        url: "/user/verUser/tablaUser",
+        url: "/user/verUser",
         type: 'get',
         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }).done(function(data) {
-        $('#usuarios').html(data);
+        $('body').html(data);
     });
 }
 
