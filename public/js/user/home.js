@@ -194,6 +194,13 @@ function playVid() {
 
 }
 
+function playVidPos() {
+    setTimeout(function () {
+        var vid = document.getElementById("video");
+        vid.play();
+    },4000);
+}
+
 function send(btn) {
 
     var row = $(btn).parent().parent();
@@ -215,6 +222,7 @@ function send(btn) {
         dataType: 'text',
         success: function (data) {
             alert(data);
+            playVidPos();
         },
         error: function (data) {
             alert("Fallo al enviar..."+data);
@@ -307,12 +315,17 @@ function enviarFila(row) {
         },
         error: function (data) {
             alert("Fallo al enviar..."+data);
+
         },
         complete: function (data) {
             //alert("esto se hace siempre");
         },
         data: datos
+
+
     });
+
+    playVid();
 }
 
 function enviarFilas() {
