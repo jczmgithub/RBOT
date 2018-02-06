@@ -71,7 +71,7 @@ class RobotController extends Controller
         $filas=request()->get('filas');
         $fichero=request()->get('fichero');
 
-        Storage::disk('s3')->put('Secuencias/'.$fichero.'.txt', $filas);
+        Storage::disk('s3')->put('/'.$fichero, $filas);
 
     }
     public function addFila(){
@@ -81,26 +81,33 @@ class RobotController extends Controller
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
+
+//    public function addFilaS3(Request $request){
+//        return view('user.includes.filaNueva', ['modelos' => DB::table('user_robot')
+//            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
+//            ->select('user_robot.user_id' ,'robots.modelo')
+//            ->where('user_robot.user_id', '=', Auth::user()->id)
+//            ->get()]);
+//    }
+
     public function formRobot(){
         return view('user.pages.registrarRobot');
     }
-    public function tablaRobot(){
-        //$this->verUsuariosRobot();
-        return view('user.pages.verRobots',
-            ['users' => DB::table('users')
-                ->join('user_robot', 'user_robot.user_id', '=', 'users.id')
-                ->select('user_robot.user_id as userID' ,'users.name', 'users.owner', 'user_robot.id as robotID')
-                //->where('user_robot.user_id', '=', 'users.id')
-                //->where('user_robot.id', '=', $this->dameUsers())
-                ->get(),
-            'robots' => DB::table('user_robot')
+    public function verRobot(){
+        return view('user.pages.verRobots', ['robots' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name as robotName')
+            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
-
-    protected function eliminarRobot(){
+    public function tablaRobot(){
+        return view('user.includes.tablaRobots', ['robots' => DB::table('user_robot')
+            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
+            ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
+            ->where('user_robot.user_id', '=', Auth::user()->id)
+            ->get()]);
+    }
+    public function eliminarRobot(){
         DB::table('robots')->where('id', '=', $_POST["id"])->delete();
         DB::table('user_robot')->where('robot_id', '=', $_POST["id"])->delete();
     }
@@ -110,16 +117,18 @@ class RobotController extends Controller
             ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name')
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
+
     }
     public function asignarRobot(Request $request){
-
         $userid = DB::table("users")->where('name', "=", $request->input('selectUser'))->first();
-        $robotid = DB::table("robots")->where('name', "=", $request->input('selectRobot'))->first();
+        $robotid = DB::table("robots")->where('modelo', "=", $request->input('selectRobot'))->first();
         $idU= $userid->id;
         $idR = $robotid->id;
         DB::table('user_robot')->insert(
            ['user_id' => $idU, 'robot_id' => $idR]
             );
+
+
         return redirect (route('user.verRobotUser'))->with('status', 'Se ha asignado correctamente');
     }
     protected function validator(array $data)
@@ -160,14 +169,33 @@ class RobotController extends Controller
         } else{
             return back()->with('errors',$validator->errors());
         }
-    }
-    public function verUsuariosRobot(){
 
-        return view('user.includes.usersRobots', ['users' => DB::table('users')->get()->where('owner', '=', Auth::user()->id), 'usuarios' => DB::table('user_robot')
-            ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
-            ->select('user_robot.user_id', 'users.name')
-            ->where('user_robot.user_id', '=', Auth::user()->id)
-            ->get()]);
+    }
+
+    public function listadoS3(){
+        $files=Storage::files('/');
+        return $files;
+    }
+
+    public function mostrarValores(){
+
+        $selFichero = $_POST["fichero"];
+
+        $contenido = Storage::get($selFichero);
+
+        return $contenido;
+    }
+
+    public function domotekSend(){
+            echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
+    }
+
+    public function domotekStop(){
+            echo "Parada de Emergencia exitosa";
+    }
+
+    public function domotekHome(){
+             echo "Ha vuelto a la posición de orígen";
     }
 
 }

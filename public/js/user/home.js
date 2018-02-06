@@ -39,6 +39,12 @@ $(document).ready(function (){
 
         });
 
+        // $('#cerrarModal').click(function (event) {
+        //     event.preventDefault();
+        //     delFilas();
+        //
+        // });
+
         $('#sendFilas').click(function (event) {
             event.preventDefault();
             enviarFilas();
@@ -56,9 +62,52 @@ $(document).ready(function (){
             cargarSecuncia();
         });
 
-        $('#cargarDatos').click(function (event) {
+        $('#stopRobot').click(function (event) {
             event.preventDefault();
-            mostrarDatos();
+            paradoEmergencia();
+        });
+
+        $('#homeRobot').click(function (event) {
+            event.preventDefault();
+            vueltaOrigen();
+        });
+
+
+        $('#selecSecuencia').on('change', function (event) {
+           var $optionSelected=$('option:selected',this);
+           var valueSelected=$optionSelected.val();
+           //var valueSelected=$('this.value');
+           console.log($optionSelected);
+           console.log(valueSelected);
+
+           var datos={
+             fichero: valueSelected
+           };
+
+            $.ajax({
+                url: "/mostrarValores",
+                type: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data:datos
+                //async: false,
+            }).done(function(data) {
+                $('#tablaBody').empty();
+                var filasArray=data.split(';');
+                var contenidoFilaArray;
+
+                for(var i=1; i < filasArray.length; i++){
+                    console.log(filasArray[i]);
+                    contenidoFilaArray = filasArray[i].split(',');
+                    var datosArray = new Array();
+                    for(var j=0; j < contenidoFilaArray.length; j++){
+                        datosArray.push(contenidoFilaArray[j]);
+                    }
+                    addFilaS3(datosArray[0],datosArray[1],datosArray[2],datosArray[3]);
+                }
+            });
+
         });
 
         $('#tablaBody').on('click', '.enviar', function(event){
@@ -83,6 +132,31 @@ function addFila() {
         //async: false,
     }).done(function(data) {
         $('#tablaBody').append(data);
+    });
+
+}
+
+function addFilaS3(robot,motor,pasos,velocidad) {
+
+    $.ajax({
+        url: "/user/tablaDatos",
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        //async: false,
+    }).done(function(data) {
+
+        $filaContenido = $(data);
+
+        $($filaContenido).find('select[name="selecRobot"]').val(robot);
+        $($filaContenido).find('select[name="selecMotor"]').val(motor);
+        $($filaContenido).find('input[name="pasosForm"]').val(pasos);
+        $($filaContenido).find('input[name="velocidadForm"]').val(velocidad);
+
+        // console.log($pasos.val());
+
+        $('#tablaBody').append($filaContenido);
     });
 
 }
@@ -120,6 +194,13 @@ function playVid() {
 
 }
 
+function playVidPos() {
+    setTimeout(function () {
+        var vid = document.getElementById("video");
+        vid.play();
+    },4000);
+}
+
 function send(btn) {
 
     var row = $(btn).parent().parent();
@@ -136,14 +217,73 @@ function send(btn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: '/prueba',
+        url: '/domotekSend',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+            playVidPos();
+        },
+        error: function (data) {
+            alert("Fallo al enviar..."+data);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+
+}
+
+function paradoEmergencia() {
+
+    var datos = {
+        mensaje: 'Stop'
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/domotekStop',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
             alert(data);
         },
-        error: function (data) {
-            alert("Fallo al enviar..."+data);
+        error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+            // alert(xhr.status);
+            // alert(xhr.responseText);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+
+}
+
+function vueltaOrigen() {
+
+    var datos = {
+        mensaje: 'origen'
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/domotekHome',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+            // alert(xhr.status);
+            // alert(xhr.responseText);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
@@ -167,7 +307,7 @@ function enviarFila(row) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: '/prueba',
+        url: '/domotekSend',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
@@ -175,12 +315,17 @@ function enviarFila(row) {
         },
         error: function (data) {
             alert("Fallo al enviar..."+data);
+
         },
         complete: function (data) {
             //alert("esto se hace siempre");
         },
         data: datos
+
+
     });
+
+    playVid();
 }
 
 function enviarFilas() {
@@ -270,8 +415,8 @@ function guardarFila(string, fichero) {
             //alert(data);
         },
         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
-            alert(xhr.status);
-            alert(xhr.responseText);
+            // alert(xhr.status);
+            // alert(xhr.responseText);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
@@ -291,10 +436,10 @@ function guardarFilas() {
 
     for(var i=1; i<filas.length; i++){
 
-        filasString = filasString+'{'+$(filas[i]).find('select[name="selecRobot"]').val()+','+
+        filasString = filasString+';'+$(filas[i]).find('select[name="selecRobot"]').val()+','+
             $(filas[i]).find('select[name="selecMotor"]').val()+','+
             $(filas[i]).find('input[name="pasosForm"]').val()+','+
-            $(filas[i]).find('input[name="velocidadForm"]').val()+'}'+'\r\n';
+            $(filas[i]).find('input[name="velocidadForm"]').val();
 
         $(filas[i]).find('select[name="selecRobot"]').val();
 
@@ -349,10 +494,30 @@ function cargarTablaUser() {
 
 function cargarSecuncia(){
         $("#myModal").modal();
-}
 
-function mostrarDatos(){
+        $('#selecSecuencia').empty();
 
+        $.ajax({
+            url: "/listadoS3",
+            type: 'get',
+            headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+        }).done(function(data) {
+            //alert(data);
+            $('<option/>',{
+                text:'--Selecciona la secuencia--',
+                disabled:'disabled',
+                selected:'selected'
+            }).appendTo('#selecSecuencia');
+            for(var i=0;i<data.length;i++){
+                //console.log(data[i]);
+
+                $('<option/>',{
+                    text:data[i],
+                    value:data[i]
+                }).appendTo('#selecSecuencia');
+            }
+
+        });
 }
 
 function cargarTablaRobot() {
