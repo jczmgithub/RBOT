@@ -123,7 +123,8 @@ div {
   background-color: #f1f1f1;
   overflow-x:auto;
   tbody{
-    height:65vh;
+    min-height: 16vh;
+    max-height: 63.5vh;
     overflow-y:auto;
     width: 100%;
   }

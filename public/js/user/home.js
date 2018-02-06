@@ -25,6 +25,8 @@ function openLegend(evt, divEvent) {
 
 $(document).ready(function (){
 
+
+
     try {
 
         $('#addFilas').click(function (event) {
@@ -114,12 +116,16 @@ $(document).ready(function (){
             event.preventDefault();
         });
 
-        openLegend(null,"divMando");
+        openLegend(null,"divRobot");
 
     } catch (e) {
+
     }
 
+
 });
+
+
 
 function addFila() {
 
@@ -206,7 +212,21 @@ function playVidPos(motor) {
 }
 
 function playVidOrigen() {
-    console.log($('#videoSrc').attr('src.substring(4,1'));
+    //var video = $('#videoSrc').attr('src').substring(0, 4)+'Inverso'+$('#videoSrc').attr('src').substring(4, 8);
+
+    //var video = $('#videoSrc').attr('src').replace('.', 'inverso.');
+
+
+    $('#videoSrc').attr('src').replace('.', 'inverso.');
+
+    document.getElementById("video").load();
+    setTimeout(function () {
+        var vid = document.getElementById("video");
+        vid.play();
+    },2000);
+
+    console.log($('#videoSrc').attr('src'));
+    console.log(video);
 }
 
 function send(btn) {
