@@ -39,6 +39,12 @@ $(document).ready(function (){
 
         });
 
+        // $('#cerrarModal').click(function (event) {
+        //     event.preventDefault();
+        //     delFilas();
+        //
+        // });
+
         $('#sendFilas').click(function (event) {
             event.preventDefault();
             enviarFilas();
@@ -55,6 +61,12 @@ $(document).ready(function (){
             event.preventDefault();
             cargarSecuncia();
         });
+
+        $('#stopRobot').click(function (event) {
+            event.preventDefault();
+            paradoEmergencia();
+        });
+
 
         $('#selecSecuencia').on('change', function (event) {
            var $optionSelected=$('option:selected',this);
@@ -83,12 +95,11 @@ $(document).ready(function (){
                 for(var i=1; i < filasArray.length; i++){
                     console.log(filasArray[i]);
                     contenidoFilaArray = filasArray[i].split(',');
+                    var datosArray = new Array();
                     for(var j=0; j < contenidoFilaArray.length; j++){
-
-
-
+                        datosArray.push(contenidoFilaArray[j]);
                     }
-                    addFilaS3('robot1','motor1',55,45);
+                    addFilaS3(datosArray[0],datosArray[1],datosArray[2],datosArray[3]);
                 }
             });
 
@@ -211,6 +222,10 @@ function send(btn) {
 
 }
 
+function paradoEmergencia() {
+    
+}
+
 function enviarFila(row) {
 
     var datos = {
@@ -328,8 +343,8 @@ function guardarFila(string, fichero) {
             //alert(data);
         },
         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
-            alert(xhr.status);
-            alert(xhr.responseText);
+            // alert(xhr.status);
+            // alert(xhr.responseText);
         },
         complete: function (data) {
             //alert("esto se hace siempre");
