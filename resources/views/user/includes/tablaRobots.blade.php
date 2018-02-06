@@ -7,6 +7,7 @@
         <th>Acciones</th>
     </tr>
     @foreach($robots as $key => $data)
+        {{--@if($data->user_id==Auth::user()->id)--}}
         <tr>
             <td>
                 {{ $data->robotName }}
@@ -19,7 +20,9 @@
             </td>
                 <td>
                     @foreach($users as $user => $datos)
-                        <li>{{ $datos->name }}</li>
+                        @if($datos->robotID==$data->id )
+                        <li>{{ $datos->name }} </li>
+                       @endif
                     @endforeach
                 </td>
             <td>
@@ -28,5 +31,6 @@
                 </button>
             </td>
         </tr>
+        {{--@endif--}}
     @endforeach
 </table>

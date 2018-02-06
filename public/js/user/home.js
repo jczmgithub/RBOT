@@ -357,11 +357,11 @@ function mostrarDatos(){
 
 function cargarTablaRobot() {
     $.ajax({
-        url: "/user/verRobot/tablaRobot",
+        url: "/user/verRobot",
         type: 'get',
         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }).done(function(data) {
-        $('#robots').html(data);
+        $('body').html(data);
     });
 }
 function eliminarRobot(id) {

@@ -84,17 +84,14 @@ class RobotController extends Controller
     public function formRobot(){
         return view('user.pages.registrarRobot');
     }
-//    public function verRobot(){
-//        $this->tablaRobot();
-//    }
     public function tablaRobot(){
         //$this->verUsuariosRobot();
         return view('user.pages.verRobots',
             ['users' => DB::table('users')
                 ->join('user_robot', 'user_robot.user_id', '=', 'users.id')
-                ->select('user_robot.user_id' ,'users.name', 'users.owner')
-                //->where('user_robot.user_id', '=', Auth::user()->id)
-                ->where('user_robot.user_id', '=', $this->dameUsers())
+                ->select('user_robot.user_id as userID' ,'users.name', 'users.owner', 'user_robot.id as robotID')
+                //->where('user_robot.user_id', '=', 'users.id')
+                //->where('user_robot.id', '=', $this->dameUsers())
                 ->get(),
             'robots' => DB::table('user_robot')
             ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
@@ -102,11 +99,8 @@ class RobotController extends Controller
             ->where('user_robot.user_id', '=', Auth::user()->id)
             ->get()]);
     }
-    public function dameUsers(){
-        $query = DB::table("users")->where('owner', '=', Auth::user()->id)->get()->id;
-        return $query;
-    }
-    public function eliminarRobot(){
+
+    protected function eliminarRobot(){
         DB::table('robots')->where('id', '=', $_POST["id"])->delete();
         DB::table('user_robot')->where('robot_id', '=', $_POST["id"])->delete();
     }
