@@ -212,21 +212,12 @@ function playVidPos(motor) {
 }
 
 function playVidOrigen() {
-    //var video = $('#videoSrc').attr('src').substring(0, 4)+'Inverso'+$('#videoSrc').attr('src').substring(4, 8);
-
-    //var video = $('#videoSrc').attr('src').replace('.', 'inverso.');
-
-
-    $('#videoSrc').attr('src').replace('.', 'inverso.');
-
+    $('#videoSrc').attr('src', $('#videoSrc').attr('src').replace('.', 'inverso.'));
     document.getElementById("video").load();
     setTimeout(function () {
         var vid = document.getElementById("video");
         vid.play();
     },2000);
-
-    console.log($('#videoSrc').attr('src'));
-    console.log(video);
 }
 
 function send(btn) {
