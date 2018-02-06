@@ -44,9 +44,10 @@ Route::prefix('admin')->group(function() {
 
 Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');
 
-Route::post('/prueba', function(){
-    echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
-});
+Route::post('/domotekSend','RobotController@domotekSend')->name('domotekSend');
+Route::post('/domotekStop','RobotController@domotekStop')->name('domotekStop');
+Route::post('/domotekHome','RobotController@domotekHome')->name('domotekHome');
+
 Route::post('/user/tablaDatos', 'RobotController@addFila')->name('addFila');
 //Route::post('/user/tablaDatosS3', 'RobotController@addFilaS3')->name('addFilaS3');
 //Rutas admin robot para registro de user y robots

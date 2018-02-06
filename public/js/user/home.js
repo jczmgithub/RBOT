@@ -67,6 +67,11 @@ $(document).ready(function (){
             paradoEmergencia();
         });
 
+        $('#homeRobot').click(function (event) {
+            event.preventDefault();
+            vueltaOrigen();
+        });
+
 
         $('#selecSecuencia').on('change', function (event) {
            var $optionSelected=$('option:selected',this);
@@ -205,7 +210,7 @@ function send(btn) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: '/prueba',
+        url: '/domotekSend',
         type: 'POST',
         dataType: 'text',
         success: function (data) {
@@ -223,7 +228,61 @@ function send(btn) {
 }
 
 function paradoEmergencia() {
-    
+
+    var datos = {
+        mensaje: 'Stop'
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/domotekStop',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+            // alert(xhr.status);
+            // alert(xhr.responseText);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+
+}
+
+function vueltaOrigen() {
+
+    var datos = {
+        mensaje: 'origen'
+    };
+
+    $.ajax({
+
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/domotekHome',
+        type: 'POST',
+        dataType: 'text',
+        success: function (data) {
+            alert(data);
+        },
+        error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+            // alert(xhr.status);
+            // alert(xhr.responseText);
+        },
+        complete: function (data) {
+            //alert("esto se hace siempre");
+        },
+        data: datos
+    });
+
 }
 
 function enviarFila(row) {
@@ -240,7 +299,7 @@ function enviarFila(row) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: '/prueba',
+        url: '/domotekSend',
         type: 'POST',
         dataType: 'text',
         success: function (data) {

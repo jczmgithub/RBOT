@@ -24,7 +24,9 @@
         <button id="saveSecuencia" class="btn btn-primary botonesFunciones">Guardar</button>
         <button id="loadSecuencia" class="btn btn-primary botonesFunciones">Cargar</button>
         <button id="delFilas" class="btn btn-primary botonesFunciones">Eliminar</button>
+        <button id="homeRobot" class="btn btn-warning botonesFunciones">Home</button>
         <button id="stopRobot" class="btn btn-danger botonesFunciones">Stop</button>
+
     </div>
 
     @include('user.includes.secuencias')

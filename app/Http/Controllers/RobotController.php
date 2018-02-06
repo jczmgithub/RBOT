@@ -186,5 +186,16 @@ class RobotController extends Controller
         return $contenido;
     }
 
+    public function domotekSend(){
+            echo $_POST["robot"]."; ".$_POST["motor"]."; ".$_POST["pasos"]."; ".$_POST["velocidad"];
+    }
+
+    public function domotekStop(){
+            echo "Parada de Emergencia exitosa";
+    }
+
+    public function domotekHome(){
+             echo "Ha vuelto a la posición de orígen";
+    }
 
 }
