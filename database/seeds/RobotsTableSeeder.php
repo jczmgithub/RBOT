@@ -34,7 +34,7 @@ class RobotsTableSeeder extends Seeder
                 'name' => 'Robot 4',
                 'modelo' => 'ASD4',
                 'host' => '192.168.1.220',
-                'user_id' => 2
+                'user_id' => 11
             ]
         ];
 
