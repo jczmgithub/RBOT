@@ -121,7 +121,7 @@ class RobotController extends Controller
     }
     public function asignarRobot(Request $request){
         $userid = DB::table("users")->where('name', "=", $request->input('selectUser'))->first();
-        $robotid = DB::table("robots")->where('modelo', "=", $request->input('selectRobot'))->first();
+        $robotid = DB::table("robots")->where('name', "=", $request->input('selectRobot'))->first();
         $idU= $userid->id;
         $idR = $robotid->id;
         DB::table('user_robot')->insert(
