@@ -1,6 +1,6 @@
 <table id="tablaRobots">
     <tr>
-        <th>Usuario</th>
+        <th>Nombre</th>
         <th>Modelo</th>
         <th>Host</th>
         <th>Acciones</th>
