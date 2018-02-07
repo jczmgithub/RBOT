@@ -149,8 +149,8 @@ function addFilaS3(robot,motor,pasos,velocidad) {
         type: 'POST',
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-        //async: false,
+        },
+        async: false,
     }).done(function(data) {
 
         $filaContenido = $(data);
