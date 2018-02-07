@@ -15,22 +15,26 @@ class RobotsTableSeeder extends Seeder
             [
                 'name' => 'Robot 1',
                 'modelo' => 'RBX1',
-                'host' => '192.168.1.209'
+                'host' => '192.168.1.209',
+                'user_id' => 1
             ],
             [
                 'name' => 'Robot 2',
                 'modelo' => 'RBX2',
-                'host' => '192.168.1.206'
+                'host' => '192.168.1.206',
+                'user_id' => 1
             ],
             [
                 'name' => 'Robot 3',
                 'modelo' => 'RBX3',
-                'host' => '192.168.1.203'
+                'host' => '192.168.1.203',
+                'user_id' => 1
             ],
             [
                 'name' => 'Robot 4',
                 'modelo' => 'ASD4',
-                'host' => '192.168.1.220'
+                'host' => '192.168.1.220',
+                'user_id' => 2
             ]
         ];
 

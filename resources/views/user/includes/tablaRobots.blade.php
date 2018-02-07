@@ -3,22 +3,27 @@
         <th>Nombre</th>
         <th>Modelo</th>
         <th>Direccion</th>
+        <th>Usuarios asignados</th>
         <th>Acciones</th>
     </tr>
-    @foreach($robots as $key => $data)
-        <tr>
+    @foreach($robots as $robot => $datosRobot)
+            <tr>
             <td>
-                {{ $data->name }}
+                {{ $datosRobot->name }}
             </td>
             <td>
-                {{ $data->modelo }}
+                {{ $datosRobot->modelo }}
             </td>
             <td>
-                {{ $data->host }}
+                {{ $datosRobot->host }}
             </td>
-
+                <td>
+                    @foreach($datosRobot->empleados as $user => $datosUser)
+                    <li>{{ $datosUser->name }} </li>
+                    @endforeach
+                </td>
             <td>
-                <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $data->id }}')">
+                <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $datosRobot->id }}')">
                     <span class="fa fa-times"></span>
                 </button>
             </td>

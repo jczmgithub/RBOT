@@ -505,11 +505,11 @@ function eliminarUser(correo) {
 }
 function cargarTablaUser() {
     $.ajax({
-        url: "/user/verUser/tablaUser",
+        url: "/user/verUser",
         type: 'get',
         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }).done(function(data) {
-        $('#usuarios').html(data);
+        $('body').html(data);
     });
 }
 
@@ -543,11 +543,11 @@ function cargarSecuncia(){
 
 function cargarTablaRobot() {
     $.ajax({
-        url: "/user/verRobot/tablaRobot",
+        url: "/user/verRobot",
         type: 'get',
         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }).done(function(data) {
-        $('#robots').html(data);
+        $('body').html(data);
     });
 }
 function eliminarRobot(id) {
