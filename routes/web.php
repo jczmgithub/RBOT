@@ -73,3 +73,21 @@ Route::post('/registrarRobot', 'RobotController@registrarRobot')->name("user.reg
 Route::post('/guardarFila', 'RobotController@guardarFila')->name('guardarFila');
 Route::get('/listadoS3','RobotController@listadoS3')->name('listadoS3');
 Route::post('/mostrarValores', 'RobotController@mostrarValores')->name('mostrarValores');
+
+Route::get('/comprobar', function(){
+    /*$robots = Auth::user()->robots;
+
+    foreach ($robots as $robot) {
+        echo $robot->name . " dueño: " . $robot->user_id . " +" ;
+        foreach ($robot->users as $user) {
+            echo $user->name ." ";
+        }
+        echo "<br>";
+
+    }*/
+    $empleados =  Auth::user()->idEmpleados;
+    foreach ($empleados as $empleado) {
+        echo $empleado->name . " " . $empleado->accesoRobots . "<br>";
+    }
+    return;
+});

@@ -29,14 +29,13 @@ class User extends Authenticatable
         'password', 'remember_token', 'credito'
     ];
 
-    /*public function robots() {
-        return $this->hasMany('App\Models\Robot');
-    }
-    */
-
     public function robots() {
-        return $this->belongsToMany('App\Models\Robot');
+        return $this->hasMany('App\Models\Robot', 'user_id', 'id');
     }
+
+    /*public function robots() {
+        return $this->belongsToMany('App\Models\Robot');
+    }*/
 
     public function isOwner(){
         if ($this->owner == "-1") {
@@ -46,8 +45,12 @@ class User extends Authenticatable
         }
 //        return $this -> user()->where('owner', 'true')->first();
     }
-    public function isEmploy($id){
-        $query = DB::table("users")->where('owner', '=', $id)->get();
-        return $query;
+
+    public function idEmpleados(){
+        return $this->hasMany('App\Models\User', 'owner', 'id');
+    }
+
+    public function accesoRobots() {
+        return $this->belongsToMany('App\Models\Robot', 'user_robot', 'user_id', 'robot_id');
     }
 }

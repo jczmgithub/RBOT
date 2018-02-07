@@ -7,11 +7,9 @@
         <th>Acciones</th>
     </tr>
     @foreach($robots as $robot => $datosRobot)
-        @if($datosRobot->user_id==Auth::user()->id )
-            {{--or $datosRobot->user_id == Auth::user()->isEmploy(Auth::user()->id)--}}
             <tr>
             <td>
-                {{ $datosRobot->robotName }}
+                {{ $datosRobot->name }}
             </td>
             <td>
                 {{ $datosRobot->modelo }}
@@ -20,13 +18,9 @@
                 {{ $datosRobot->host }}
             </td>
                 <td>
-                {{--@elseif($data->user_id==Auth::user()->isEmploy())--}}
-                    @foreach($users as $user => $datosUser)
-                        @if($datosUser->robotID==$datosRobot->id )
-                            <li>{{ $datosUser->name }} </li>
-                        @endif
+                    @foreach($datosRobot->empleados as $user => $datosUser)
+                    <li>{{ $datosUser->name }} </li>
                     @endforeach
-
                 </td>
             <td>
                 <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $datosRobot->id }}')">
@@ -34,6 +28,5 @@
                 </button>
             </td>
         </tr>
-        @endif
     @endforeach
 </table>

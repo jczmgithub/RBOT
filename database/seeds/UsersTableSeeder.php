@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'A',
+                'name' => 'JefeMain',
                 'email' => 'a@a.a',
                 'password' => bcrypt('a'),
                 'tarifa' => 3,
@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
                 'owner' => -1
             ],
             [
-                'name' => 'usuAdmin',
+                'name' => 'Jefe 2',
                 'email' => 'admin@admin.com',
                 'tarifa' => 1,
                 'credito' => '1234000012341111',
@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
                 'owner' => -1
             ],
             [
-                'name' => 'usuUsu',
+                'name' => 'Jefe 3',
                 'email' => 'usu@usu.com',
                 'tarifa' => 2,
                 'credito' => '1234000012342222',
@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
                 'owner' => -1
             ],
             [
-                'name' => 'User',
+                'name' => 'Jefe 4',
                 'email' => 'user@mail.com',
                 'tarifa' => 3,
                 'credito' => '1234000012343333',
@@ -49,7 +49,7 @@ class UsersTableSeeder extends Seeder
                 'owner' => -1
             ],
             [
-                'name' => 'Usuario1Prueba',
+                'name' => 'Usuario Prueba',
                 'email' => 'usera1aa@mail.com',
                 'tarifa' => 1,
                 'credito' => '1234000012343333',
