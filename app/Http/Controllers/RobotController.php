@@ -98,13 +98,15 @@ class RobotController extends Controller
             'users' => DB::table('users')
                 ->join('user_robot', 'user_robot.user_id', '=', 'users.id')
                 ->select('user_robot.user_id as userID' ,'users.name', 'users.owner', 'user_robot.id as robotID')
+                ->distinct()
                 //->where('user_robot.user_id', '=', 'users.id')
                 //->where('user_robot.id', '=', $this->dameUsers())
                 ->get(),
             'robots' => DB::table('user_robot')
                 ->join('robots', 'user_robot.robot_id', '=', 'robots.id')
                 ->select('user_robot.user_id' ,'robots.modelo', 'robots.host', 'robots.id', 'robots.name as robotName')
-                ->where('user_robot.user_id', '=', Auth::user()->id)
+                ->distinct('robots.name')
+                //->where('user_robot.user_id', '=', Auth::user()->id)
                 ->get()]);
     }
     public function eliminarRobot(){

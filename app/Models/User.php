@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -37,11 +39,15 @@ class User extends Authenticatable
     }
 
     public function isOwner(){
-        if ($this->owner == "true") {
+        if ($this->owner == "-1") {
             return true;
         } else {
             return false;
         }
 //        return $this -> user()->where('owner', 'true')->first();
+    }
+    public function isEmploy($id){
+        $query = DB::table("users")->where('owner', '=', $id)->get();
+        return $query;
     }
 }

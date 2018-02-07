@@ -18,15 +18,15 @@ class UserRobotTableSeeder extends Seeder
             ],
             [
                 'user_id' => 1,
-                'robot_id' => 11
+                'robot_id' => 2
             ],
             [
                 'user_id' => 1,
-                'robot_id' => 21
+                'robot_id' => 3
             ],
             [
-                'user_id' => 11,
-                'robot_id' => 31
+                'user_id' => 2,
+                'robot_id' => 4
             ]
 
         ];

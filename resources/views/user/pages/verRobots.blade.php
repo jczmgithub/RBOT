@@ -5,7 +5,7 @@
     @endauth
 @endsection
 @section('home')
-    {{--TODO Comprobar permisos del admin robot para que le saque el formulario--}}
+    @if(Auth::user()->isOwner())
     <div class="contenidoLogin container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -32,5 +32,6 @@
     @else
         {!! HTML::style('css/user/home.css') !!}
         {!! HTML::script('js/user/home.js'); !!}
+    @endif
     @endif
 @stop

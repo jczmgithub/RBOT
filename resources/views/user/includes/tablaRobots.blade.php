@@ -6,31 +6,34 @@
         <th>Usuarios asignados</th>
         <th>Acciones</th>
     </tr>
-    @foreach($robots as $key => $data)
-        {{--@if($data->user_id==Auth::user()->id)--}}
-        <tr>
+    @foreach($robots as $robot => $datosRobot)
+        @if($datosRobot->user_id==Auth::user()->id )
+            {{--or $datosRobot->user_id == Auth::user()->isEmploy(Auth::user()->id)--}}
+            <tr>
             <td>
-                {{ $data->robotName }}
+                {{ $datosRobot->robotName }}
             </td>
             <td>
-                {{ $data->modelo }}
+                {{ $datosRobot->modelo }}
             </td>
             <td>
-                {{ $data->host }}
+                {{ $datosRobot->host }}
             </td>
                 <td>
-                    @foreach($users as $user => $datos)
-                        @if($datos->robotID==$data->id )
-                        <li>{{ $datos->name }} </li>
-                       @endif
+                {{--@elseif($data->user_id==Auth::user()->isEmploy())--}}
+                    @foreach($users as $user => $datosUser)
+                        @if($datosUser->robotID==$datosRobot->id )
+                            <li>{{ $datosUser->name }} </li>
+                        @endif
                     @endforeach
+
                 </td>
             <td>
-                <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $data->id }}')">
+                <button class="btn btn-sm btn-danger" onclick="eliminarRobot('{{ $datosRobot->id }}')">
                     <span class="fa fa-times"></span>
                 </button>
             </td>
         </tr>
-        {{--@endif--}}
+        @endif
     @endforeach
 </table>
