@@ -6,7 +6,6 @@
 @endsection
 @section('home')
     @if(Auth::user()->isOwner())
-    {{--TODO Comprobar permisos del admin robot para que le saque el formulario--}}
     <div class="contenidoLogin container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">

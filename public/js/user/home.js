@@ -69,7 +69,7 @@ $(document).ready(function (){
         });
 
 
-        $('#selecSecuencia').on('change', function (event) {
+        $('#selecSecuencia').on('change', function () {
            var $optionSelected=$('option:selected',this);
            var valueSelected=$optionSelected.val();
            //var valueSelected=$('this.value');
@@ -96,7 +96,7 @@ $(document).ready(function (){
                 for(var i=1; i < filasArray.length; i++){
                     console.log(filasArray[i]);
                     contenidoFilaArray = filasArray[i].split(',');
-                    var datosArray = new Array();
+                    var datosArray = [];
                     for(var j=0; j < contenidoFilaArray.length; j++){
                         datosArray.push(contenidoFilaArray[j]);
                     }
@@ -144,7 +144,7 @@ function addFilaS3(robot,motor,pasos,velocidad) {
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        async: false,
+        async: false
     }).done(function(data) {
 
         $filaContenido = $(data);
@@ -180,7 +180,7 @@ function delFilas(){
 
     }).done(function() {
 
-    $("#tablaBody tr").remove();
+    $("#tablaBody").find("tr").remove();
 
     });
 
@@ -206,7 +206,8 @@ function playVidPos(motor) {
 }
 
 function playVidOrigen() {
-    $('#videoSrc').attr('src', $('#videoSrc').attr('src').replace('.', 'inverso.'));
+    var $videoSrc = $('#videoSrc');
+    $videoSrc.attr('src', $videoSrc.attr('src').replace('.', 'inverso.'));
     document.getElementById("video").load();
     setTimeout(function () {
         var vid = document.getElementById("video");
@@ -431,11 +432,11 @@ function eliminarUser(correo) {
 }
 function cargarTablaUser() {
     $.ajax({
-        url: "/user/verUser/tablaUser",
+        url: "/user/verUser",
         type: 'get',
         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }).done(function(data) {
-        $('#usuarios').html(data);
+        $('body').html(data);
     });
 }
 
@@ -469,11 +470,11 @@ function cargarSecuncia(){
 
 function cargarTablaRobot() {
     $.ajax({
-        url: "/user/verRobot/tablaRobot",
+        url: "/user/verRobot",
         type: 'get',
         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }).done(function(data) {
-        $('#robots').html(data);
+        $('body').html(data);
     });
 }
 function eliminarRobot(id) {

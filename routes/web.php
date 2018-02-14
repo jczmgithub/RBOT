@@ -58,8 +58,7 @@ Route::get('/verUser/tablaUser', 'UserController@tablaUser')->name('user.tablaUs
 Route::get('/registrarUser/{token}', 'UserController@completarRegistro')->name('user.rellenarPassword');
 Route::get('/registrarUser', 'UserController@formRegistro')->name('user.pages.registrarUser');
 Route::get('/registrarRobot', 'RobotController@formRobot')->name('formRobot');
-Route::get('/verRobot', 'RobotController@verRobot')->name("user.tablaRobot");
-Route::get('/verRobot/tablaRobot', 'RobotController@tablaRobot')->name('user.tablaRobot');
+Route::get('/verRobot', 'RobotController@tablaRobot')->name("user.tablaRobot");
 Route::get('/verRobotUser', 'RobotController@verRobotUser')->name("user.verRobotUser");
 Route::get('/registrarRobot', 'RobotController@formRobot')->name('user.formRobot');
     //POST
@@ -74,3 +73,21 @@ Route::post('/registrarRobot', 'RobotController@registrarRobot')->name("user.reg
 Route::post('/guardarFila', 'RobotController@guardarFila')->name('guardarFila');
 Route::get('/listadoS3','RobotController@listadoS3')->name('listadoS3');
 Route::post('/mostrarValores', 'RobotController@mostrarValores')->name('mostrarValores');
+
+Route::get('/comprobar', function(){
+    /*$robots = Auth::user()->robots;
+
+    foreach ($robots as $robot) {
+        echo $robot->name . " dueño: " . $robot->user_id . " +" ;
+        foreach ($robot->users as $user) {
+            echo $user->name ." ";
+        }
+        echo "<br>";
+
+    }*/
+    $empleados =  Auth::user()->idEmpleados;
+    foreach ($empleados as $empleado) {
+        echo $empleado->name . " " . $empleado->accesoRobots . "<br>";
+    }
+    return;
+});
