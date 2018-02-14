@@ -41,12 +41,6 @@ $(document).ready(function (){
 
         });
 
-        // $('#cerrarModal').click(function (event) {
-        //     event.preventDefault();
-        //     delFilas();
-        //
-        // });
-
         $('#sendFilas').click(function (event) {
             event.preventDefault();
             enviarFilas();
@@ -240,7 +234,7 @@ function send(btn) {
         type: 'POST',
         dataType: 'text',
         success: function (data) {
-            alert(data);
+            console.log(data);
             playVidPos($(row).find('select[name="selecMotor"]').val());
         },
         error: function (data) {
@@ -269,7 +263,7 @@ function paradoEmergencia() {
         type: 'POST',
         dataType: 'text',
         success: function (data) {
-            alert(data);
+            console.log(data);
         },
         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
             // alert(xhr.status);
@@ -298,7 +292,7 @@ function vueltaOrigen() {
         type: 'POST',
         dataType: 'text',
         success: function (data) {
-            alert(data);
+            console.log(data);
             playVidOrigen();
         },
         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
@@ -331,7 +325,7 @@ function enviarFila(row) {
         type: 'POST',
         dataType: 'text',
         success: function (data) {
-            alert(data);
+            console.log(data);
         },
         error: function (data) {
             alert("Fallo al enviar..."+data);
@@ -351,70 +345,14 @@ function enviarFila(row) {
 function enviarFilas() {
 
     var filas = $('tr');
-    // var columnas;
-
 
     for(var i=1; i<filas.length; i++){
-
-        // columnas = $(filas[i]).find('td');
-        // console.log(columnas);
-        //
-        // for (var j=0; j<(columnas.length-1); j++){
-        //     console.log($(columnas[j].children).val());
-        // }
 
         enviarFila(filas[i]);
     }
 
     playVid();
 }
-
-// function guardarFila(row, fichero) {
-//
-//     var datos = {
-//         robot: $(row).find('select[name="selecRobot"]').val(),
-//         motor: $(row).find('select[name="selecMotor"]').val(),
-//         pasos: $(row).find('input[name="pasosForm"]').val(),
-//         velocidad: $(row).find('input[name="velocidadForm"]').val(),
-//         fichero: fichero
-//     };
-//
-//     $.ajax({
-//
-//         headers: {
-//             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//         },
-//         url: '/guardarFila',
-//         type: 'POST',
-//         dataType: 'text',
-//         success: function (data) {
-//             //alert(data);
-//         },
-//         error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
-//             alert(xhr.status);
-//             alert(xhr.responseText);
-//         },
-//         complete: function (data) {
-//             //alert("esto se hace siempre");
-//         },
-//         data: datos
-//     });
-//
-// }
-//
-// function guardarFilas() {
-//
-//     var fichero = prompt("Introduce nombre de la secuencia");
-//
-//     var filas = $('tr');
-//
-//     for(var i=1; i<filas.length; i++){
-//
-//         guardarFila(filas[i], fichero);
-//
-//     }
-//
-// }
 
 function guardarFila(string, fichero) {
 
@@ -463,19 +401,8 @@ function guardarFilas() {
 
         $(filas[i]).find('select[name="selecRobot"]').val();
 
-        // filasString = filasString+$filas[i][0]+'\r\n';
-        //
-        // for(var j=1; j<$($filas[i]).children().length; j++){
-        //
-        //     $($filas[i]).children().val();
-        //
-        //     console.log($($filas[j]).children());
-        //     filasString = filasString+$filas[i][0]+'\r\n';
-        //
-        // }
     }
 
-    // console.log(filasString);
     guardarFila(filasString, fichero);
 
 }
