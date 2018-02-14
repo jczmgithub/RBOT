@@ -57,6 +57,15 @@ class UsersTableSeeder extends Seeder
                 'confirmado' => 1,
                 'owner' => 1
             ],
+            [
+                'name' => 'Zubiri',
+                'email' => 'zubiri@zubiri.com',
+                'tarifa' => 1,
+                'credito' => '1234000012343333',
+                'password' => bcrypt('zubiri'),
+                'confirmado' => 1,
+                'owner' => -1
+            ],
         ];
 
         DB::table('users')->insert($users);

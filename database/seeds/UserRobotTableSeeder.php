@@ -27,6 +27,10 @@ class UserRobotTableSeeder extends Seeder
             [
                 'user_id' => 11,
                 'robot_id' => 31
+            ],
+            [
+                'user_id' => 51,
+                'robot_id' => 31
             ]
 
         ];
